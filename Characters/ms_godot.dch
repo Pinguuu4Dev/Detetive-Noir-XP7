@@ -15,7 +15,7 @@
 &"display_name": "Miku",
 &"mirror": false,
 &"nicknames": ["Miku-chan"],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(0, 10),
 &"portraits": {
 "placeholder_miku": {
 "export_overrides": {

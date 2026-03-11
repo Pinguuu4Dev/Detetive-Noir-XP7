@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfa38wc81ivmh"]
 
 [ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/main_scene.gd" id="1_52fb6"]
+[ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/placeholder_item.tscn" id="2_6l7je"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2ia5b"]
 
@@ -10,14 +11,17 @@
 script = ExtResource("1_52fb6")
 
 [node name="placeholder_bg" type="Sprite2D" parent="." unique_id=1108101680]
-modulate = Color(0.18925694, 0.66137975, 0.7348177, 1)
+modulate = Color(0.99127215, 0, 0.20027876, 1)
 z_index = -2
 position = Vector2(577.75, 325.25)
 scale = Vector2(1156.5, 651.5)
 texture = SubResource("PlaceholderTexture2D_2ia5b")
 
 [node name="placeholder_table" type="Sprite2D" parent="." unique_id=1439817965]
-modulate = Color(0.56598717, 0.27049786, 0.1297341, 1)
-position = Vector2(274.99997, 531)
-scale = Vector2(537, 237.00002)
+modulate = Color(0.16787681, 0.281723, 0.83768046, 1)
+position = Vector2(584.99994, 573.25)
+scale = Vector2(324.50003, 152.49998)
 texture = SubResource("PlaceholderTexture2D_52fb6")
+
+[node name="placeholder_item" parent="." unique_id=211640599 instance=ExtResource("2_6l7je")]
+position = Vector2(592, 422)

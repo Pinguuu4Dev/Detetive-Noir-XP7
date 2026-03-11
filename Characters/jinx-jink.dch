@@ -15,7 +15,7 @@
 &"display_name": "Jinx Jink",
 &"mirror": false,
 &"nicknames": ["Jinx"],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(0, 10),
 &"portraits": {
 "placeholder": {
 "export_overrides": {

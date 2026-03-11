@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://jpcg38jxvprg"]
+
+[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scenes/item_behavior.gd" id="1_k4sy6"]
+[ext_resource type="Texture2D" uid="uid://ctss36tdp7ftp" path="res://Assets/Placeholder/leek.png" id="1_kwdtm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
+size = Vector2(537.3135, 453.70374)
+
+[node name="placeholder_item" type="Area2D" unique_id=293489425]
+scale = Vector2(0.268, 0.324)
+script = ExtResource("1_k4sy6")
+
+[node name="item_collision" type="CollisionShape2D" parent="." unique_id=1491647141]
+position = Vector2(-3.7313573, -4.6296406)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_kwdtm")
+
+[node name="placeholder_sprite" type="Sprite2D" parent="." unique_id=1509532906]
+texture = ExtResource("1_kwdtm")

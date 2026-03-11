@@ -1,10 +1,17 @@
-join jinx-jink right [animation="Slide From Right" length="0.3" wait="true" z_index="1"]
+join jinx-jink rightmost [animation="Slide From Right" length="0.3" wait="true" z_index="1"]
 jinx-jink: What am I doing here?
 [wait time="1.5" skippable="true"]
 jinx-jink: Who am I?
 [wait time="1.5" skippable="true"]
 jinx-jink: What is this place? Help!
 [wait time="0.5" skippable="true"]
-join sir_godot left [animation="Slide From Left" length="0.3"]
+join sir_godot leftmost [animation="Slide From Left" length="0.3"]
 sir_godot: Don't worry! Miku is here!
 [wait time="1.5"]
+leave sir_godot [animation="Zoom Out" length="0.2"]
+jinx-jink: No! Strange blue-haired girl!
+jinx-jink: ...
+jinx-jink: Maybe I should get- wait, why is there a leek here?
+if {leek_obtained} == true:
+	join sir_godot rightmost [animation="Zoom In" length="0.3" z_index="1"]
+	sir_godot: Thank you stranger!
