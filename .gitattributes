@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+
+# Ignorar arquivos com mudanças vazias no Github Desktop
+*.import text eol=lf
+*.tscn text eol=lf
+*.tres text eol=lf
