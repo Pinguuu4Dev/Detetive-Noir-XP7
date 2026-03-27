@@ -35,7 +35,9 @@ overrides = {
 "box_animation_in": "1",
 "box_animation_new_text": "1",
 "box_animation_out": "1",
-"box_panel": "\"res://Assets/Layout_Styles/placeholder_vn_textbox.tres\""
+"box_panel": "\"res://Assets/Layout_Styles/placeholder_vn_textbox.tres\"",
+"typing_sounds_mode": "2",
+"typing_sounds_sounds_folder": "\"res://Assets/Audio/SFX/Typewriter Sounds\""
 }
 
 [sub_resource type="Resource" id="Resource_jp5tn"]

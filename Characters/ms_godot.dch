@@ -5,7 +5,7 @@
 &"color": Color(0.49667358, 0.84765625, 0.83120394, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
+"sound_mood_default": "Sound 1",
 "sound_moods": {},
 "style": "placeholder_vn_style",
 "suffix": ""
@@ -24,7 +24,8 @@
 "mirror": true,
 "offset": Vector2(0, 0),
 "scale": 1.0,
-"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn",
+"sound_mood": "Sound 1"
 }
 },
 &"scale": 0.6
