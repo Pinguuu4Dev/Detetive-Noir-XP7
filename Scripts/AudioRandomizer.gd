@@ -3,6 +3,7 @@
 class_name AudioRandomizer
 extends AudioStreamPlayer
 
+@export var disable: bool = false
 @export var first_time_wait: float = 5
 @export var minimum_interval: float = 1
 @export var maximum_interval: float = 10
@@ -10,6 +11,9 @@ extends AudioStreamPlayer
 @onready var timer: Timer = Timer.new()
 
 func _ready() -> void:
+	if disable:
+		return
+		
 	add_child(timer)
 	timer.start(first_time_wait)
 	await timer.timeout

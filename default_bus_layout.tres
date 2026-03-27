@@ -1,0 +1,31 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://cf0njx8j6s6dd"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+room_size = 0.6
+damping = 0.4
+spread = 0.5
+dry = 0.0
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
+resource_name = "Delay"
+dry = 0.5
+
+[resource]
+bus/0/bypass_fx = true
+bus/1/name = &"SFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/2/name = &"Horn Reverb"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"SFX"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectDelay_j3pel")
+bus/2/effect/1/enabled = true
