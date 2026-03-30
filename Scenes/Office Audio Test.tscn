@@ -18,13 +18,13 @@ stream_1/stream = ExtResource("3_g2iu0")
 stream = ExtResource("1_v48u6")
 volume_db = -10.0
 autoplay = true
-bus = &"SFX"
+bus = &"Muffled Rain"
 
 [node name="Car Horn" type="AudioStreamPlayer" parent="." unique_id=672391836]
 stream = SubResource("AudioStreamRandomizer_2wvkm")
 volume_db = -6.0
 bus = &"Car Horn"
 script = ExtResource("4_rymqd")
-first_time_wait = 0.1
-minimum_interval = 3.0
-maximum_interval = 3.0
+first_time_wait = 10.0
+minimum_interval = 15.0
+maximum_interval = 30.0
