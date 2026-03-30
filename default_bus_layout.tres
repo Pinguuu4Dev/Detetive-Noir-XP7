@@ -2,9 +2,9 @@
 
 [sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
 resource_name = "EQ"
-band_db/1000_hz = -10.0
-band_db/3200_hz = -15.0
-band_db/10000_hz = -60.0
+band_db/1000_hz = -6.0
+band_db/3200_hz = -12.0
+band_db/10000_hz = -24.0
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
 resource_name = "Reverb"
@@ -18,7 +18,6 @@ resource_name = "Delay"
 dry = 0.5
 
 [resource]
-bus/0/bypass_fx = true
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
