@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bv1myco43dw70"
+path="res://.godot/imported/Scratch 5.wav-f9906cf5b12cfa43ab4ef90d01b4d163.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/UI/Scratch/Scratch 5.wav"
+dest_files=["res://.godot/imported/Scratch 5.wav-f9906cf5b12cfa43ab4ef90d01b4d163.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bs7lfhnah2pq0"
+path="res://.godot/imported/Long double underline.wav-14879e41a69c47d71118f2b26cc956c3.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/UI/Double Underline/Long double underline.wav"
+dest_files=["res://.godot/imported/Long double underline.wav-14879e41a69c47d71118f2b26cc956c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

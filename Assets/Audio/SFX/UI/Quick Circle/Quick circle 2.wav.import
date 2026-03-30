@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://t2shok8abfx7"
+path="res://.godot/imported/Quick circle 2.wav-f53b6455dc80419bf1eb5f25931c9f9e.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/UI/Quick Circle/Quick circle 2.wav"
+dest_files=["res://.godot/imported/Quick circle 2.wav-f53b6455dc80419bf1eb5f25931c9f9e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

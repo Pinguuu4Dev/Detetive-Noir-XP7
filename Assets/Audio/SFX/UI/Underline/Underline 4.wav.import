@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dp5j3i3u6t4kw"
+path="res://.godot/imported/Underline 4.wav-1bf1a93e364b054577cd9cc6e370d849.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/UI/Underline/Underline 4.wav"
+dest_files=["res://.godot/imported/Underline 4.wav-1bf1a93e364b054577cd9cc6e370d849.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

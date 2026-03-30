@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bkco24jpga51o"]
+
+[ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="1_v48u6"]
+[ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/Car horn 1.ogg" id="2_srov4"]
+[ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/Car horn 2.ogg" id="3_g2iu0"]
+[ext_resource type="Script" uid="uid://qg277x0b6h38" path="res://Scripts/AudioRandomizer.gd" id="4_rymqd"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2wvkm"]
+random_pitch = 1.0905077
+random_volume_offset_db = 5.0
+streams_count = 2
+stream_0/stream = ExtResource("2_srov4")
+stream_1/stream = ExtResource("3_g2iu0")
+
+[node name="Office Audio Test" type="Node2D" unique_id=1488589997]
+
+[node name="Rain Loop" type="AudioStreamPlayer" parent="." unique_id=627404742]
+stream = ExtResource("1_v48u6")
+volume_db = -10.0
+
+[node name="Car Horn" type="AudioStreamPlayer" parent="." unique_id=672391836]
+stream = SubResource("AudioStreamRandomizer_2wvkm")
+volume_db = -12.0
+bus = &"Car Horn"
+script = ExtResource("4_rymqd")
+first_time_wait = 0.1
+minimum_interval = 2.0
+maximum_interval = 2.0
