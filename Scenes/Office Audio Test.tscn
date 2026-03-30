@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bkco24jpga51o"]
 
 [ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="1_v48u6"]
+[ext_resource type="AudioStream" uid="uid://ck6fbpas6t20w" path="res://Assets/Audio/SFX/Props/Clock ticking 2.wav" id="2_g2iu0"]
 [ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/Car horn 1.ogg" id="2_srov4"]
 [ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/Car horn 2.ogg" id="3_g2iu0"]
+[ext_resource type="AudioStream" uid="uid://b06bkjk3b4ktw" path="res://Assets/Audio/SFX/Props/Phone Ringing.wav" id="3_rymqd"]
 [ext_resource type="Script" uid="uid://qg277x0b6h38" path="res://Scripts/AudioRandomizer.gd" id="4_rymqd"]
+[ext_resource type="Texture2D" uid="uid://b8l7ybjjd4bab" path="res://Assets/mockup office.jpg" id="7_rymqd"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2wvkm"]
 random_pitch = 1.0905077
@@ -12,13 +15,43 @@ streams_count = 2
 stream_0/stream = ExtResource("2_srov4")
 stream_1/stream = ExtResource("3_g2iu0")
 
-[node name="Office Audio Test" type="Node2D" unique_id=1488589997]
+[node name="Office Audio Test" type="Control" unique_id=1307531463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=430549038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_rymqd")
+stretch_mode = 4
 
 [node name="Rain on window loop" type="AudioStreamPlayer" parent="." unique_id=627404742]
 stream = ExtResource("1_v48u6")
 volume_db = -10.0
 autoplay = true
 bus = &"Muffled Rain"
+
+[node name="Clock Ticking Loop" type="AudioStreamPlayer" parent="." unique_id=1229734166]
+stream = ExtResource("2_g2iu0")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+bus = &"SFX"
+
+[node name="Phone Ringing" type="AudioStreamPlayer" parent="." unique_id=1727543239]
+stream = ExtResource("3_rymqd")
+volume_db = -6.0
+pitch_scale = 0.8
+autoplay = true
+bus = &"SFX"
 
 [node name="Car Horn" type="AudioStreamPlayer" parent="." unique_id=672391836]
 stream = SubResource("AudioStreamRandomizer_2wvkm")
