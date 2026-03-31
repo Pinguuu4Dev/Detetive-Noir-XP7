@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://lu62bpxjup3b"
+path="res://.godot/imported/Rain on window loop.ogg-cb132ac13736d8f39883af2cd96d68b3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/World/Rain on window loop.ogg"
+dest_files=["res://.godot/imported/Rain on window loop.ogg-cb132ac13736d8f39883af2cd96d68b3.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

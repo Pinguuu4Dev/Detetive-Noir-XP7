@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://o3fsjo6j8tuc"
+path="res://.godot/imported/Car horn 2.ogg-f71c0f14a83f5d8a5d827e26cb50721e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/World/Car horn 2.ogg"
+dest_files=["res://.godot/imported/Car horn 2.ogg-f71c0f14a83f5d8a5d827e26cb50721e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

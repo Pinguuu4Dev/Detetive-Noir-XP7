@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bkco24jpga51o"]
 
-[ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="1_v48u6"]
+[ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/World/Rain on window loop.ogg" id="1_v48u6"]
 [ext_resource type="AudioStream" uid="uid://ck6fbpas6t20w" path="res://Assets/Audio/SFX/Props/Clock ticking 2.wav" id="2_g2iu0"]
-[ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/Car horn 1.ogg" id="2_srov4"]
-[ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/Car horn 2.ogg" id="3_g2iu0"]
+[ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/World/Car horn 1.ogg" id="2_srov4"]
+[ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/World/Car horn 2.ogg" id="3_g2iu0"]
 [ext_resource type="AudioStream" uid="uid://b06bkjk3b4ktw" path="res://Assets/Audio/SFX/Props/Phone Ringing.wav" id="3_rymqd"]
 [ext_resource type="Script" uid="uid://qg277x0b6h38" path="res://Scripts/AudioRandomizer.gd" id="4_rymqd"]
 [ext_resource type="Texture2D" uid="uid://b8l7ybjjd4bab" path="res://Assets/mockup office.jpg" id="7_rymqd"]
