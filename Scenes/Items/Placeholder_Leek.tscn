@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
 size = Vector2(537.31354, 462.963)
 
-[node name="placeholder_item" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Leek" type="Sprite2D" unique_id=114531261]
 z_index = 5
 scale = Vector2(0.268, 0.324)
 texture = ExtResource("1_kwdtm")

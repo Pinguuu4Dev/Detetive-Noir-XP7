@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d2ult0xaiam3b"]
 
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="1_i6sei"]
-[ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/Car Horn 1.ogg" id="2_li27l"]
-[ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/Car Horn 2.ogg" id="3_tx6xt"]
+[ext_resource type="AudioStream" uid="uid://ve1syrfs30t4" path="res://Assets/Audio/SFX/Car horn 1.ogg" id="2_li27l"]
+[ext_resource type="AudioStream" uid="uid://o3fsjo6j8tuc" path="res://Assets/Audio/SFX/Car horn 2.ogg" id="3_tx6xt"]
 [ext_resource type="Script" uid="uid://qg277x0b6h38" path="res://Scripts/AudioRandomizer.gd" id="4_tx6xt"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2wvkm"]
@@ -23,7 +23,6 @@ bus = &"SFX"
 [node name="Car Horn" type="AudioStreamPlayer" parent="." unique_id=672391836]
 stream = SubResource("AudioStreamRandomizer_2wvkm")
 volume_db = -12.0
-bus = &"Horn Reverb"
 script = ExtResource("4_tx6xt")
 first_time_wait = 0.1
 minimum_interval = 2.0

@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://duondqvlik4xr"]
+
+[ext_resource type="Shader" uid="uid://dqx3lm8hoqoyj" path="res://Shaders/blur_effect.gdshader" id="1_lcjvk"]
+
+[resource]
+shader = ExtResource("1_lcjvk")
+shader_parameter/level_of_detail = 0.800000038

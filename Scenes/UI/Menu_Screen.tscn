@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://n0lx6rvo7ub7"]
+
+[ext_resource type="Script" uid="uid://bt4ab0sdbm4u1" path="res://Scripts/Mechanics/Scenes/menu_manager.gd" id="1_cdisa"]
+[ext_resource type="PackedScene" uid="uid://cfa38wc81ivmh" path="res://Scenes/Game Levels/Main_Scene.tscn" id="2_se15k"]
+[ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Options_Screen.tscn" id="3_ruads"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nlab"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.34407586, 0.3440757, 0.34407574, 0.6)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_ruads"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdisa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se15k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruads"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yub6e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjge0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8bed"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo2sf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Menu_Screen" type="Control" unique_id=1630642795]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdisa")
+level_to = ExtResource("2_se15k")
+
+[node name="Menu_BG" type="ColorRect" parent="." unique_id=790371902]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+
+[node name="Button_Container" type="PanelContainer" parent="Menu_BG" unique_id=18230530]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39200002
+anchor_top = 0.289
+anchor_right = 0.623
+anchor_bottom = 0.72200006
+offset_left = 0.4159851
+offset_top = -0.27200317
+offset_right = 0.30395508
+offset_bottom = 0.14395142
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2nlab")
+
+[node name="Vertical_Layout" type="VBoxContainer" parent="Menu_BG/Button_Container" unique_id=2053573168]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Start_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=2046742699]
+layout_mode = 2
+theme = SubResource("Theme_ruads")
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_cdisa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_se15k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ruads")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yub6e")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rjge0")
+text = "Start Game"
+text_direction = 1
+
+[node name="Options_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=1791005115]
+layout_mode = 2
+theme = SubResource("Theme_ruads")
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_i8bed")
+text = "Options"
+text_direction = 1
+
+[node name="Exit_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=673625825]
+layout_mode = 2
+theme = SubResource("Theme_ruads")
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_lo2sf")
+text = "Exit Game"
+text_direction = 1
+
+[node name="OptionsScreen" parent="." unique_id=1642139216 instance=ExtResource("3_ruads")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Start_BT" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Options_BT" to="." method="_on_options_pressed"]

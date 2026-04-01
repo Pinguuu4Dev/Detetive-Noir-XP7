@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dxl6rtqsu87qb"]
+
+[ext_resource type="Material" uid="uid://duondqvlik4xr" path="res://Materials/blur_effect.tres" id="1_niwg3"]
+
+[sub_resource type="Animation" id="Animation_niwg3"]
+resource_name = "Blur"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause_BG:material:shader_parameter/level_of_detail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.800000038]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause_BG/Pause_Container:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dunkq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause_BG:material:shader_parameter/level_of_detail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause_BG/Pause_Container:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dunkq"]
+_data = {
+&"Blur": SubResource("Animation_niwg3"),
+&"RESET": SubResource("Animation_dunkq")
+}
+
+[node name="PauseScreen" type="Control" unique_id=1931167145]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause_BG" type="ColorRect" parent="." unique_id=1300590507]
+material = ExtResource("1_niwg3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause_Container" type="PanelContainer" parent="Pause_BG" unique_id=1371162920]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.164
+anchor_right = 0.69100004
+anchor_bottom = 0.82600003
+offset_left = -0.55999756
+offset_top = -0.27200317
+offset_right = -0.032043457
+offset_bottom = -0.24804688
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Vertical_Layout" type="VBoxContainer" parent="Pause_BG/Pause_Container" unique_id=1365656795]
+process_mode = 3
+process_priority = 1
+layout_mode = 2
+
+[node name="Transition_FX" type="AnimationPlayer" parent="." unique_id=662403710]
+libraries/ = SubResource("AnimationLibrary_dunkq")
