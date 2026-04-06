@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://ve11v46rvj85"]
+
+[ext_resource type="FontFile" uid="uid://cveuhecw5twp" path="res://Assets/Fonts/Milk Choco.otf" id="1_bmh4s"]
+
+[resource]
+font = ExtResource("1_bmh4s")
+font_size = 22
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)

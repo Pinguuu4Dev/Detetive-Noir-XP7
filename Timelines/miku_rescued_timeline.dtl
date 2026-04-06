@@ -1,6 +1,0 @@
-join protagonist rightmost [animation="Slide From Right" z_index="1"]
-join ms_godot leftmost [animation="Fade In Up" wait="true" z_index="1"]
-ms_godot: Thank you stranger!
-protagonist: Don't worry! Let's get out of here
-ms_godot: For sure!
-leave --All-- [animation="Slide To Left" length="0.3"]

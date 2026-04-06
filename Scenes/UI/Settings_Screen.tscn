@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://d1fliddd0r1x8"]
+
+[ext_resource type="Script" uid="uid://baq80rb3dvrbk" path="res://Scripts/Mechanics/Scenes/settingsMenu_manager.gd" id="1_bftun"]
+[ext_resource type="LabelSettings" uid="uid://ve11v46rvj85" path="res://Assets/Themes/settings_label.tres" id="2_cwmog"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="3_g15v8"]
+[ext_resource type="Texture2D" uid="uid://bccy06sc0otfq" path="res://Assets/Placeholder/Icons/fullscreen.png" id="4_bv61s"]
+[ext_resource type="Texture2D" uid="uid://cj8r4he0v62ye" path="res://Assets/Placeholder/Icons/miniplayer.png" id="5_fmlh3"]
+[ext_resource type="Texture2D" uid="uid://7u14uxwpq8ie" path="res://Assets/Placeholder/Icons/windowed fullscreen.png" id="6_2x228"]
+
+[sub_resource type="Animation" id="Animation_7wyei"]
+resource_name = "Blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Settings_BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jay2q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Settings_BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jay2q"]
+_data = {
+&"Fade-In": SubResource("Animation_7wyei"),
+&"RESET": SubResource("Animation_jay2q")
+}
+
+[node name="Settings_Screen" type="Control" unique_id=1642139216]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bftun")
+
+[node name="Settings_BG" type="ColorRect" parent="." unique_id=1978185744]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12212009, 0.11852705, 0.108811535, 0.54509807)
+
+[node name="Settings_Container" type="MarginContainer" parent="Settings_BG" unique_id=271673640]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 50
+
+[node name="Vertical_Layout" type="VBoxContainer" parent="Settings_BG/Settings_Container" unique_id=895985159]
+process_mode = 3
+process_priority = 1
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Volume_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=1257589433]
+layout_mode = 2
+text = "Volume"
+label_settings = ExtResource("2_cwmog")
+
+[node name="Volume_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=120937255]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="Volume_Slider" type="HSlider" parent="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section" unique_id=923347409]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 0.7
+scrollable = false
+
+[node name="Mute_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section" unique_id=760194758]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Mute_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section/Mute_Section" unique_id=2001401507]
+layout_mode = 2
+text = "Silenciar"
+label_settings = ExtResource("2_cwmog")
+
+[node name="Mute_Option" type="CheckBox" parent="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section/Mute_Section" unique_id=2075151148]
+layout_mode = 2
+theme_override_constants/check_v_offset = 1
+
+[node name="ScreenOptions_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=627117519]
+layout_mode = 2
+text = "Opções de Tela"
+label_settings = ExtResource("2_cwmog")
+
+[node name="Screen_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=2132350024]
+layout_mode = 2
+
+[node name="Screen_Options" type="OptionButton" parent="Settings_BG/Settings_Container/Vertical_Layout/Screen_Section" unique_id=390162635]
+layout_mode = 2
+theme = ExtResource("3_g15v8")
+theme_override_constants/arrow_margin = 14
+item_count = 3
+popup/item_0/text = "Tela Cheia"
+popup/item_0/icon = ExtResource("4_bv61s")
+popup/item_0/id = 3
+popup/item_1/text = "Modo Janela"
+popup/item_1/icon = ExtResource("5_fmlh3")
+popup/item_1/id = 0
+popup/item_2/text = "Tela Cheia sem Borda"
+popup/item_2/icon = ExtResource("6_2x228")
+popup/item_2/id = 4
+
+[node name="Done_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=4280464]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Done_Button" type="Button" parent="Settings_BG/Settings_Container/Vertical_Layout/Done_Section" unique_id=1547741742]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("3_g15v8")
+text = "Done"
+
+[node name="Transition_FX" type="AnimationPlayer" parent="." unique_id=1723853167]
+libraries/ = SubResource("AnimationLibrary_jay2q")
+autoplay = &"Fade-In"
+
+[connection signal="drag_ended" from="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section/Volume_Slider" to="." method="_on_volume_drag_ended"]
+[connection signal="value_changed" from="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section/Volume_Slider" to="." method="_on_volume_changed"]
+[connection signal="toggled" from="Settings_BG/Settings_Container/Vertical_Layout/Volume_Section/Mute_Section/Mute_Option" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="Settings_BG/Settings_Container/Vertical_Layout/Screen_Section/Screen_Options" to="." method="_on_screen_options_selected"]
+[connection signal="pressed" from="Settings_BG/Settings_Container/Vertical_Layout/Done_Section/Done_Button" to="." method="_on_done_pressed"]

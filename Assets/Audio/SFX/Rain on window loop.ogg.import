@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Rain on window loop.ogg-c3df3c66c6b4579ccdef5
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

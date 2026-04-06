@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.49667358, 0.84765625, 0.83120394, 1),
+&"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "Sound 1",
@@ -10,16 +10,16 @@
 "style": "placeholder_vn_style",
 "suffix": ""
 },
-&"default_portrait": "placeholder_miku",
-&"description": "It's Miku!",
-&"display_name": "Miku",
+&"default_portrait": "placeholder_caller",
+&"description": "",
+&"display_name": "???",
 &"mirror": false,
-&"nicknames": ["Miku-chan"],
-&"offset": Vector2(0, 10),
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
 &"portraits": {
-"placeholder_miku": {
+"placeholder_caller": {
 "export_overrides": {
-"image": "\"res://Assets/Placeholder/miku.png\""
+"image": "\"res://Assets/Placeholder/Characters/caller_sylhoute.png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -28,5 +28,5 @@
 "sound_mood": "Sound 1"
 }
 },
-&"scale": 0.6
+&"scale": 0.45
 }

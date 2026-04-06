@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dxl6rtqsu87qb"]
 
+[ext_resource type="Script" uid="uid://c5dfugn2hxetw" path="res://Scripts/Mechanics/Scenes/pause_screen_manager.gd" id="1_dunkq"]
 [ext_resource type="Material" uid="uid://duondqvlik4xr" path="res://Materials/blur_effect.tres" id="1_niwg3"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="3_hahjl"]
+[ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Settings_Screen.tscn" id="3_j33te"]
 
 [sub_resource type="Animation" id="Animation_niwg3"]
 resource_name = "Blur"
@@ -63,17 +66,12 @@ _data = {
 &"RESET": SubResource("Animation_dunkq")
 }
 
-[node name="PauseScreen" type="Control" unique_id=1931167145]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Pause_Screen" type="CanvasLayer" unique_id=602457543]
+process_mode = 3
+script = ExtResource("1_dunkq")
 
 [node name="Pause_BG" type="ColorRect" parent="." unique_id=1300590507]
 material = ExtResource("1_niwg3")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -83,15 +81,9 @@ grow_vertical = 2
 [node name="Pause_Container" type="PanelContainer" parent="Pause_BG" unique_id=1371162920]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.28
-anchor_top = 0.164
-anchor_right = 0.69100004
-anchor_bottom = 0.82600003
-offset_left = -0.55999756
-offset_top = -0.27200317
-offset_right = -0.032043457
-offset_bottom = -0.24804688
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -99,6 +91,25 @@ grow_vertical = 2
 process_mode = 3
 process_priority = 1
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_hahjl")
 
-[node name="Transition_FX" type="AnimationPlayer" parent="." unique_id=662403710]
+[node name="Resume_Button" type="Button" parent="Pause_BG/Pause_Container/Vertical_Layout" unique_id=566948709]
+layout_mode = 2
+theme = ExtResource("3_hahjl")
+text = "Resumir"
+
+[node name="Exit_Button" type="Button" parent="Pause_BG/Pause_Container/Vertical_Layout" unique_id=1465584958]
+layout_mode = 2
+theme = ExtResource("3_hahjl")
+text = "Sair do Jogo"
+
+[node name="Pause_FX" type="AnimationPlayer" parent="." unique_id=662403710]
 libraries/ = SubResource("AnimationLibrary_dunkq")
+
+[node name="Settings_Screen" parent="." unique_id=1642139216 instance=ExtResource("3_j33te")]
+visible = false
+
+[connection signal="pressed" from="Pause_BG/Pause_Container/Vertical_Layout/Resume_Button" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause_BG/Pause_Container/Vertical_Layout/Exit_Button" to="." method="_on_exit_pressed"]

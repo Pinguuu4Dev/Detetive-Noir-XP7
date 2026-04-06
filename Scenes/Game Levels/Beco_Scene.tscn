@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cnw2ei7sdvg4l"]
+
+[ext_resource type="Texture2D" uid="uid://dbav1wlx6xgaa" path="res://Assets/Placeholder/Levels/alley.jpg" id="1_30hq6"]
+[ext_resource type="Script" uid="uid://w4kxkpanccg1" path="res://Scripts/Mechanics/Scenes/becoScene_logic.gd" id="1_rwci3"]
+[ext_resource type="PackedScene" uid="uid://1k0u5t53vji6" path="res://Scenes/Items/BecoScene_Notebook.tscn" id="3_wgc12"]
+[ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/BecoScene_Door_1.tscn" id="4_6xvgo"]
+[ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
+[ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/BecoScene_Trash_1.tscn" id="5_lhagv"]
+
+[node name="BecoScene" type="Node2D" unique_id=1615627716]
+script = ExtResource("1_rwci3")
+
+[node name="Scene_Elements" type="Node2D" parent="." unique_id=1433143879]
+
+[node name="Placeholder_BG" type="Sprite2D" parent="Scene_Elements" unique_id=38902416]
+z_index = -2
+position = Vector2(576.49994, 329.99997)
+scale = Vector2(0.9117187, 0.93055546)
+texture = ExtResource("1_30hq6")
+
+[node name="Interactable_Items" type="Node2D" parent="." unique_id=1695721762]
+
+[node name="Placeholder_Notebook" parent="Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
+modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
+position = Vector2(682, 559)
+rotation = 0.35433745
+scale = Vector2(0.18009228, 0.159996)
+
+[node name="Placeholder_Door" parent="Interactable_Items" unique_id=1451948297 instance=ExtResource("4_6xvgo")]
+position = Vector2(451, 470)
+rotation = 0.014495522
+scale = Vector2(0.22663306, 0.36068675)
+item_type = "metal_door"
+delete_after_interaction = false
+
+[node name="Placeholder_Trash" parent="Interactable_Items" unique_id=260404300 instance=ExtResource("5_lhagv")]
+position = Vector2(255, 456.00003)
+scale = Vector2(0.46800005, 0.324)
+item_type = "trash_1"
+
+[node name="Beco_Audio" type="AudioStreamPlayer2D" parent="." unique_id=1146770481]
+stream = ExtResource("4_nbpvd")
+volume_db = -10.0
+autoplay = true

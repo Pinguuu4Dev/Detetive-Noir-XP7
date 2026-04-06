@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pogpmv5ekkn7"
-path="res://.godot/imported/miku.png-5c0eff5cf06e56f94eb36ae6c6605dad.ctex"
+uid="uid://bv2o42w0fkj08"
+path="res://.godot/imported/notebook.png-fef3910d908b951bdcbbab0be995c93c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder/miku.png"
-dest_files=["res://.godot/imported/miku.png-5c0eff5cf06e56f94eb36ae6c6605dad.ctex"]
+source_file="res://Assets/Placeholder/Objects/notebook.png"
+dest_files=["res://.godot/imported/notebook.png-fef3910d908b951bdcbbab0be995c93c.ctex"]
 
 [params]
 

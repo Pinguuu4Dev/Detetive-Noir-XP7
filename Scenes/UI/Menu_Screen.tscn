@@ -1,139 +1,63 @@
 [gd_scene format=3 uid="uid://n0lx6rvo7ub7"]
 
-[ext_resource type="Script" uid="uid://bt4ab0sdbm4u1" path="res://Scripts/Mechanics/Scenes/menu_manager.gd" id="1_cdisa"]
+[ext_resource type="Script" uid="uid://bt4ab0sdbm4u1" path="res://Scripts/Mechanics/Scenes/mainMenu_manager.gd" id="1_cdisa"]
 [ext_resource type="PackedScene" uid="uid://cfa38wc81ivmh" path="res://Scenes/Game Levels/Main_Scene.tscn" id="2_se15k"]
-[ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Options_Screen.tscn" id="3_ruads"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="3_2bnp2"]
+[ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Settings_Screen.tscn" id="3_ruads"]
+[ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_rjge0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nlab"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-bg_color = Color(0.34407586, 0.3440757, 0.34407574, 0.6)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-corner_detail = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dlhk"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.23753911, 0.23753914, 0.23753911, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 10
 
-[sub_resource type="Theme" id="Theme_ruads"]
+[sub_resource type="Animation" id="Animation_ruads"]
+resource_name = "Fade-Out"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdisa"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[sub_resource type="Animation" id="Animation_rjge0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se15k"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruads"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yub6e"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjge0"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8bed"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo2sf"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjge0"]
+_data = {
+&"Fade-Out": SubResource("Animation_ruads"),
+&"RESET": SubResource("Animation_rjge0")
+}
 
 [node name="Menu_Screen" type="Control" unique_id=1630642795]
 layout_mode = 3
@@ -158,59 +82,55 @@ color = Color(0.16206557, 0.1620656, 0.16206557, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.39200002
-anchor_top = 0.289
+anchor_top = 0.26500002
 anchor_right = 0.623
-anchor_bottom = 0.72200006
+anchor_bottom = 0.748
 offset_left = 0.4159851
-offset_top = -0.27200317
+offset_top = 0.27998352
 offset_right = 0.30395508
-offset_bottom = 0.14395142
+offset_bottom = 0.29599
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2nlab")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2dlhk")
 
 [node name="Vertical_Layout" type="VBoxContainer" parent="Menu_BG/Button_Container" unique_id=2053573168]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 50
+theme = ExtResource("3_2bnp2")
 alignment = 1
 
 [node name="Start_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=2046742699]
 layout_mode = 2
-theme = SubResource("Theme_ruads")
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_cdisa")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_se15k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ruads")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_yub6e")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rjge0")
-text = "Start Game"
+theme = ExtResource("3_2bnp2")
+text = "Iniciar Jogo"
 text_direction = 1
 
 [node name="Options_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=1791005115]
 layout_mode = 2
-theme = SubResource("Theme_ruads")
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_i8bed")
-text = "Options"
+theme = ExtResource("3_2bnp2")
+text = "Configurações"
 text_direction = 1
 
 [node name="Exit_BT" type="Button" parent="Menu_BG/Button_Container/Vertical_Layout" unique_id=673625825]
 layout_mode = 2
-theme = SubResource("Theme_ruads")
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_lo2sf")
-text = "Exit Game"
+theme = ExtResource("3_2bnp2")
+text = "Sair do Jogo"
 text_direction = 1
 
-[node name="OptionsScreen" parent="." unique_id=1642139216 instance=ExtResource("3_ruads")]
+[node name="Settings_Screen" parent="." unique_id=1642139216 instance=ExtResource("3_ruads")]
 visible = false
 layout_mode = 1
 
+[node name="Transition_FX" type="AnimationPlayer" parent="." unique_id=625350323]
+root_node = NodePath("../Menu_BG/Button_Container")
+libraries/ = SubResource("AnimationLibrary_rjge0")
+
+[node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1190858699]
+stream = ExtResource("4_rjge0")
+autoplay = true
+
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Start_BT" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Options_BT" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Exit_BT" to="." method="_on_exit_pressed"]

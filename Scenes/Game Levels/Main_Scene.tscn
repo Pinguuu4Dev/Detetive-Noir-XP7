@@ -1,44 +1,48 @@
 [gd_scene format=3 uid="uid://cfa38wc81ivmh"]
 
-[ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/main_scene.gd" id="1_5h1g4"]
-[ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/Placeholder_Leek.tscn" id="2_q8kq6"]
+[ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/mainScene_logic.gd" id="1_5h1g4"]
+[ext_resource type="PackedScene" uid="uid://cnw2ei7sdvg4l" path="res://Scenes/Game Levels/Beco_Scene.tscn" id="2_4ri1a"]
+[ext_resource type="Texture2D" uid="uid://cke2p0m0ilh1p" path="res://Assets/Placeholder/Levels/detective-office-work-place-interior-flat-vector-2KDJCFF.jpg" id="2_q8kq6"]
 [ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Objects/cursor_manager.gd" id="3_e1qge"]
-[ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Options_Screen.tscn" id="4_q8kq6"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2ia5b"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_52fb6"]
+[ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/MainScene_Phone.tscn" id="3_s3noc"]
+[ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
+[ext_resource type="PackedScene" uid="uid://bxe1w5clrd6a5" path="res://Scenes/Items/MainScene_Door.tscn" id="4_wkffy"]
+[ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
 
 [node name="Main_Scene" type="Node2D" unique_id=1242555024]
 script = ExtResource("1_5h1g4")
+next_scene = ExtResource("2_4ri1a")
 
 [node name="Scene_Elements" type="Node2D" parent="." unique_id=1194236809]
 
 [node name="Placeholder_BG" type="Sprite2D" parent="Scene_Elements" unique_id=1108101680]
-modulate = Color(0.99127215, 0, 0.20027876, 1)
 z_index = -2
-position = Vector2(577.75, 325.25)
-scale = Vector2(1156.5, 651.5)
-texture = SubResource("PlaceholderTexture2D_2ia5b")
-
-[node name="Placeholder_Table" type="Sprite2D" parent="Scene_Elements" unique_id=1439817965]
-modulate = Color(0.16787681, 0.281723, 0.83768046, 1)
-position = Vector2(584.99994, 573.25)
-scale = Vector2(324.50003, 152.49998)
-texture = SubResource("PlaceholderTexture2D_52fb6")
+position = Vector2(578.99994, 325)
+scale = Vector2(0.89077675, 0.8127115)
+texture = ExtResource("2_q8kq6")
 
 [node name="Interactable_Items" type="Node2D" parent="." unique_id=404983896]
 
-[node name="Item_1" parent="Interactable_Items" unique_id=211640599 groups=["interactable_object"] instance=ExtResource("2_q8kq6")]
-position = Vector2(489, 454.00003)
-scale = Vector2(0.14799878, 0.17892389)
+[node name="Placeholder_Phone" parent="Interactable_Items" unique_id=114531261 instance=ExtResource("3_s3noc")]
+position = Vector2(510.00003, 503)
+scale = Vector2(0.23200013, 0.09799758)
+item_type = "phone"
 
-[node name="Item_2" parent="Interactable_Items" unique_id=114531261 groups=["interactable_object"] instance=ExtResource("2_q8kq6")]
-modulate = Color(0, 0.79607844, 0, 1)
-position = Vector2(669, 454.00003)
-scale = Vector2(0.14799878, 0.17892389)
+[node name="Placeholder_Door" parent="Interactable_Items" unique_id=1494225548 instance=ExtResource("4_wkffy")]
+position = Vector2(90.00001, 399.99997)
+scale = Vector2(0.37022614, 1.1025863)
+item_type = "door"
+delete_after_interaction = false
 
 [node name="Cursor_Manager" type="Node" parent="." unique_id=2042316836]
 script = ExtResource("3_e1qge")
 
-[node name="OptionsScreen" parent="." unique_id=1642139216 instance=ExtResource("4_q8kq6")]
+[node name="PauseScreen" parent="." unique_id=1931167145 instance=ExtResource("4_q8kq6")]
+process_priority = 1
+process_physics_priority = 1
+layer = 128
+
+[node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1327138087]
+stream = ExtResource("6_s3noc")
+volume_db = -14.0
+autoplay = true

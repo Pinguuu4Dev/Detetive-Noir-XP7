@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Detetive-Noir-XP7"
-run/main_scene="uid://cfa38wc81ivmh"
+run/main_scene="uid://n0lx6rvo7ub7"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Assets/Placeholder/icon.svg"
+config/icon="res://Assets/Placeholder/Characters/icon.svg"
 
 [audio]
 
@@ -27,12 +27,16 @@ CursorManager="*uid://b3h3ytrkd0ee5"
 [dialogic]
 
 directories/dch_directory={
-"ms_godot": "res://Characters/ms_godot.dch",
+"mystery_caller": "res://Characters/ms_godot.dch",
 "protagonist": "res://Characters/protagonist.dch"
 }
 directories/dtl_directory={
-"main_timeline": "res://Timelines/main_timeline.dtl",
-"miku_rescued_timeline": "res://Timelines/miku_rescued_timeline.dtl"
+"beco_continuation": "res://Timelines/beco_notebook_segment_1.dtl",
+"beco_door_segment_1": "res://Timelines/beco_door_segment_1.dtl",
+"beco_timeline": "res://Timelines/beco_start.dtl",
+"beco_trash_segment_1": "res://Timelines/beco_trash_segment_1.dtl",
+"cena_incompleta_1": "res://Timelines/cena_incompleta_1.dtl",
+"phone_call_timeline": "res://Timelines/phone_call.dtl"
 }
 layout/style_directory={
 "": "res://Assets/Layout_Styles/placeholder_vn_style.tres",
@@ -42,8 +46,11 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Layout_Styles/placeholder_vn_style.tres"]
 layout/default_style="res://Assets/Layout_Styles/placeholder_vn_style.tres"
 variables={
+"beco_vars": {
+"notebook_collected": false
+},
 "main_vars": {
-"got_leeks": false
+"picked_phone": false
 }
 }
 text/letter_speed=0.05
@@ -76,11 +83,21 @@ audio/channel_defaults={
 "fade_length": 0.0,
 "loop": true,
 "volume": 0.0
+},
+"sfx": {
+"audio_bus": "SFX",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
 }
 }
 animations/join_default="Slide From Left"
 animations/leave_default="Slide To Left"
 animations/cross_fade_default="Fade Cross"
+glossary/glossary_files=["uid://seo3pcgt6l55"]
+save/autosave=true
+save/autosave_mode=0
+save/default_slot="autosave"
 
 [display]
 

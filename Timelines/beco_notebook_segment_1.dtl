@@ -1,0 +1,11 @@
+join protagonist center [animation="Instant In" z_index="1" mirrored="true"]
+protagonist: Vamos ver o que temos aqui…
+[wait time="0.15" hide_text="false"]
+protagonist: Meu… deus? A caligrafia é idêntica à minha, mas eu não me recordo de ter escrito isso
+[wait time="0.1" hide_text="false"]
+protagonist: “Que… assim… sonhos… em…” a maioria das palavras tão censuradas, não consigo abstrair nada do que tá aqui, e as outras páginas parecem todas vazias… Secas, intactas, mas vazias!
+protagonist: É melhor dar mais uma olhada pelos arredores desse beco.
+update protagonist left [length="0.0" wait="true" repeat="2" mirrored="false" move_time="0.6" move_trans="linear"]
+protagonist: Ok, tem uma lata de lixo aqui. Verde bem escuro, molhada por conta da chuva, parece ter sido danificada por alguma coisa afiada…
+protagonist: Levemente danificada nas laterais, nada de relevante na tampa. Ok, a checagem do exterior foi concluída
+protagonist: Agora, hora de ver a parte de dentro…

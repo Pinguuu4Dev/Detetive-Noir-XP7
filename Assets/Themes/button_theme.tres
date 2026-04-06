@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://i5qt2ugkwip0"]
+
+[ext_resource type="StyleBox" uid="uid://k5en5b7tg2bh" path="res://Assets/Styles/hover_style.tres" id="1_3ej8q"]
+[ext_resource type="StyleBox" uid="uid://6iyja247pqax" path="res://Assets/Styles/normal_style.tres" id="2_wrgub"]
+[ext_resource type="StyleBox" uid="uid://cyk16i84484np" path="res://Assets/Styles/pressed_style.tres" id="3_6vd5y"]
+[ext_resource type="FontFile" uid="uid://cveuhecw5twp" path="res://Assets/Fonts/Milk Choco.otf" id="4_gigjq"]
+
+[resource]
+default_font = ExtResource("4_gigjq")
+default_font_size = 30
+Button/styles/hover = ExtResource("1_3ej8q")
+Button/styles/normal = ExtResource("2_wrgub")
+Button/styles/pressed = ExtResource("3_6vd5y")
+OptionButton/styles/hover = ExtResource("1_3ej8q")
+OptionButton/styles/normal = ExtResource("2_wrgub")
+OptionButton/styles/pressed = ExtResource("3_6vd5y")
+VBoxContainer/constants/separation = 50

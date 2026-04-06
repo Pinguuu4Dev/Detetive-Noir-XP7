@@ -1,0 +1,3 @@
+join protagonist center [animation="Slide From Left" length="0.6" wait="true" z_index="1" mirrored="true"]
+protagonist: Uh… um caderno? A chuva não parece ser capaz de atingi-lo… que esquisito.
+leave protagonist [animation="Fade Out" length="0.3" wait="true"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcb5tml6hy4pk"
-path="res://.godot/imported/placeholder_jinx.png-46fbb29c6c4755b640c31fa7a783ab2f.ctex"
+path="res://.godot/imported/placeholder_jinx.png-4ae3d7450b67456af395c64d23bcd011.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder/placeholder_jinx.png"
-dest_files=["res://.godot/imported/placeholder_jinx.png-46fbb29c6c4755b640c31fa7a783ab2f.ctex"]
+source_file="res://Assets/Placeholder/Characters/placeholder_jinx.png"
+dest_files=["res://.godot/imported/placeholder_jinx.png-4ae3d7450b67456af395c64d23bcd011.ctex"]
 
 [params]
 

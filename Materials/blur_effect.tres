@@ -4,4 +4,4 @@
 
 [resource]
 shader = ExtResource("1_lcjvk")
-shader_parameter/level_of_detail = 0.800000038
+shader_parameter/level_of_detail = 0.0
