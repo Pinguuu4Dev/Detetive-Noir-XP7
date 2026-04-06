@@ -27,16 +27,16 @@ CursorManager="*uid://b3h3ytrkd0ee5"
 [dialogic]
 
 directories/dch_directory={
-"mystery_caller": "res://Characters/ms_godot.dch",
+"ms_godot": "res://Characters/ms_godot.dch",
 "protagonist": "res://Characters/protagonist.dch"
 }
 directories/dtl_directory={
-"beco_continuation": "res://Timelines/beco_notebook_segment_1.dtl",
 "beco_door_segment_1": "res://Timelines/beco_door_segment_1.dtl",
-"beco_timeline": "res://Timelines/beco_start.dtl",
+"beco_notebook_segment_1": "res://Timelines/beco_notebook_segment_1.dtl",
+"beco_start": "res://Timelines/beco_start.dtl",
 "beco_trash_segment_1": "res://Timelines/beco_trash_segment_1.dtl",
 "cena_incompleta_1": "res://Timelines/cena_incompleta_1.dtl",
-"phone_call_timeline": "res://Timelines/phone_call.dtl"
+"phone_call": "res://Timelines/phone_call.dtl"
 }
 layout/style_directory={
 "": "res://Assets/Layout_Styles/placeholder_vn_style.tres",

@@ -17,7 +17,7 @@ func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
 
-	Dialogic.start("beco_timeline")
+	Dialogic.start("beco_start")
 	# Adquire todos os filhos da cena que são do tipo 'item'
 	for x in get_children():
 		if x.name == "Interactable_Items":
@@ -30,7 +30,7 @@ func _on_item_interacted(i: Item) -> void:
 	match i.item_type:
 		"notebook":
 			if !notebook_collected:
-				Dialogic.start("beco_continuation")
+				Dialogic.start("beco_notebook_segment_1")
 				notebook_collected = true
 				Dialogic.VAR.beco_vars.set("notebook_collected", true)
 		"metal_door":

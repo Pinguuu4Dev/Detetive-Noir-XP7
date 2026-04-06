@@ -1,6 +1,6 @@
 join protagonist rightmost [animation="Slide From Right" wait="true" z_index="1"]
 protagonist: Jynx, detetive felina particular à disposição. Com o que eu posso ajudar?
-join mystery_caller leftmost [animation="Slide From Left" wait="true" z_index="1"]
+join ms_godot leftmost [animation="Slide From Left" wait="true" z_index="1"]
 mystery_caller: ...
 protagonist: Alô?
 mystery_caller: ...
@@ -12,7 +12,7 @@ protagonist: Moça, não consegui ouvir algumas partes, qual era o nome da víti
 mystery_caller: ...
 protagonist: Moça?
 mystery_caller: ...
-leave mystery_caller [animation="Fade Out" wait="true"]
+leave  [animation="Fade Out" wait="true"]
 [wait time="0.2"]
 audio sfx "res://Assets/Audio/SFX/Objects/Phone_hang_up.wav"
 protagonist: Tá, beco da rua XV… é perto daqui. Umas três quadras de distância.
