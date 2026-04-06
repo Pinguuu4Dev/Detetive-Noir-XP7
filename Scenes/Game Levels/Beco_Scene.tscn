@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/BecoScene_Door_1.tscn" id="4_6xvgo"]
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
 [ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/BecoScene_Trash_1.tscn" id="5_lhagv"]
+[ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="7_xo8tj"]
 
 [node name="BecoScene" type="Node2D" unique_id=1615627716]
 script = ExtResource("1_rwci3")
@@ -42,3 +43,5 @@ item_type = "trash_1"
 stream = ExtResource("4_nbpvd")
 volume_db = -10.0
 autoplay = true
+
+[node name="Pause_Screen" parent="." unique_id=602457543 instance=ExtResource("7_xo8tj")]
