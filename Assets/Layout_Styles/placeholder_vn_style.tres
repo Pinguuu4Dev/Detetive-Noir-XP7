@@ -15,6 +15,11 @@
 [sub_resource type="Resource" id="Resource_3wofa"]
 script = ExtResource("2_q0vxy")
 scene = ExtResource("1_22g87")
+overrides = {
+"follow_viewport": "true",
+"global_font": "\"res://Assets/Fonts/Milk Choco.otf\"",
+"global_font_size": "16.0"
+}
 
 [sub_resource type="Resource" id="Resource_u0coc"]
 script = ExtResource("2_q0vxy")
@@ -36,6 +41,8 @@ overrides = {
 "box_animation_new_text": "1",
 "box_animation_out": "1",
 "box_panel": "\"res://Assets/Layout_Styles/placeholder_vn_textbox.tres\"",
+"box_size": "Vector2(450, 100)",
+"text_size": "30.0",
 "typing_sounds_mode": "2",
 "typing_sounds_sounds_folder": "\"res://Assets/Audio/SFX/Typewriter Sounds\""
 }
@@ -71,4 +78,4 @@ layer_info = {
 "16": SubResource("Resource_dl86o"),
 "17": SubResource("Resource_bjbbs")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = ""

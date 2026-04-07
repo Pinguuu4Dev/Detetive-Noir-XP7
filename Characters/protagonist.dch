@@ -12,9 +12,9 @@
 },
 &"default_portrait": "placeholder_protagonist",
 &"description": "",
-&"display_name": "Jinx Jink",
+&"display_name": "Jynx Jink",
 &"mirror": false,
-&"nicknames": ["jinx"],
+&"nicknames": ["jynx"],
 &"offset": Vector2(0, 10),
 &"portraits": {
 "placeholder_protagonist": {

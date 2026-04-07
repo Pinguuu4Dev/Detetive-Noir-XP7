@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
 
 [node name="Main_Scene" type="Node2D" unique_id=1242555024]
+scale = Vector2(0.56081104, 0.5600002)
 script = ExtResource("1_5h1g4")
 next_scene = ExtResource("2_4ri1a")
 

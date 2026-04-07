@@ -98,12 +98,12 @@ theme = ExtResource("3_hahjl")
 [node name="Resume_Button" type="Button" parent="Pause_BG/Pause_Container/Vertical_Layout" unique_id=566948709]
 layout_mode = 2
 theme = ExtResource("3_hahjl")
-text = "Resumir"
+text = "Retomar"
 
 [node name="Exit_Button" type="Button" parent="Pause_BG/Pause_Container/Vertical_Layout" unique_id=1465584958]
 layout_mode = 2
 theme = ExtResource("3_hahjl")
-text = "Sair do Jogo"
+text = "Sair"
 
 [node name="Pause_FX" type="AnimationPlayer" parent="." unique_id=662403710]
 libraries/ = SubResource("AnimationLibrary_dunkq")

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="7_xo8tj"]
 
 [node name="BecoScene" type="Node2D" unique_id=1615627716]
+scale = Vector2(0.56, 0.56)
 script = ExtResource("1_rwci3")
 
 [node name="Scene_Elements" type="Node2D" parent="." unique_id=1433143879]
@@ -38,6 +39,7 @@ delete_after_interaction = false
 position = Vector2(255, 456.00003)
 scale = Vector2(0.46800005, 0.324)
 item_type = "trash_1"
+delete_after_interaction = false
 
 [node name="Beco_Audio" type="AudioStreamPlayer2D" parent="." unique_id=1146770481]
 stream = ExtResource("4_nbpvd")
