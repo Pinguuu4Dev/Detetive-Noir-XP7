@@ -5,10 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
 size = Vector2(537.31354, 462.963)
 
-[node name="Placeholder_Door" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Trash" type="Sprite2D" unique_id=114531261]
 z_index = 5
 scale = Vector2(0.268, 0.324)
 script = ExtResource("1_cxnq1")
+item_type = "trash"
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)

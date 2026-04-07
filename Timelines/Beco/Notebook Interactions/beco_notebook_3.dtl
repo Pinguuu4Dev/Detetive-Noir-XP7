@@ -1,0 +1,9 @@
+join protagonist center [animation="Zoom In" length="0.6" wait="true" z_index="1" mirrored="true"]
+protagonist: [i]"Em suas patas… assim… sonhos…"[/i]
+protagonist: [i]"Em meio às trevas… os números nos amaldiçoam"[/i]
+protagonist: [i]“No sangue que uniria os mundos”[/i]
+protagonist: Uma das linhas ainda tá censurada… talvez se eu mexer nela...
+[wait time="1.4" skippable="true"]
+protagonist: [i]“Assim como os pesadelos e os sonhos.”[/i]
+protagonist: Consegui deixar a página inteira legível!
+protagonist: Mas ainda não consegui abrir a porta. Será que…

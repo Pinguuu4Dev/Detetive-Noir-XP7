@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6dm6tvn0abm4"]
+
+[ext_resource type="Texture2D" uid="uid://cjn4fe8j5ldum" path="res://Assets/Placeholder/Levels/ritual_room.png" id="1_i4k8b"]
+[ext_resource type="Script" uid="uid://b55saolj2the2" path="res://Scripts/Mechanics/Scenes/ritualScene_logic.gd" id="1_mcrfp"]
+
+[node name="RitualRoom_Scene" type="Node2D" unique_id=1884547424]
+script = ExtResource("1_mcrfp")
+
+[node name="Placeholder_BG" type="Sprite2D" parent="." unique_id=647810504]
+position = Vector2(322.49997, 183.49998)
+scale = Vector2(0.33593747, 0.33611107)
+texture = ExtResource("1_i4k8b")
