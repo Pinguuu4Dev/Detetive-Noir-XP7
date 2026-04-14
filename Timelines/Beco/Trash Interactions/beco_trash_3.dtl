@@ -1,0 +1,11 @@
+join protagonist left [animation="Zoom In" length="0.4" wait="true" z_index="1"]
+protagonist: Ainda tem sangue e ele vem até…
+update protagonist leftmost [mirrored="true" move_time="0.4" move_trans="linear"]
+[wait time="0.4"]
+audio sfx "res://Assets/Audio/SFX/Objects/metal_dragging_on_floor.wav"
+update protagonist [animation="Tada" length="0.6" repeat="2"]
+[wait time="0.8"]
+protagonist: Aqui, ah, é daí que tava vindo o sangue, uma faca, certo.
+protagonist: Faca de combate, lâmina completamente lisa, sem serrilhado. Útil para perfurar carne humana e… pera aí.
+protagonist: Tem pelos escuros de gato na ponta da faca. Definitivamente há um felino envolvido no caso, ou pelo menos, algum passou por aqui.
+protagonist: Estranho, extremamente estranho. Vou tentar investigar a caderneta de novo…

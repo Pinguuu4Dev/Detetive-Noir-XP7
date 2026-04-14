@@ -27,7 +27,7 @@ CursorManager="*uid://b3h3ytrkd0ee5"
 [dialogic]
 
 directories/dch_directory={
-"mystery_caller": "res://Characters/ms_godot.dch",
+"mystery_caller": "res://Characters/mystery_caller.dch",
 "protagonist": "res://Characters/protagonist.dch"
 }
 directories/dtl_directory={
@@ -42,6 +42,7 @@ directories/dtl_directory={
 "beco_start": "res://Timelines/Beco/beco_start.dtl",
 "beco_trash_1": "res://Timelines/Beco/Trash Interactions/beco_trash_1.dtl",
 "beco_trash_2": "res://Timelines/Beco/Trash Interactions/beco_trash_2.dtl",
+"beco_trash_3": "res://Timelines/Beco/Trash Interactions/beco_trash_3.dtl",
 "office_incomplete_scene_1": "res://Timelines/Office/Hints to Incomplete Scene/office_incomplete_scene_1.dtl",
 "office_phone_call": "res://Timelines/Office/office_phone_call.dtl",
 "ritualRoom_start": "res://Timelines/Ritual Room/ritualRoom_start.dtl"
