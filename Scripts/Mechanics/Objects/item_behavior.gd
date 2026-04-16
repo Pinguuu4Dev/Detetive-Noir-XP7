@@ -14,7 +14,7 @@ signal item_interacted_signal(i_type: Item)
 # Roda no início do jogo
 func _ready() -> void:
 	item_interacted_signal.connect(_item_interacted_func) # Conecta o sinal 'item_collected' com a função 'item_collected'
-
+	
 # Roda a cada tick do jogo
 func _process(delta: float) -> void:
 	pass
@@ -35,9 +35,9 @@ func object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_released("interact_with_items") and object_held:
 		item_interacted_signal.emit(self)
 		object_held = false
-
+		
 ## Quando item for coletado, o sinal vai ativar essa função
-func _item_interacted_func(i: Item) -> void:
+func _item_interacted_func() -> void:
 	if delete_after_interaction:
 		queue_free() # Destrói o item
 	_reset_cursor()

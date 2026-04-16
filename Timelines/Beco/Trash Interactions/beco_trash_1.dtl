@@ -1,5 +1,8 @@
 join protagonist center [animation="Slide In Down" length="0.3" wait="true" z_index="1"]
-protagonist: Ok, tem uma lata de lixo aqui. Verde bem escuro, molhada por conta da chuva, parece ter sido danificada por alguma coisa afiada…
+protagonist: Uma lata de lixo. Verde musgo, molhada por conta da chuva, parece ter sido atingida por alguma coisa afiada…
 update protagonist left [animation="Shake X" length="0.2" wait="true" repeat="2" mirrored="false" move_time="0.4" move_ease="in" move_trans="linear"]
-protagonist: Levemente danificada nas laterais, nada de relevante na tampa. Ok, a checagem do exterior foi concluída.
+protagonist: Levemente danificada nas laterais, nada de relevante na tampa.
 protagonist: Agora, hora de ver a parte de dentro…
+protagonist: É definitivamente lixo orgânico. Meu olfato já devia estar acostumado com coisas do tipo, mas parece que não.
+protagonist: Além de sacos de lixo com restos de comida, excremento animal e outras coisas que parecem ter sido descartadas… não tem nada de interessante por aqui.
+protagonist: Tá, vou dar mais uma olhada por aí.

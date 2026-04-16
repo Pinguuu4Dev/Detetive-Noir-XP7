@@ -1,5 +1,5 @@
 extends Node
-class_name Cursors
+class_name Cursor_Manager
 ## Script para poder guardar os cursores que vão ser usados no jogo dependendo do que o mouse está fazendo
 
 @export_category("Tipos de Cursores")

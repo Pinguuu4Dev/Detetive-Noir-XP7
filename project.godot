@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://cf0njx8j6s6dd"
 
 Dialogic="*uid://ds2q0uclmolvu"
 CursorManager="*uid://b3h3ytrkd0ee5"
+ItemManager="*uid://bi6ibnkxdfkmp"
 
 [dialogic]
 
@@ -43,6 +44,7 @@ directories/dtl_directory={
 "beco_trash_1": "res://Timelines/Beco/Trash Interactions/beco_trash_1.dtl",
 "beco_trash_2": "res://Timelines/Beco/Trash Interactions/beco_trash_2.dtl",
 "beco_trash_3": "res://Timelines/Beco/Trash Interactions/beco_trash_3.dtl",
+"beco_trash_4": "res://Timelines/Beco/Trash Interactions/beco_trash_4.dtl",
 "office_incomplete_scene_1": "res://Timelines/Office/Hints to Incomplete Scene/office_incomplete_scene_1.dtl",
 "office_phone_call": "res://Timelines/Office/office_phone_call.dtl",
 "ritualRoom_start": "res://Timelines/Ritual Room/ritualRoom_start.dtl"
@@ -55,9 +57,6 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Layout_Styles/placeholder_vn_style.tres"]
 layout/default_style="res://Assets/Layout_Styles/placeholder_vn_style.tres"
 variables={
-"beco_vars": {
-"notebook_collected": false
-},
 "main_vars": {
 "picked_phone": false
 }
@@ -103,7 +102,7 @@ audio/channel_defaults={
 animations/join_default="Slide From Left"
 animations/leave_default="Slide To Left"
 animations/cross_fade_default="Fade Cross"
-glossary/glossary_files=["uid://seo3pcgt6l55"]
+glossary/glossary_files=[]
 save/autosave=true
 save/autosave_mode=0
 save/default_slot="autosave"

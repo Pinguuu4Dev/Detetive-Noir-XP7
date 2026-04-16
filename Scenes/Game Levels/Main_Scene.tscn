@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/mainScene_logic.gd" id="1_5h1g4"]
 [ext_resource type="PackedScene" uid="uid://cnw2ei7sdvg4l" path="res://Scenes/Game Levels/Beco_Scene.tscn" id="2_4ri1a"]
 [ext_resource type="Texture2D" uid="uid://cke2p0m0ilh1p" path="res://Assets/Placeholder/Levels/detective-office-work-place-interior-flat-vector-2KDJCFF.jpg" id="2_q8kq6"]
-[ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Objects/cursor_manager.gd" id="3_e1qge"]
+[ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Globals/cursor_manager.gd" id="3_e1qge"]
 [ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/MainScene_Phone.tscn" id="3_s3noc"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
 [ext_resource type="PackedScene" uid="uid://bxe1w5clrd6a5" path="res://Scenes/Items/MainScene_Door.tscn" id="4_wkffy"]
