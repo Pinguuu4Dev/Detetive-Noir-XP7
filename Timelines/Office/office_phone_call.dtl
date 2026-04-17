@@ -1,10 +1,10 @@
 join protagonist rightmost [animation="Slide From Right" wait="true" z_index="1"]
 protagonist: Jynx, detetive felina particular à disposição. Como posso-lhe ajudar?
 join mystery_caller leftmost [animation="Slide From Left" wait="true" z_index="1"]
-audio "res://Assets/Audio/SFX/Objects/phone_static.wav"
+audio "res://Assets/Audio/SFX/Objects/phone_static.wav" [volume="-5.0"]
 mystery_caller: ...
 protagonist: Alô?
-audio "res://Assets/Audio/SFX/Objects/phone_static.wav"
+audio "res://Assets/Audio/SFX/Objects/phone_static.wav" [volume="-5.0"]
 mystery_caller: ...
 protagonist: Uh… olá? É trote? Com quem eu falo?
 mystery_caller: Assassinaram… assassinaram minha irmã. Ela tinha saído à noite… por favor, me ajude. Por favor. A polícia não quis resolver. Eu tô desesperada. Eu quero justiça.

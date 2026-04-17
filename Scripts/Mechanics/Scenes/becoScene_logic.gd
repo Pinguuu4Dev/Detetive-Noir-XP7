@@ -6,7 +6,7 @@ var cur_timeline: DialogicTimeline
 ## Para poder sabermos se uma timeline está acontecendo ou não
 var timeline_playing:= false 
 ## Objetos que devem ser interagidos pelo jogador antes de seguir a timeline
-var notebook_collected: bool
+var timelines_finished: Array[String] = []
 var notebook_ref: Item = null
 var puzzle_done = false
 
@@ -31,74 +31,38 @@ func _ready() -> void:
 func _on_item_interacted(i: Item) -> void:
 	match i.item_type:
 		"metal_door":
-			if ItemManager._get_interactions("metal_door") == 0:
-				ItemManager._add_interactions(i.item_type)
-				Dialogic.start(_check_timeline_segment(i, 0))
-			elif ItemManager._get_interactions("notebook") >= 4:
-				ItemManager._add_interactions(i.item_type)
-				Dialogic.start(_check_timeline_segment(i, 0))
-			elif ItemManager._get_interactions("metal_door") == 2:
+			if !timelines_finished.has("beco_metal_door_1"):
+				Dialogic.start("beco_metal_door_1")
+			elif !timelines_finished.has("beco_metal_door_2") and timelines_finished.has("beco_metal_door_1"): #and timelines_finished.has("beco_notebook_4")
+				Dialogic.start("beco_metal_door_2")
+			elif timelines_finished.has("beco_metal_door_2"):
 				get_tree().change_scene_to_packed(next_scene)
 			else:
 				Dialogic.start("beco_incomplete_scene_3")
 		"notebook":
-			if !notebook_collected:
-				ItemManager._add_interactions(i.item_type)
-				Dialogic.start(_check_timeline_segment(i, 0))
-				notebook_collected = true
-			elif ItemManager._get_interactions("trash") >= 1:
-				ItemManager._add_interactions(i.item_type)
-				Dialogic.start(_check_timeline_segment(i, 0))
-			elif ItemManager._get_interactions("notebook") >= 3:
-				ItemManager._add_interactions(i.item_type) 
+			if !timelines_finished.has("beco_notebook_1"):
+				Dialogic.start("beco_notebook_1")
+			elif !timelines_finished.has("beco_notebook_2") and timelines_finished.has("beco_notebook_1") and (timelines_finished.has("beco_trash_2") or timelines_finished.has("beco_trash_3")):
+				Dialogic.start("beco_notebook_2")
+			elif !timelines_finished.has("beco_notebook_3") and timelines_finished.has("beco_notebook_2") and timelines_finished.has("beco_trash_4"):
+				Dialogic.start("beco_notebook_3")
+			elif !timelines_finished.has("beco_notebook_4") and timelines_finished.has("beco_notebook_3"):
+				Dialogic.start("beco_notebook_4")
 			else:
 				Dialogic.start("beco_incomplete_scene_1")
 		"trash":
-			if ItemManager._get_interactions("trash") == 0:
-				ItemManager._add_interactions(i.item_type)
-				if ItemManager._get_interactions("notebook") > 0 and ItemManager._get_interactions("metal_door") > 0:
-					ItemManager._add_interactions(i.item_type)
-				Dialogic.start(_check_timeline_segment(i, 0))
-			elif ItemManager._get_interactions("notebook") == 1 and ItemManager._get_interactions("metal_door") > 0:
-				if ItemManager._get_interactions("trash") != 2:
-					ItemManager._add_interactions(i.item_type)
-					Dialogic.start(_check_timeline_segment(i, 3))
-				elif ItemManager._get_interactions("trash") >= 2 and puzzle_done:
-					ItemManager._add_interactions(i.item_type)
-					Dialogic.start(_check_timeline_segment(i, 4))
+			if !timelines_finished.has("beco_trash_1") and !timelines_finished.has("beco_trash_2"):
+				var trash_timeline = "beco_trash_1"
+				if timelines_finished.has("beco_notebook_1") and timelines_finished.has("beco_metal_door_1"):
+					trash_timeline = "beco_trash_2"
+				Dialogic.start(trash_timeline)
+			elif !timelines_finished.has("beco_trash_3") and timelines_finished.has("beco_trash_1"):
+				Dialogic.start("beco_trash_3")
+			elif !timelines_finished.has("beco_trash_4") and timelines_finished.has("beco_notebook_2"):
+				Dialogic.start("beco_trash_4")
 			else:
 				Dialogic.start("beco_incomplete_scene_2")
 
-## Função que verifica quando um item é interagido, qual timeline deve tocar.
-func _check_timeline_segment(i: Item, manual_override: int) -> String:
-	match i.item_type:
-		"trash":
-			var trash_segment = ""
-			if manual_override == 0:
-				trash_segment = "beco_trash_" + str(ItemManager._get_interactions(i.item_type))
-			else:
-				trash_segment = "beco_trash_" + str(manual_override)
-			
-			return trash_segment
-		"notebook":
-			var notebook_segment = ""
-			if manual_override == 0:
-				notebook_segment = "beco_notebook_" + str(ItemManager.nb_interactions)
-			else:
-				notebook_segment = "beco_notebook_" + str(manual_override)
-			
-			return notebook_segment
-		"metal_door":
-			var door_segment = ""
-			if manual_override == 0:
-				door_segment = "beco_metal_door_" + str(ItemManager._get_interactions(i.item_type))
-			else:
-				door_segment = "beco_metal_door_" + str(manual_override)
-			
-			return door_segment
-		_:
-			print("error")
-			return ""
 ## Quando uma timeline começar.
 func _on_timeline_started() -> void:
 	cur_timeline = Dialogic.current_timeline #  Guarda qual timeline é na variável
@@ -109,4 +73,6 @@ func _on_timeline_started() -> void:
 func _on_timeline_ended() -> void:
 	timeline_playing = false # Diz que a timeline não está ativa
 	print("'", cur_timeline.get_identifier(), "'", " terminou: ", !timeline_playing) # Debug pra indicar qual timeline está terminou e se realmente está terminado
+	if !timelines_finished.has(cur_timeline.get_identifier()):
+		timelines_finished.append(cur_timeline.get_identifier())
 	cur_timeline = null

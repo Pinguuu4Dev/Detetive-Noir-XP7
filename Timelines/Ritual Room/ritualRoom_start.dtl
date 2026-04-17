@@ -5,3 +5,4 @@ audio sfx "res://Assets/Audio/SFX/Ambience/scary_sound.wav"
 update protagonist [animation="Bounce" length="0.1" repeat="2" mirrored="true"]
 protagonist: Que barulho foi esse?
 protagonist: O que… o que é isso? Eu… alguém…
+leave protagonist [animation="Slide To Right" length="0.3" wait="true"]

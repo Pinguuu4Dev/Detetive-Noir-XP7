@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://brkstk8ovdg6c"]
+
+[ext_resource type="Script" uid="uid://h4iwvj483gku" path="res://Scripts/Mechanics/Objects/puzzle_line_behavior.gd" id="1_t04r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4s8a"]
+size = Vector2(294, 24)
+
+[node name="Puzzle_Line" type="Node2D" unique_id=1598418759]
+z_index = 2
+script = ExtResource("1_t04r4")
+
+[node name="Line_Collision" type="Area2D" parent="." unique_id=757495385]
+z_index = 10
+
+[node name="Collision_Shape" type="CollisionShape2D" parent="Line_Collision" unique_id=1025323229]
+z_index = 10
+position = Vector2(147, 12)
+shape = SubResource("RectangleShape2D_g4s8a")
+
+[connection signal="body_entered" from="Line_Collision" to="." method="_on_body_enter"]
+[connection signal="body_exited" from="Line_Collision" to="." method="_on_body_exit"]
+[connection signal="mouse_entered" from="Line_Collision" to="." method="_on_mouse_enter"]
+[connection signal="mouse_exited" from="Line_Collision" to="." method="_on_mouse_exit"]

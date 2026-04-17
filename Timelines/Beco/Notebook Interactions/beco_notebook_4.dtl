@@ -1,0 +1,5 @@
+join protagonist center [animation="Fade In" length="0.3" wait="true" z_index="1"]
+protagonist: [i]“Assim como os pesadelos e os sonhos.”[/i]
+update protagonist [animation="Shake Y" length="0.3" wait="true" repeat="2" mirrored="true"]
+protagonist: Consegui deixar a página inteira legível!
+protagonist: Mas ainda não consegui abrir a porta. Será que…

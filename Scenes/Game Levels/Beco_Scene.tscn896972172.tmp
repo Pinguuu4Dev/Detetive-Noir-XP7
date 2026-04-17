@@ -23,7 +23,6 @@ scale = Vector2(0.9117187, 0.93055546)
 texture = ExtResource("1_30hq6")
 
 [node name="Interactable_Items" type="Node2D" parent="." unique_id=1695721762]
-position = Vector2(0, -1.7857143)
 
 [node name="Placeholder_Notebook" parent="Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
 modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)

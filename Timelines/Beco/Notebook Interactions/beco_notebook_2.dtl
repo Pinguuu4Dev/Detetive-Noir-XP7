@@ -1,6 +1,7 @@
 join protagonist center [animation="Zoom In" length="0.4" wait="true" z_index="1" mirrored="true"]
 protagonist: [i]“que… assim… sonhos… em…”[/i]
-protagonist: [i]“Em suas patas… os números nos amaldiçoam?”[/i]
-protagonist: Aparentemente algumas partes dessa escritura ficaram mais compreensíveis agora. Que esquisito.
+protagonist: [i]“Em suas patas… os números nos amaldiçoam”[/i]?
+protagonist: Aparentemente algumas partes dessa escritura ficaram mais compreensíveis agora. Interessante.
 [wait time="0.2" skippable="true"]
-protagonist: Que isso? Eu consigo mexer na ordem das frases com minhas próprias unhas. Devo estar sonhando, mas talvez isso ajude.
+protagonist: Que isso? Eu consigo mexer na ordem das frases com minhas próprias patas…
+protagonist: Devo estar sonhando, mas talvez isso ajude.

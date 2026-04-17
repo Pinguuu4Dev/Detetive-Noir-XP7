@@ -27,14 +27,13 @@ func _on_item_interacted(i: Item) -> void:
 		"phone": 
 			if !Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
 				Dialogic.VAR.main_vars.set("picked_phone", true)
-				print(Dialogic.VAR.main_vars.picked_phone)
 				Dialogic.start("office_phone_call")
 		"door": 
 			if !Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
 				Dialogic.start("office_incomplete_scene_1")
 			if Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
 				get_tree().change_scene_to_packed(next_scene)
-		
+
 ## Quando uma timeline começar
 func _on_timeline_started() -> void:
 	cur_timeline = Dialogic.current_timeline #  Guarda qual timeline é na variável

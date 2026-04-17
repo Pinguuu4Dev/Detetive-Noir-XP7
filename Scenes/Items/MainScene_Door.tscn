@@ -18,10 +18,6 @@ position = Vector2(-3.7313278, -9.259279)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")
 
-[node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
-volume_db = -9.0
-bus = &"SFX"
-
 [connection signal="input_event" from="collision_area" to="." method="object_is_held"]
 [connection signal="mouse_entered" from="collision_area" to="." method="_change_cursor"]
 [connection signal="mouse_exited" from="collision_area" to="." method="_reset_cursor"]
