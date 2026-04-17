@@ -6,72 +6,12 @@
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_nlo1l"]
 [ext_resource type="PackedScene" uid="uid://gwgr1dxsgm5p" path="res://Scenes/Mechanics/Droppable_Areas.tscn" id="5_o240r"]
 
-[sub_resource type="Animation" id="Animation_g4s8a"]
-resource_name = "Puzzle_Started"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Notebook_Page/Puzzle_Lines:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.03333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Notebook_Page/Puzzle_Lines:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.9529412)]
-}
-
-[sub_resource type="Animation" id="Animation_4ynst"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Notebook_Page/Puzzle_Lines:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Notebook_Page/Puzzle_Lines:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_44k4v"]
-_data = {
-&"Puzzle_Started": SubResource("Animation_g4s8a"),
-&"RESET": SubResource("Animation_4ynst")
-}
 
 [node name="NotebookPuzzle" type="Node2D" unique_id=1122473079]
 
 [node name="Visibility_Player" type="AnimationPlayer" parent="." unique_id=470359343]
 libraries/ = SubResource("AnimationLibrary_44k4v")
-autoplay = &"Puzzle_Started"
 
 [node name="Notebook_Page" type="TextureRect" parent="." unique_id=343645507]
 z_index = -1
@@ -81,7 +21,6 @@ mouse_filter = 2
 texture = ExtResource("1_kdwrw")
 
 [node name="Puzzle_Lines" type="Control" parent="Notebook_Page" unique_id=1001457089]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,7 +30,8 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Puzzle_Line_1" parent="Notebook_Page/Puzzle_Lines" unique_id=1598418759 node_paths=PackedStringArray("line_inside_collision") instance=ExtResource("2_44k4v")]
-position = Vector2(31, 31)
+position = Vector2(330, 33)
+scale = Vector2(0.96, 0.9199997)
 line_inside_collision = NodePath("Line_3")
 
 [node name="Line_3" type="RichTextLabel" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_1" unique_id=1285723487]
@@ -100,10 +40,8 @@ anchor_left = 0.045
 anchor_top = 0.120000005
 anchor_right = 0.045
 anchor_bottom = 0.120000005
-offset_left = -390.0
-offset_top = -40.0
-offset_right = -96.0
-offset_bottom = -12.999985
+offset_right = 294.0
+offset_bottom = 27.000015
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_nlo1l")
@@ -362,7 +300,8 @@ texture = ExtResource("2_g4s8a")
 expand_mode = 1
 
 [node name="Puzzle_Line_2" parent="Notebook_Page/Puzzle_Lines" unique_id=442480591 node_paths=PackedStringArray("line_inside_collision") instance=ExtResource("2_44k4v")]
-position = Vector2(30, 70)
+position = Vector2(330, 72)
+scale = Vector2(0.96, 0.9199997)
 line_inside_collision = NodePath("Line_5")
 
 [node name="Line_5" type="RichTextLabel" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_2" unique_id=276417844]
@@ -371,10 +310,8 @@ anchor_left = 0.045
 anchor_top = 0.120000005
 anchor_right = 0.045
 anchor_bottom = 0.120000005
-offset_left = -390.0
-offset_top = -40.0
-offset_right = -96.0
-offset_bottom = -13.0
+offset_right = 294.0
+offset_bottom = 27.0
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_nlo1l")
@@ -509,17 +446,18 @@ color = Color(0.6627451, 0.19215687, 0.19607843, 1)
 [node name="BloodSplash" type="TextureRect" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_2/Line_5/Blood_Splashes/Group_2/Blood_3" unique_id=280323538]
 z_index = 2
 layout_mode = 0
-offset_left = -59.184845
-offset_top = 41.184574
-offset_right = 76.27083
-offset_bottom = 88.38279
+offset_left = -67.59066
+offset_top = 56.256104
+offset_right = 67.86501
+offset_bottom = 103.454315
 rotation = -0.6780848
 scale = Vector2(0.9260237, 1.1193962)
 texture = ExtResource("2_g4s8a")
 expand_mode = 1
 
 [node name="Puzzle_Line_3" parent="Notebook_Page/Puzzle_Lines" unique_id=771586600 node_paths=PackedStringArray("line_inside_collision") instance=ExtResource("2_44k4v")]
-position = Vector2(30, 108)
+position = Vector2(330, 110)
+scale = Vector2(0.96, 0.9199997)
 line_inside_collision = NodePath("Line_2")
 
 [node name="Line_2" type="RichTextLabel" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_3" unique_id=585889753]
@@ -528,10 +466,8 @@ anchor_left = 0.045
 anchor_top = 0.120000005
 anchor_right = 0.045
 anchor_bottom = 0.120000005
-offset_left = -390.0
-offset_top = -40.0
-offset_right = -98.0
-offset_bottom = -13.0
+offset_right = 292.0
+offset_bottom = 27.0
 mouse_filter = 2
 theme = ExtResource("2_nlo1l")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -670,7 +606,8 @@ texture = ExtResource("2_g4s8a")
 expand_mode = 1
 
 [node name="Puzzle_Line_4" parent="Notebook_Page/Puzzle_Lines" unique_id=859219732 node_paths=PackedStringArray("line_inside_collision") instance=ExtResource("2_44k4v")]
-position = Vector2(31, 145)
+position = Vector2(330, 147)
+scale = Vector2(0.96, 0.9199997)
 line_inside_collision = NodePath("Line_1")
 
 [node name="Line_1" type="RichTextLabel" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_4" unique_id=974391902]
@@ -679,10 +616,8 @@ anchor_left = 0.045
 anchor_top = 0.120000005
 anchor_right = 0.045
 anchor_bottom = 0.120000005
-offset_left = -390.0
-offset_top = -40.0
-offset_right = -95.0
-offset_bottom = -13.0
+offset_right = 295.0
+offset_bottom = 27.0
 mouse_filter = 2
 theme = ExtResource("2_nlo1l")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -809,7 +744,8 @@ texture = ExtResource("2_g4s8a")
 expand_mode = 1
 
 [node name="Puzzle_Line_5" parent="Notebook_Page/Puzzle_Lines" unique_id=1495717340 node_paths=PackedStringArray("line_inside_collision") instance=ExtResource("2_44k4v")]
-position = Vector2(30, 184)
+position = Vector2(330, 186)
+scale = Vector2(0.96, 0.9199997)
 line_inside_collision = NodePath("Line_4")
 
 [node name="Line_4" type="RichTextLabel" parent="Notebook_Page/Puzzle_Lines/Puzzle_Line_5" unique_id=1840764782]
@@ -818,10 +754,8 @@ anchor_left = 0.045
 anchor_top = 0.120000005
 anchor_right = 0.045
 anchor_bottom = 0.120000005
-offset_left = -390.0
-offset_top = -40.0
-offset_right = -97.0
-offset_bottom = -13.0
+offset_right = 293.0
+offset_bottom = 27.0
 mouse_filter = 2
 theme = ExtResource("2_nlo1l")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
