@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://2huxjn0odarf"]
+
+[ext_resource type="PackedScene" uid="uid://brkstk8ovdg6c" path="res://Scenes/Puzzle/Puzzle_Line_Parent.tscn" id="1_jincc"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_kj5y8"]
+[ext_resource type="Texture2D" uid="uid://d0jdqb8snv56j" path="res://Assets/Placeholder/Effects/blood_splash_1.png" id="3_rxhfx"]
+
+[node name="Puzzle_Line" unique_id=1598418759 instance=ExtResource("1_jincc")]
+
+[node name="Line_5" type="RichTextLabel" parent="." index="2" unique_id=243653784]
+z_index = -1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.120000005
+anchor_right = 0.045
+anchor_bottom = 0.120000005
+offset_right = 294.0
+offset_bottom = 27.0
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_kj5y8")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Assim como os pesadelos e os sonhos"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_Splashes" type="Control" parent="Line_5" index="2" unique_id=1616687759]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Group_1" type="Control" parent="Line_5/Blood_Splashes" index="0" unique_id=322428412]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_1" type="ColorRect" parent="Line_5/Blood_Splashes/Group_1" index="0" unique_id=1022515009]
+z_index = 1
+layout_mode = 0
+offset_left = 46.0
+offset_top = 15.0
+offset_right = 71.580505
+offset_bottom = 26.432312
+rotation = 0.020086229
+scale = Vector2(1.0623637, 0.3837617)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_5/Blood_Splashes/Group_1/Blood_1" index="0" unique_id=265752247]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_rxhfx")
+expand_mode = 1
+
+[node name="Blood_2" type="ColorRect" parent="Line_5/Blood_Splashes/Group_1" index="1" unique_id=1116045295]
+z_index = 1
+layout_mode = 0
+offset_left = 82.0
+offset_top = 19.0
+offset_right = 107.580505
+offset_bottom = 30.432312
+rotation = -1.328385
+scale = Vector2(0.50034636, 0.65961856)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_5/Blood_Splashes/Group_1/Blood_2" index="0" unique_id=2129796786]
+z_index = 2
+layout_mode = 0
+offset_left = -65.571
+offset_top = 38.84766
+offset_right = 69.884674
+offset_bottom = 86.045876
+rotation = -0.6780848
+scale = Vector2(0.9260237, 2.110586)
+mouse_filter = 2
+texture = ExtResource("3_rxhfx")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Group_2" type="Control" parent="Line_5/Blood_Splashes" index="1" unique_id=1827070651]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_1" type="ColorRect" parent="Line_5/Blood_Splashes/Group_2" index="0" unique_id=1266931516]
+z_index = 1
+layout_mode = 0
+offset_left = 130.0
+offset_top = 17.0
+offset_right = 155.5805
+offset_bottom = 28.432312
+rotation = -0.5627656
+scale = Vector2(0.5771308, 0.5214685)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_5/Blood_Splashes/Group_2/Blood_1" index="0" unique_id=1572249506]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_rxhfx")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_2" type="ColorRect" parent="Line_5/Blood_Splashes/Group_2" index="1" unique_id=879935883]
+z_index = 1
+layout_mode = 0
+offset_left = 160.0
+offset_top = 7.000001
+offset_right = 185.5805
+offset_bottom = 18.432312
+rotation = 0.44057226
+scale = Vector2(0.8421274, 1.0201421)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_5/Blood_Splashes/Group_2/Blood_2" index="0" unique_id=1244240541]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_rxhfx")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_3" type="ColorRect" parent="Line_5/Blood_Splashes/Group_2" index="2" unique_id=158591550]
+z_index = 1
+layout_mode = 0
+offset_left = 201.0
+offset_top = 17.000004
+offset_right = 226.5805
+offset_bottom = 28.432316
+rotation = -0.34809065
+scale = Vector2(1.2583729, 1.039815)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_5/Blood_Splashes/Group_2/Blood_3" index="0" unique_id=1410505603]
+z_index = 2
+layout_mode = 0
+offset_left = -67.59066
+offset_top = 56.256104
+offset_right = 67.86501
+offset_bottom = 103.454315
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_rxhfx")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

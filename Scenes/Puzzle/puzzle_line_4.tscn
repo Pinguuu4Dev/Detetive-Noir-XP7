@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://dcsbs8aomy5y0"]
+
+[ext_resource type="PackedScene" uid="uid://brkstk8ovdg6c" path="res://Scenes/Puzzle/Puzzle_Line_Parent.tscn" id="1_yvp3c"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_70357"]
+[ext_resource type="Texture2D" uid="uid://d0jdqb8snv56j" path="res://Assets/Placeholder/Effects/blood_splash_1.png" id="3_83u35"]
+
+[node name="Puzzle_Line" unique_id=1598418759 instance=ExtResource("1_yvp3c")]
+
+[node name="Line_4" type="RichTextLabel" parent="." index="2" unique_id=944616227]
+z_index = -1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.120000005
+anchor_right = 0.045
+anchor_bottom = 0.120000005
+offset_right = 293.0
+offset_bottom = 27.0
+mouse_filter = 2
+theme = ExtResource("2_70357")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = " Os números nos amaldiçoam"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_Splashes" type="Control" parent="Line_4" index="2" unique_id=816917210]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Group_1" type="Control" parent="Line_4/Blood_Splashes" index="0" unique_id=1868851633]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_1" type="ColorRect" parent="Line_4/Blood_Splashes/Group_1" index="0" unique_id=937978439]
+z_index = 1
+layout_mode = 0
+offset_top = 9.0
+offset_right = 43.0
+offset_bottom = 23.0
+scale = Vector2(0.25524312, 0.8783908)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_1/Blood_1" index="0" unique_id=1142866554]
+z_index = 2
+layout_mode = 0
+offset_left = -38.0
+offset_top = -6.0
+offset_right = 48.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_2" type="ColorRect" parent="Line_4/Blood_Splashes/Group_1" index="1" unique_id=271380817]
+z_index = 1
+layout_mode = 0
+offset_left = 24.000002
+offset_top = 5.0
+offset_right = 47.0
+offset_bottom = 20.0
+scale = Vector2(0.8000007, 1.1500988)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_1/Blood_2" index="0" unique_id=137872097]
+z_index = 2
+layout_mode = 0
+offset_left = -3.9999971
+offset_top = 33.0
+offset_right = 41.89931
+offset_bottom = 76.244736
+rotation = -1.412123
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_3" type="ColorRect" parent="Line_4/Blood_Splashes/Group_1" index="2" unique_id=1751857366]
+z_index = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 23.0
+offset_right = 91.0
+offset_bottom = 38.0
+rotation = 3.1415803
+scale = Vector2(0.48000434, 1.1500988)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_1/Blood_3" index="0" unique_id=1731827638]
+z_index = 2
+layout_mode = 0
+offset_left = -6.8192673
+offset_top = 34.779583
+offset_right = 39.08004
+offset_bottom = 78.02432
+rotation = -1.412123
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_4" type="ColorRect" parent="Line_4/Blood_Splashes/Group_1" index="3" unique_id=378624285]
+z_index = 1
+layout_mode = 0
+offset_left = 81.0
+offset_top = 11.0
+offset_right = 104.0
+offset_bottom = 26.0
+rotation = 5.6898417
+scale = Vector2(0.48000434, 1.1500988)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_1/Blood_4" index="0" unique_id=1753296679]
+z_index = 2
+layout_mode = 0
+offset_left = -6.8192673
+offset_top = 34.779583
+offset_right = 39.08004
+offset_bottom = 78.02432
+rotation = -1.412123
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_5" type="ColorRect" parent="Line_4/Blood_Splashes/Group_1" index="4" unique_id=288135848]
+z_index = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 17.0
+offset_right = 133.5805
+offset_bottom = 28.432312
+rotation = -0.5903235
+scale = Vector2(0.59488946, 0.5381278)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_1/Blood_5" index="0" unique_id=765830654]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Group_2" type="Control" parent="Line_4/Blood_Splashes" index="1" unique_id=583356127]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_5" type="ColorRect" parent="Line_4/Blood_Splashes/Group_2" index="0" unique_id=2054184462]
+z_index = 1
+layout_mode = 0
+offset_left = 141.0
+offset_top = 10.0
+offset_right = 166.5805
+offset_bottom = 21.432312
+rotation = 0.3813151
+scale = Vector2(0.46267715, 0.57797223)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_2/Blood_5" index="0" unique_id=424983133]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_6" type="ColorRect" parent="Line_4/Blood_Splashes/Group_2" index="1" unique_id=617712581]
+z_index = 1
+layout_mode = 0
+offset_left = 163.0
+offset_top = 15.000004
+offset_right = 188.5805
+offset_bottom = 26.432316
+rotation = -0.43240866
+scale = Vector2(0.28945568, 0.3837617)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_2/Blood_6" index="0" unique_id=11587218]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_7" type="ColorRect" parent="Line_4/Blood_Splashes/Group_2" index="2" unique_id=834061269]
+z_index = 1
+layout_mode = 0
+offset_left = 176.99998
+offset_top = 20.0
+offset_right = 202.58049
+offset_bottom = 31.432312
+rotation = -0.5627656
+scale = Vector2(0.6663705, 0.59226334)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_2/Blood_7" index="0" unique_id=1858835219]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Blood_8" type="ColorRect" parent="Line_4/Blood_Splashes/Group_2" index="3" unique_id=186219055]
+z_index = 1
+layout_mode = 0
+offset_left = 199.0
+offset_top = 20.0
+offset_right = 224.5805
+offset_bottom = 31.432312
+rotation = -0.5315812
+scale = Vector2(0.61432076, 0.3650181)
+mouse_filter = 2
+color = Color(0.6627451, 0.19215687, 0.19607843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BloodSplash" type="TextureRect" parent="Line_4/Blood_Splashes/Group_2/Blood_8" index="0" unique_id=1800138536]
+z_index = 2
+layout_mode = 0
+offset_left = -59.184845
+offset_top = 41.184574
+offset_right = 76.27083
+offset_bottom = 88.38279
+rotation = -0.6780848
+scale = Vector2(0.9260237, 1.1193962)
+mouse_filter = 2
+texture = ExtResource("3_83u35")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

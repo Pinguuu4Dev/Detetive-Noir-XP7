@@ -1,7 +1,7 @@
 join protagonist center [animation="Instant In" z_index="1" mirrored="true"]
 protagonist: Vamos ver o que temos aqui…
 [wait time="0.15" hide_text="false"]
-protagonist: Meu… deus? A caligrafia é idêntica à minha, mas eu não me recordo de ter escrito isso.
+protagonist: Meu… deus? A caligrafia é idêntica à minha. Mas não me recordo de ter escrito isso.
 [wait time="0.1" hide_text="false"]
-protagonist: “Que… assim… sonhos… em…” a maioria das palavras tão censuradas, não consigo abstrair nada do que tá aqui, e as outras páginas parecem todas vazias… Secas, intactas, mas vazias!
+protagonist: "Que… assim… sonhos… em…” a maioria das palavras estão censuradas, é difícil tirar alguma coisa daqui. E as outras páginas parecem todas vazias… Secas, intactas, mas vazias.
 protagonist: É melhor dar mais uma olhada pelos arredores desse beco.

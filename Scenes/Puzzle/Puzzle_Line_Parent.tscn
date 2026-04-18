@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://brkstk8ovdg6c"]
+
+[ext_resource type="Script" uid="uid://h4iwvj483gku" path="res://Scripts/Mechanics/Objects/puzzle_line_behavior.gd" id="1_t04r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4s8a"]
+size = Vector2(294, 24)
+
+[node name="Puzzle_Line" type="Control" unique_id=83627724]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_t04r4")
+scale_up = 1.2000000000000002
+
+[node name="Line_Collision" type="Area2D" parent="." unique_id=757495385]
+z_index = 10
+priority = 2
+
+[node name="Collision_Shape" type="CollisionShape2D" parent="Line_Collision" unique_id=1025323229]
+z_index = 10
+position = Vector2(147, 12)
+shape = SubResource("RectangleShape2D_g4s8a")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2109676678]
+z_index = -2
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 294.0
+offset_bottom = 26.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.7297845, 0.7297845, 0.7297845, 0.50980395)
+
+[connection signal="body_entered" from="Line_Collision" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Line_Collision" to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="Line_Collision" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line_Collision" to="." method="_on_mouse_exited"]

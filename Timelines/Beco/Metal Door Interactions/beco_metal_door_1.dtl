@@ -1,15 +1,16 @@
 join protagonist center [animation="Slide From Left" length="0.4" wait="true" z_index="1"]
-protagonist: Ah, essa deve ser a entrada pro prédio que tinha sido informado na ligação.
+protagonist: Ah, essa deve ser a entrada pro prédio…
 [wait time="0.1"]
 protagonist: Hmmm… é metálica, e parece ter se oxidado um tanto por conta da chuva, eu imagino… mas não vejo nada demais. Será que alguém atende se eu bater?
-audio sfx -
+audio "res://Assets/Audio/SFX/Objects/knock-on-door.wav" [volume="-15.0"]
 protagonist: ...
-audio sfx -
+audio "res://Assets/Audio/SFX/Objects/knock-on-door.wav" [volume="-15.0"]
 protagonist: ...
 [wait time="0.2" skippable="true"]
 protagonist: ...
 [wait time="0.2" skippable="true"]
 protagonist: Tá, cansei de esperar, vou tentar abrir.
-audio sfx -
+audio "res://Assets/Audio/SFX/Ambience/scary_sound_2.wav"
+[wait time="0.3"]
 protagonist: Já imaginei que estivesse trancada, mas que barulho foi esse?
 protagonist: Bem, vou investigar melhor os arredores.

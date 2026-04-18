@@ -5,9 +5,9 @@ protagonist: [i]Em suas patas,[/i]
 protagonist: [i]Em meio às trevas,[/i]
 protagonist: [i]No sangue que uniria os mundos,[/i]
 protagonist: [i]Os números nos amaldiçoam,[/i]
-protagonist: [i]Assim como os pesadelos e os sonhos![/i]
+protagonist: [i]Assim como os pesadelos e os sonhos[/i]
 [wait time="0.6"]
 audio sfx "res://Assets/Audio/SFX/Objects/door_opening.wav" [volume="-5.0"]
 [wait time="1.2"]
-protagonist: Absurdamente específico, ainda acho que tô sonhando. Mas pelo menos deu certo. Hora de continuar a investigação…
+protagonist: Absurdamente específico, ainda acho que estou sonhando. Mas pelo menos deu certo. Hora de continuar a investigação.
 update protagonist left [length="1.4" z_index="1" move_time="1.2"]
