@@ -17,6 +17,7 @@ func _ready() -> void:
 
 	# Adquire todos os filhos da cena que são do tipo 'item'
 	for i in interactable_items.get_children():
+		print(i)
 		if i is Item:  # Conecta o sinal destes itens com a função deste script
 			i.item_interacted_signal.connect(_on_item_interacted)
 

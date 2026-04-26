@@ -17,16 +17,16 @@ func _process(delta: float) -> void:
 
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
-	Input.set_custom_mouse_cursor(CursorManager.interact_mouse_icon)
+	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
 	
 ## Função para resetar o cursor com o sinal do sprite de quando o mouse sai
 func _reset_cursor() -> void:
-	Input.set_custom_mouse_cursor(CursorManager.default_mouse_icon)
+	Input.set_custom_mouse_cursor(CursorManager.default_icon)
 	
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
 func object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("interact_with_items"):
-		Input.set_custom_mouse_cursor(CursorManager.grabbing_mouse_icon)
+		Input.set_custom_mouse_cursor(CursorManager.grab_icon)
 		object_held = true
 	if event.is_action_released("interact_with_items") and object_held:
 		item_interacted_signal.emit(self)

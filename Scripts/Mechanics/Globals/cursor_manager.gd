@@ -4,8 +4,8 @@ class_name Cursor_Manager
 
 @export_category("Tipos de Cursores")
 ## Ícone padrão do mouse
-@export var default_mouse_icon:= preload("res://Assets/Placeholder/Cursors/cursor_default.png") 
+@export var default_icon:= preload("res://Assets/Placeholder/Cursors/default.png") 
 ## Ícone para indicar que é possível interagir com um item
-@export var interact_mouse_icon:= preload("res://Assets/Placeholder/Cursors/cursor_grab.png") 
+@export var hover_icon:= preload("res://Assets/Placeholder/Cursors/hover.png") 
 ## Ícone de segurando item
-@export var grabbing_mouse_icon:= preload("res://Assets/Placeholder/Cursors/cursor_grabbing.png")
+@export var grab_icon:= preload("res://Assets/Placeholder/Cursors/click.png")
