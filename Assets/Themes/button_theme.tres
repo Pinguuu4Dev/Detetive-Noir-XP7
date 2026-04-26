@@ -7,11 +7,11 @@
 
 [resource]
 default_font = ExtResource("4_gigjq")
-default_font_size = 30
+default_font_size = 24
 Button/styles/hover = ExtResource("1_3ej8q")
 Button/styles/normal = ExtResource("2_wrgub")
 Button/styles/pressed = ExtResource("3_6vd5y")
 OptionButton/styles/hover = ExtResource("1_3ej8q")
 OptionButton/styles/normal = ExtResource("2_wrgub")
 OptionButton/styles/pressed = ExtResource("3_6vd5y")
-VBoxContainer/constants/separation = 50
+VBoxContainer/constants/separation = 30

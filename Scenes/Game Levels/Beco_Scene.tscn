@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cnw2ei7sdvg4l"]
 
-[ext_resource type="Texture2D" uid="uid://dbav1wlx6xgaa" path="res://Assets/Placeholder/Levels/alley.jpg" id="1_30hq6"]
 [ext_resource type="Script" uid="uid://w4kxkpanccg1" path="res://Scripts/Mechanics/Scenes/becoScene_logic.gd" id="1_rwci3"]
 [ext_resource type="PackedScene" uid="uid://6dm6tvn0abm4" path="res://Scenes/Game Levels/RitualRoom_Scene.tscn" id="2_4qler"]
 [ext_resource type="PackedScene" uid="uid://1k0u5t53vji6" path="res://Scenes/Items/BecoScene_Notebook.tscn" id="3_wgc12"]
+[ext_resource type="Texture2D" uid="uid://c1pur3awrv7k7" path="res://Assets/Placeholder/Levels/alley-bg.jpg" id="4_4qler"]
 [ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/BecoScene_Door_1.tscn" id="4_6xvgo"]
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
 [ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/BecoScene_Trash_1.tscn" id="5_lhagv"]
@@ -14,39 +14,56 @@ scale = Vector2(0.56, 0.56)
 script = ExtResource("1_rwci3")
 next_scene = ExtResource("2_4qler")
 
-[node name="Scene_Elements" type="Node2D" parent="." unique_id=1433143879]
+[node name="Scene_Elements" type="Node" parent="." unique_id=1264917687]
 
-[node name="Placeholder_BG" type="Sprite2D" parent="Scene_Elements" unique_id=38902416]
-z_index = -2
-position = Vector2(576.49994, 329.99997)
-scale = Vector2(0.9117187, 0.93055546)
-texture = ExtResource("1_30hq6")
-
-[node name="Interactable_Items" type="Node2D" parent="." unique_id=1695721762]
-position = Vector2(0, -1.7857143)
-
-[node name="Placeholder_Notebook" parent="Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
-modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
-position = Vector2(705.3571, 562.5)
-rotation = 0.35433745
-scale = Vector2(0.15667646, 0.12706041)
-delete_after_interaction = false
-
-[node name="Placeholder_Door" parent="Interactable_Items" unique_id=1451948297 groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
-position = Vector2(451, 470)
-rotation = 0.014495522
-scale = Vector2(0.22663306, 0.36068675)
-item_type = "metal_door"
-delete_after_interaction = false
-
-[node name="Placeholder_Trash" parent="Interactable_Items" unique_id=260404300 groups=["start_hidden"] instance=ExtResource("5_lhagv")]
-position = Vector2(264.2857, 451.78574)
-scale = Vector2(0.32514292, 0.18114284)
-delete_after_interaction = false
-
-[node name="Beco_Audio" type="AudioStreamPlayer2D" parent="." unique_id=1146770481]
+[node name="Beco_Audio" type="AudioStreamPlayer2D" parent="Scene_Elements" unique_id=1146770481]
 stream = ExtResource("4_nbpvd")
 volume_db = -10.0
 autoplay = true
+
+[node name="Beco_BG" type="TextureRect" parent="Scene_Elements" unique_id=1296039237]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_4qler")
+
+[node name="Interactable_Items" type="Control" parent="Scene_Elements/Beco_BG" unique_id=752073450]
+anchors_preset = 0
+scale = Vector2(0.56, 0.56)
+
+[node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
+modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
+position = Vector2(703.57153, 510.71436)
+rotation = 0.3030762
+scale = Vector2(0.15667646, 0.12706041)
+delete_after_interaction = false
+
+[node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
+position = Vector2(612.5, 321.4286)
+rotation = 0.014495522
+scale = Vector2(0.15417561, 0.42900252)
+item_type = "metal_door"
+delete_after_interaction = false
+
+[node name="Placeholder_Trash" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=260404300 groups=["start_hidden"] instance=ExtResource("5_lhagv")]
+position = Vector2(369.64288, 376.7857)
+rotation = -0.1523123
+scale = Vector2(0.26235053, 0.2344173)
+delete_after_interaction = false
+
+[node name="Placeholder_Trash2" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 groups=["start_hidden"] instance=ExtResource("5_lhagv")]
+position = Vector2(935.71436, 394.64288)
+rotation = 0.07442681
+scale = Vector2(0.44867325, 0.3371964)
+delete_after_interaction = false
 
 [node name="Pause_Screen" parent="." unique_id=602457543 instance=ExtResource("7_xo8tj")]

@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://ous4dtx7r8fq"]
+
+[ext_resource type="Texture2D" uid="uid://1l6au63g1vm" path="res://Assets/Placeholder/Textbox/dialog-box_name-label.png" id="1_kdwe4"]
+
+[resource]
+texture = ExtResource("1_kdwe4")
+texture_margin_left = 14.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0

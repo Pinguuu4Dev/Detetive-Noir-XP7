@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://81loofkmxjn0"]
+
+[ext_resource type="Texture2D" uid="uid://c3k5nw1te5sod" path="res://Assets/Placeholder/Textbox/dialog-box_full.png" id="1_n3q16"]
+
+[resource]
+content_margin_left = 119.0
+content_margin_top = 53.0
+content_margin_bottom = 24.0
+texture = ExtResource("1_n3q16")

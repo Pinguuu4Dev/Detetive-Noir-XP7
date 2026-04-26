@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cfa38wc81ivmh"]
+
+[ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/officeScene_logic.gd" id="1_5h1g4"]
+[ext_resource type="PackedScene" uid="uid://cnw2ei7sdvg4l" path="res://Scenes/Game Levels/Beco_Scene.tscn" id="2_4ri1a"]
+[ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Globals/cursor_manager.gd" id="3_e1qge"]
+[ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/MainScene_Phone.tscn" id="3_s3noc"]
+[ext_resource type="Texture2D" uid="uid://c54vdb0jy168o" path="res://Assets/Placeholder/Levels/office-bg.jpg" id="3_sjxch"]
+[ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
+[ext_resource type="PackedScene" uid="uid://bxe1w5clrd6a5" path="res://Scenes/Items/MainScene_Door.tscn" id="4_wkffy"]
+[ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
+
+[node name="Office_Scene" type="Node2D" unique_id=1242555024]
+scale = Vector2(0.56081104, 0.5600002)
+script = ExtResource("1_5h1g4")
+next_scene = ExtResource("2_4ri1a")
+
+[node name="Scene_Elements" type="Node" parent="." unique_id=19095818]
+
+[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=2062857342]
+z_index = -2
+custom_minimum_size = Vector2(640, 320)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_sjxch")
+
+[node name="Interactable_Items" type="Control" parent="Scene_Elements/Placeholder_BG" unique_id=259430953]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Placeholder_Phone" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=114531261 instance=ExtResource("3_s3noc")]
+position = Vector2(-18, -4.000025)
+rotation = 0.35287395
+scale = Vector2(0.06809677, 0.07739601)
+item_type = "phone"
+
+[node name="Placeholder_Door" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1494225548 instance=ExtResource("4_wkffy")]
+position = Vector2(-240, 75)
+scale = Vector2(0.29409647, 0.46732822)
+item_type = "door"
+delete_after_interaction = false
+
+[node name="Audio_Player" type="AudioStreamPlayer2D" parent="Scene_Elements" unique_id=1327138087]
+scale = Vector2(0.56081104, 0.5600002)
+stream = ExtResource("6_s3noc")
+volume_db = -14.0
+autoplay = true
+
+[node name="Cursor_Manager" type="Node" parent="." unique_id=2042316836]
+script = ExtResource("3_e1qge")
+
+[node name="PauseScreen" parent="." unique_id=1931167145 instance=ExtResource("4_q8kq6")]
+process_priority = 1
+process_physics_priority = 1
+layer = 128

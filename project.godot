@@ -112,6 +112,7 @@ save/default_slot="autosave"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://cn46cfa8tjqsw"

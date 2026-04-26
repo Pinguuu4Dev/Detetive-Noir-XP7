@@ -5,6 +5,8 @@ extends Node2D
 var cur_timeline: DialogicTimeline
 ## Para poder sabermos se uma timeline está acontecendo ou não
 var timeline_playing:= false 
+@onready var interactable_items = $Scene_Elements/Placeholder_BG/Interactable_Items
+
 @export_category("Próxima Cena")
 @export var next_scene: PackedScene
 
@@ -13,13 +15,10 @@ func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
 
-	Dialogic.VAR.reset() # Reseta as variáveis da timeline
 	# Adquire todos os filhos da cena que são do tipo 'item'
-	for x in get_children():
-		if x.name == "Interactable_Items":
-			for i in x.get_children():
-				if i is Item:  # Conecta o sinal destes itens com a função deste script
-					i.item_interacted_signal.connect(_on_item_interacted)
+	for i in interactable_items.get_children():
+		if i is Item:  # Conecta o sinal destes itens com a função deste script
+			i.item_interacted_signal.connect(_on_item_interacted)
 
 ## Função quando o sinal de 'item_collected' dos itens ser ativado
 func _on_item_interacted(i: Item) -> void:

@@ -10,7 +10,7 @@ var timelines_finished: Array[String] = []
 var notebook_ref: Item = null
 var puzzle_done = false
 
-@onready var interactable_items_ref = $Interactable_Items
+@onready var interactable_items = $Scene_Elements/Beco_BG/Interactable_Items
 
 @export_category("Próxima Cena")
 @export var next_scene: PackedScene
@@ -18,10 +18,10 @@ var puzzle_done = false
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
-	notebook_ref = interactable_items_ref.get_node("Placeholder_Notebook")
+	notebook_ref = $Scene_Elements/Beco_BG/Interactable_Items/Placeholder_Notebook
 	
 	# Adquire todos os filhos da cena que são do tipo 'item'
-	for i in interactable_items_ref.get_children():
+	for i in interactable_items.get_children():
 		if i is Item:  # Conecta o sinal destes itens com a função deste script
 			i.item_interacted_signal.connect(_on_item_interacted)
 			

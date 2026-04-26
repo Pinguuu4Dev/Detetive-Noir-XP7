@@ -15,7 +15,7 @@
 &"display_name": "Jynx Jink",
 &"mirror": false,
 &"nicknames": ["Jynx"],
-&"offset": Vector2(0, 10),
+&"offset": Vector2(-60, 10),
 &"portraits": {
 "placeholder_protagonist": {
 "export_overrides": {
@@ -27,5 +27,5 @@
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },
-&"scale": 0.6
+&"scale": 0.8
 }
