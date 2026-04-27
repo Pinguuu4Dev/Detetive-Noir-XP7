@@ -3,10 +3,123 @@
 [ext_resource type="Texture2D" uid="uid://cjn4fe8j5ldum" path="res://Assets/Placeholder/Levels/ritual_room.png" id="1_i4k8b"]
 [ext_resource type="Script" uid="uid://b55saolj2the2" path="res://Scripts/Mechanics/Scenes/ritualScene_logic.gd" id="1_mcrfp"]
 
+[sub_resource type="Animation" id="Animation_mcrfp"]
+resource_name = "Fade_In"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/Fade_Color:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/Fade_Color:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bb25a"]
+resource_name = "Fade_Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/Fade_Color:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/Fade_Color:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_egwkw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/Fade_Color:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/Fade_Color:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bb25a"]
+_data = {
+&"Fade_In": SubResource("Animation_mcrfp"),
+&"Fade_Out": SubResource("Animation_bb25a"),
+&"RESET": SubResource("Animation_egwkw")
+}
+
 [node name="RitualRoom_Scene" type="Node2D" unique_id=1884547424]
 script = ExtResource("1_mcrfp")
 
-[node name="Placeholder_BG" type="Sprite2D" parent="." unique_id=647810504]
-position = Vector2(322.49997, 183.49998)
+[node name="Scene_Elements" type="Node" parent="." unique_id=1190844019]
+
+[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=393998331]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.33593747, 0.33611107)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("1_i4k8b")
+
+[node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1718756825]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -18.0
+offset_right = 29.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scene_Elements" unique_id=1350356664]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_bb25a")

@@ -11,6 +11,7 @@ var notebook_ref: Item = null
 var puzzle_done = false
 
 @onready var interactable_items = $Scene_Elements/Beco_BG/Interactable_Items
+@onready var animation_player = $Scene_Elements/AnimationPlayer
 
 @export_category("Próxima Cena")
 @export var next_scene: PackedScene
@@ -24,7 +25,9 @@ func _ready() -> void:
 	for i in interactable_items.get_children():
 		if i is Item:  # Conecta o sinal destes itens com a função deste script
 			i.item_interacted_signal.connect(_on_item_interacted)
-			
+	
+	animation_player.play("Fade_In")
+	await animation_player.animation_finished
 	Dialogic.start("beco_start")
 	
 ## Função quando o sinal de 'item_collected' dos itens ser ativado
@@ -36,6 +39,8 @@ func _on_item_interacted(i: Item) -> void:
 			elif !timelines_finished.has("beco_metal_door_2") and timelines_finished.has("beco_metal_door_1"): #and timelines_finished.has("beco_notebook_4")
 				Dialogic.start("beco_metal_door_2")
 			elif timelines_finished.has("beco_metal_door_2"):
+				animation_player.play("Fade_Out")
+				await animation_player.animation_finished
 				get_tree().change_scene_to_packed(next_scene)
 			else:
 				Dialogic.start("beco_incomplete_scene_3")

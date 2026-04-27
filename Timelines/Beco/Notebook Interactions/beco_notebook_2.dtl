@@ -1,4 +1,4 @@
-join protagonist center [animation="Zoom In" length="0.4" wait="true" z_index="1" mirrored="true"]
+join protagonist center [animation="Zoom In" length="0.4" wait="true" z_index="1"]
 protagonist: [i]“que… assim… sonhos… em…”[/i]
 protagonist: [i]“Em suas patas… os números nos amaldiçoam”[/i]?
 protagonist: Aparentemente algumas partes dessa escritura ficaram mais compreensíveis agora. Interessante.

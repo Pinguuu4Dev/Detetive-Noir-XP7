@@ -6,6 +6,8 @@ var cur_timeline: DialogicTimeline
 ## Para poder sabermos se uma timeline está acontecendo ou não
 var timeline_playing:= false 
 @onready var interactable_items = $Scene_Elements/Placeholder_BG/Interactable_Items
+@onready var animation_player = $Scene_Elements/AnimationPlayer
+@onready var audio_player = $Audio_Player
 
 @export_category("Próxima Cena")
 @export var next_scene: PackedScene
@@ -15,9 +17,9 @@ func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
 
+	animation_player.play("Fade_In")
 	# Adquire todos os filhos da cena que são do tipo 'item'
 	for i in interactable_items.get_children():
-		print(i)
 		if i is Item:  # Conecta o sinal destes itens com a função deste script
 			i.item_interacted_signal.connect(_on_item_interacted)
 
@@ -28,11 +30,6 @@ func _on_item_interacted(i: Item) -> void:
 			if !Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
 				Dialogic.VAR.main_vars.set("picked_phone", true)
 				Dialogic.start("office_phone_call")
-		"door": 
-			if !Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
-				Dialogic.start("office_incomplete_scene_1")
-			if Dialogic.VAR.main_vars.picked_phone and !timeline_playing:
-				get_tree().change_scene_to_packed(next_scene)
 
 ## Quando uma timeline começar
 func _on_timeline_started() -> void:
@@ -44,4 +41,8 @@ func _on_timeline_started() -> void:
 func _on_timeline_ended() -> void:
 	timeline_playing = false # Diz que a timeline não está ativa
 	print("'", cur_timeline.get_identifier(), "'", " terminou: ", !timeline_playing) # Debug pra indicar qual timeline está terminou e se realmente está terminado
+	if cur_timeline.get_identifier() == "office_phone_call":
+		animation_player.play("Fade_Out")
+		await animation_player.animation_finished
+		get_tree().change_scene_to_packed(next_scene)
 	cur_timeline = null

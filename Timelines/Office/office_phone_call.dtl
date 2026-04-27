@@ -1,4 +1,4 @@
-join protagonist rightmost [animation="Slide From Right" wait="true" z_index="1"]
+join protagonist rightmost [animation="Slide From Right" wait="true" z_index="1" mirrored="true"]
 protagonist: Jynx, detetive felina particular à disposição. Como posso lhe ajudar?
 join mystery_caller leftmost [animation="Slide From Left" wait="true" z_index="1"]
 audio "res://Assets/Audio/SFX/Objects/phone_static.wav" [volume="-5.0"]
@@ -19,4 +19,7 @@ mystery_caller: ...
 leave mystery_caller [animation="Fade Out" wait="true"]
 [wait time="0.2"]
 audio sfx "res://Assets/Audio/SFX/Objects/Phone_hang_up.wav"
+[wait time="0.2"]
+audio sfx "res://Assets/Audio/SFX/footsteps_wood.wav"
+leave protagonist [animation="Slide To Left" length="1.2" wait="true"]
 protagonist: Beco da rua XV… é perto daqui. Umas três quadras de distância.

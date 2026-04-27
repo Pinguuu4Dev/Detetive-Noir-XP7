@@ -1,32 +1,126 @@
-[gd_scene format=3 uid="uid://cfa38wc81ivmh"]
+[gd_scene format=3 uid="uid://dd3ja6w7yaep0"]
 
-[ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/officeScene_logic.gd" id="1_5h1g4"]
+[ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/officeScene_logic.gd" id="1_4ri1a"]
 [ext_resource type="PackedScene" uid="uid://cnw2ei7sdvg4l" path="res://Scenes/Game Levels/Beco_Scene.tscn" id="2_4ri1a"]
+[ext_resource type="Texture2D" uid="uid://c54vdb0jy168o" path="res://Assets/Placeholder/Levels/office-bg.jpg" id="3_4ri1a"]
 [ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Globals/cursor_manager.gd" id="3_e1qge"]
 [ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/MainScene_Phone.tscn" id="3_s3noc"]
-[ext_resource type="Texture2D" uid="uid://c54vdb0jy168o" path="res://Assets/Placeholder/Levels/office-bg.jpg" id="3_sjxch"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
-[ext_resource type="PackedScene" uid="uid://bxe1w5clrd6a5" path="res://Scenes/Items/MainScene_Door.tscn" id="4_wkffy"]
 [ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
+
+[sub_resource type="Animation" id="Animation_wkffy"]
+resource_name = "Fade_In"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_Color:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade_Color:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4ri1a"]
+resource_name = "Fade_Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_Color:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade_Color:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7m2wl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_Color:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade_Color:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dk640"]
+_data = {
+&"Fade_In": SubResource("Animation_wkffy"),
+&"Fade_Out": SubResource("Animation_4ri1a"),
+&"RESET": SubResource("Animation_7m2wl")
+}
 
 [node name="Office_Scene" type="Node2D" unique_id=1242555024]
 scale = Vector2(0.56081104, 0.5600002)
-script = ExtResource("1_5h1g4")
+script = ExtResource("1_4ri1a")
 next_scene = ExtResource("2_4ri1a")
 
-[node name="Scene_Elements" type="Node" parent="." unique_id=19095818]
+[node name="Scene_Elements" type="Node" parent="." unique_id=311925423]
 
-[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=2062857342]
+[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=253579388]
 z_index = -2
-custom_minimum_size = Vector2(640, 320)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -49.95145
+offset_top = -44.71193
+offset_right = 47.53705
+offset_bottom = 54.058594
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_sjxch")
+scale = Vector2(0.89077675, 0.8127115)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_4ri1a")
 
-[node name="Interactable_Items" type="Control" parent="Scene_Elements/Placeholder_BG" unique_id=259430953]
+[node name="Interactable_Items" type="Control" parent="Scene_Elements/Placeholder_BG" unique_id=484792981]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,27 +129,37 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.6295754, 0.6890516)
 
 [node name="Placeholder_Phone" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=114531261 instance=ExtResource("3_s3noc")]
-position = Vector2(-18, -4.000025)
-rotation = 0.35287395
-scale = Vector2(0.06809677, 0.07739601)
+position = Vector2(-33.510075, -8.34523)
+scale = Vector2(0.114648454, 0.12413737)
 item_type = "phone"
 
-[node name="Placeholder_Door" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1494225548 instance=ExtResource("4_wkffy")]
-position = Vector2(-240, 75)
-scale = Vector2(0.29409647, 0.46732822)
-item_type = "door"
-delete_after_interaction = false
+[node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1765385306]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -59.0
+offset_right = 83.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="Audio_Player" type="AudioStreamPlayer2D" parent="Scene_Elements" unique_id=1327138087]
-scale = Vector2(0.56081104, 0.5600002)
-stream = ExtResource("6_s3noc")
-volume_db = -14.0
-autoplay = true
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scene_Elements" unique_id=708208440]
+libraries/ = SubResource("AnimationLibrary_dk640")
 
 [node name="Cursor_Manager" type="Node" parent="." unique_id=2042316836]
 script = ExtResource("3_e1qge")
+
+[node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1327138087]
+stream = ExtResource("6_s3noc")
+volume_db = -14.0
+autoplay = true
 
 [node name="PauseScreen" parent="." unique_id=1931167145 instance=ExtResource("4_q8kq6")]
 process_priority = 1
