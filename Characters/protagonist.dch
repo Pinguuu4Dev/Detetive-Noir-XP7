@@ -13,7 +13,7 @@
 &"default_portrait": "placeholder_protagonist",
 &"description": "",
 &"display_name": "Jynx Jink",
-&"mirror": true,
+&"mirror": false,
 &"nicknames": ["Jynx"],
 &"offset": Vector2(-60, 10),
 &"portraits": {

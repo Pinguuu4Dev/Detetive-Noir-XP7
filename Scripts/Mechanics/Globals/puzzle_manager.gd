@@ -11,7 +11,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _remove_selected_line():
-	if selected_line:
-		selected_line._on_line_selected(false)
-		selected_line = null
+func _set_selected_line(line: PuzzleLine):
+	print("Selected line of Manager: ", selected_line)
+	if !selected_line:
+		selected_line = line
+	else:
+		selected_line._in_line_selected(false)
+		selected_line = line
+	print("Change selected line to: ", line)

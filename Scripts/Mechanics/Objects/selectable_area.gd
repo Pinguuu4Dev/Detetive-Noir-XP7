@@ -24,30 +24,22 @@ func _on_mouse_exited() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_with_items") and PuzzleManager.selected_line and hovered:
-		selected = true
-		_on_selected()
-		if !self.puzzleLine_ref:
-			_set_puzzleLine(PuzzleManager.selected_line)
-		else:
-			var temp_line
-			temp_line = puzzleLine_ref
-			PuzzleManager.selected_area = self
-			puzzleLine_ref._on_line_selected(false)
-			puzzleLine_ref.position = PuzzleManager.selected_line.global_position
-			_set_puzzleLine(PuzzleManager.selected_line)
+		_is_selected(true)
+		_set_puzzleLine(PuzzleManager.selected_line)
 	if event.is_action_released("interact_with_items"):
-		selected = false
-		_on_selected()
+		_is_selected(false)
 		
 func _set_puzzleLine(p: PuzzleLine):
+	if !puzzleLine_ref:
 		self.puzzleLine_ref = p
 		self.puzzleLine_ref.position = self.global_position
-		PuzzleManager.selected_line._on_line_selected(false)
-		PuzzleManager._remove_selected_line()
-		self.puzzleLine_ref._on_line_selected(false)
+		print(puzzleLine_ref)
+		PuzzleManager._set_selected_line(null)
+		print(PuzzleManager.selected_area, " and ", PuzzleManager.selected_line)
 		
-func _on_selected():
-	if selected:
+func _is_selected(b: bool):
+	selected = b
+	if b:
 		scale = Vector2(scale_up, scale_up)
 	else:
 		scale = original_scale

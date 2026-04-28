@@ -25,11 +25,11 @@ func _on_mouse_exited() -> void:
 		scale = original_scale
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact_with_items") and !PuzzleManager.selected_line and hovered:
-		PuzzleManager.selected_line = self
-		_on_line_selected(true)
+	if event.is_action_pressed("interact_with_items") and hovered:
+		_in_line_selected(true)
 		
-func _on_line_selected(b: bool) -> void:
+func _in_line_selected(b: bool) -> void:
+	PuzzleManager._set_selected_line(self)
 	if b:
 		selected = true
 		scale = Vector2(scale_up, scale_up)
