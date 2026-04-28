@@ -6,34 +6,42 @@ var selected:= false
 var initial_pos: Vector2
 
 @export_range(1.1, 2, 0.1) var scale_up = 1.3
+var new_scale = Vector2(scale_up, scale_up)
 var original_scale:= Vector2(1, 1)
 
 func _ready() -> void:
 	initial_pos = global_position
 
-func _process(delta: float) -> void:
-	pass
-	
 func _on_mouse_entered() -> void:
-	hovered = true
 	if !selected:
-		scale = Vector2(scale_up, scale_up)
-	
+		_hover(true)
+		
 func _on_mouse_exited() -> void:
-	hovered = false
 	if !selected:
-		scale = original_scale
+		_hover(false)
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact_with_items") and hovered:
-		_in_line_selected(true)
-		
-func _in_line_selected(b: bool) -> void:
-	PuzzleManager._set_selected_line(self)
+	if event.is_action_pressed("interact_with_items") and !PuzzleManager.hovered_area:
+		if hovered and !selected:
+			PuzzleManager._set_selected_line(self)
+	elif event.is_action_pressed("interact_with_items"):
+		if selected:
+			PuzzleManager._set_area_line(self)
+			
+func _selected(b: bool) -> void:
 	if b:
 		selected = true
-		scale = Vector2(scale_up, scale_up)
+		%Line_Areas.visible = true
+		scale = new_scale
 	else:
 		selected = false
+		%Line_Areas.visible = false
+		scale = original_scale
+		
+func _hover(h: bool):
+	if h:
+		hovered = true
+		scale = new_scale
+	else:
 		hovered = false
 		scale = original_scale

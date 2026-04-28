@@ -24,7 +24,7 @@ offset_right = 147.0
 offset_bottom = 13.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
-color = Color(0.0026044694, 0.19737977, 0.7893448, 0.431)
+color = Color(0, 0, 0, 0.43137255)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

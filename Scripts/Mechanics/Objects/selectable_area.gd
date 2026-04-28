@@ -2,44 +2,39 @@ extends Area2D
 class_name Selectable
 
 var hovered:= false
-var selected:= false
 var puzzleLine_ref: PuzzleLine
 
 @export_range(1.1, 2, 0.1) var scale_up = 1.3
 var original_scale:= Vector2(1, 1)
 
-
-func _process(delta: float) -> void:
-	pass
-	
 func _on_mouse_entered() -> void:
-	hovered = true
-	if !selected:
-		scale = Vector2(scale_up, scale_up)
-	
+	_hover(true)
+	PuzzleManager._set_hovered_area(self)
+	if puzzleLine_ref:
+		print("Hovered area of Manager: '", name.substr(name.length() - 1), "' has line: '", puzzleLine_ref.name.substr(puzzleLine_ref.name.length() - 1), "'.")
+	else:
+		print("Hovered area of Manager: '", name.substr(name.length() - 1), "' is empty.")
+		
 func _on_mouse_exited() -> void:
-	hovered = false
-	if !selected:
-		scale = original_scale
-	
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact_with_items") and PuzzleManager.selected_line and hovered:
-		_is_selected(true)
-		_set_puzzleLine(PuzzleManager.selected_line)
-	if event.is_action_released("interact_with_items"):
-		_is_selected(false)
+	_hover(false)
+	PuzzleManager._set_hovered_area(null)
 		
-func _set_puzzleLine(p: PuzzleLine):
-	if !puzzleLine_ref:
-		self.puzzleLine_ref = p
-		self.puzzleLine_ref.position = self.global_position
-		print(puzzleLine_ref)
-		PuzzleManager._set_selected_line(null)
-		print(PuzzleManager.selected_area, " and ", PuzzleManager.selected_line)
-		
-func _is_selected(b: bool):
-	selected = b
-	if b:
+func _set_line(p: PuzzleLine):
+	puzzleLine_ref = p
+	puzzleLine_ref.position = global_position
+	print("Line '", puzzleLine_ref.name.substr(puzzleLine_ref.name.length() - 1), "' assigned to area '", name.substr(name.length() - 1), "'. ")
+	PuzzleManager._add_occupied_area(self)
+	PuzzleManager._clear_values()
+
+func _clear_line():
+	puzzleLine_ref = null
+	if PuzzleManager.areas_occupied.has(self):
+		PuzzleManager.areas_occupied.remove_at(PuzzleManager.areas_occupied.find(self))
+
+func _hover(h: bool):
+	if h:
+		hovered = true
 		scale = Vector2(scale_up, scale_up)
 	else:
+		hovered = false
 		scale = original_scale
