@@ -21,16 +21,16 @@ func _on_mouse_exited() -> void:
 		_hover(false)
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact_with_items") and !PuzzleManager.hovered_area:
-		if hovered and !selected:
+	if event.is_action_pressed("interact_with_items"):
+		if hovered:
 			PuzzleManager._set_selected_line(self)
-	elif event.is_action_pressed("interact_with_items"):
-		if selected:
-			PuzzleManager._set_area_line(self)
-			
+		elif selected:
+			PuzzleManager._set_selected_line(self)
+		
 func _selected(b: bool) -> void:
 	if b:
 		selected = true
+		_hover(false)
 		%Line_Areas.visible = true
 		scale = new_scale
 	else:
