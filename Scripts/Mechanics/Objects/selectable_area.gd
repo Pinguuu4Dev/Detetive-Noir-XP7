@@ -19,11 +19,10 @@ func _on_mouse_exited() -> void:
 func _set_line(p: PuzzleLine):
 	p.position = global_position
 	puzzleLine_ref = p
-	print("Area '", self.name, "' has line '", puzzleLine_ref)
-	
-	PuzzleManager._add_occupied_area(self)
+	puzzleLine_ref._set_in_area(self)
 
 func _clear_line():
+	puzzleLine_ref._set_in_area(null)
 	puzzleLine_ref = null
 
 func _hover(h: bool):

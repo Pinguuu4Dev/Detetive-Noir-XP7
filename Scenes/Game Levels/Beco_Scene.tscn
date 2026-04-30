@@ -132,10 +132,15 @@ scale = Vector2(0.56, 0.56)
 
 [node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
 modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
-position = Vector2(703.57153, 510.71436)
+position = Vector2(741.07153, 541.0715)
 rotation = 0.3030762
 scale = Vector2(0.15667646, 0.12706041)
 delete_after_interaction = false
+layout_mode = 1
+offset_left = 703.57153
+offset_top = 510.71436
+offset_right = 2455.3623
+offset_bottom = 1267.9983
 
 [node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
 position = Vector2(612.5, 321.4286)
@@ -143,12 +148,14 @@ rotation = 0.014495522
 scale = Vector2(0.15417561, 0.42900252)
 item_type = "metal_door"
 delete_after_interaction = false
+open_after_interaction = null
 
 [node name="Placeholder_Trash2" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 groups=["start_hidden"] instance=ExtResource("5_lhagv")]
 position = Vector2(935.71436, 394.64288)
 rotation = 0.07442681
 scale = Vector2(0.44867325, 0.3371964)
 delete_after_interaction = false
+open_after_interaction = null
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=434344345]
 anchors_preset = 15

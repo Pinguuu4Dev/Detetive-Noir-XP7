@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c5uce2natwtyk"]
 
+[ext_resource type="Script" uid="uid://b0kymjqxulia3" path="res://Scripts/Mechanics/Objects/notebook_puzzle.gd" id="1_0v856"]
 [ext_resource type="Texture2D" uid="uid://buofng6w240tk" path="res://Assets/Placeholder/Objects/notebook_page.png" id="1_lfsmi"]
 [ext_resource type="PackedScene" uid="uid://6d7xdun01qoe" path="res://Scenes/Puzzle/Lines/puzzle_line_1.tscn" id="2_isv3y"]
 [ext_resource type="PackedScene" uid="uid://csy0jd2rp4d4x" path="res://Scenes/Puzzle/Lines/puzzle_line_2.tscn" id="3_0v856"]
@@ -7,71 +8,113 @@
 [ext_resource type="PackedScene" uid="uid://dcsbs8aomy5y0" path="res://Scenes/Puzzle/Lines/puzzle_line_4.tscn" id="5_wd4mk"]
 [ext_resource type="PackedScene" uid="uid://2huxjn0odarf" path="res://Scenes/Puzzle/Lines/puzzle_line_5.tscn" id="6_cg02q"]
 [ext_resource type="PackedScene" uid="uid://gwgr1dxsgm5p" path="res://Scenes/Puzzle/Areas/Selectable_Areas.tscn" id="7_n811j"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_44k4v"]
 
-[node name="NotebookPuzzle" type="Node2D" unique_id=1122473079]
+[node name="NotebookPuzzle" type="Control" unique_id=1089036930]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0v856")
 
 [node name="Visibility_Player" type="AnimationPlayer" parent="." unique_id=470359343]
 libraries/ = SubResource("AnimationLibrary_44k4v")
 
 [node name="Notebook_Page" type="TextureRect" parent="." unique_id=343645507]
 z_index = -1
-offset_right = 640.0
-offset_bottom = 359.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_lfsmi")
 
 [node name="Puzzle_Lines" type="Control" parent="Notebook_Page" unique_id=1241974789]
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Puzzle_Line1" parent="Notebook_Page/Puzzle_Lines" unique_id=1598418759 instance=ExtResource("2_isv3y")]
 z_index = 4
-layout_mode = 0
-offset_left = 334.0
-offset_top = 106.0
-offset_right = 334.0
-offset_bottom = 106.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.113000005
+anchor_right = 1.0
+anchor_bottom = 0.113000005
+offset_left = -306.0
+offset_top = 65.32
+offset_right = -306.0
+offset_bottom = 65.32
 pivot_offset_ratio = Vector2(0, 0)
 scale_up = 1.3
 
 [node name="Puzzle_Line2" parent="Notebook_Page/Puzzle_Lines" unique_id=2080902045 instance=ExtResource("3_0v856")]
 z_index = 4
-layout_mode = 0
-offset_left = 334.0
-offset_top = 145.0
-offset_right = 334.0
-offset_bottom = 145.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.43100002
+anchor_right = 1.0
+anchor_bottom = 0.43100002
+offset_left = -306.0
+offset_top = -10.160004
+offset_right = -306.0
+offset_bottom = -10.160004
 pivot_offset_ratio = Vector2(0, 0)
 scale_up = 1.3
 
 [node name="Puzzle_Line3" parent="Notebook_Page/Puzzle_Lines" unique_id=431103160 instance=ExtResource("4_2oifp")]
 z_index = 4
-layout_mode = 0
-offset_left = 334.0
-offset_top = 184.0
-offset_right = 334.0
-offset_bottom = 184.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.544
+anchor_right = 1.0
+anchor_bottom = 0.544
+offset_left = -306.0
+offset_top = -11.840012
+offset_right = -306.0
+offset_bottom = -11.840012
 pivot_offset_ratio = Vector2(0, 0)
 scale_up = 1.3
 
 [node name="Puzzle_Line4" parent="Notebook_Page/Puzzle_Lines" unique_id=1939637381 instance=ExtResource("5_wd4mk")]
 z_index = 4
-layout_mode = 0
-offset_left = 334.0
-offset_top = 69.0
-offset_right = 334.0
-offset_bottom = 69.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.231
+anchor_right = 1.0
+anchor_bottom = 0.231
+offset_left = -306.0
+offset_top = -14.160004
+offset_right = -306.0
+offset_bottom = -14.160004
 pivot_offset_ratio = Vector2(0, 0)
 scale_up = 1.3
 
 [node name="Puzzle_Line5" parent="Notebook_Page/Puzzle_Lines" unique_id=2109427686 instance=ExtResource("6_cg02q")]
 z_index = 4
-layout_mode = 0
-offset_left = 334.0
-offset_top = 30.0
-offset_right = 334.0
-offset_bottom = 30.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.11400001
+anchor_right = 1.0
+anchor_bottom = 0.11400001
+offset_left = -306.0
+offset_top = -11.040001
+offset_right = -306.0
+offset_bottom = -11.040001
 pivot_offset_ratio = Vector2(0, 0)
 scale_up = 1.3
 
@@ -94,3 +137,23 @@ position = Vector2(30, 145)
 
 [node name="Area_5" parent="Notebook_Page/Line_Areas" unique_id=1437472023 instance=ExtResource("7_n811j")]
 position = Vector2(30, 183)
+
+[node name="Reset_Button" type="Button" parent="Notebook_Page" unique_id=593203790]
+z_index = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -81.0
+offset_right = 78.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("8_isv3y")
+action_mode = 0
+text = "Resetar"
+
+[connection signal="pressed" from="Notebook_Page/Reset_Button" to="." method="_on_reset_button_pressed"]

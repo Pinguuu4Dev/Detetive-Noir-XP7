@@ -4,26 +4,40 @@
 [ext_resource type="Texture2D" uid="uid://bv2o42w0fkj08" path="res://Assets/Placeholder/Objects/notebook.png" id="1_uhysx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(537.31354, 462.963)
+size = Vector2(429.10413, 324.0741)
 
-[node name="Placeholder_Notebook" type="Sprite2D" unique_id=114531261]
+[sub_resource type="Animation" id="Animation_1q37m"]
+resource_name = "Open"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uctva"]
+_data = {
+&"Open": SubResource("Animation_1q37m")
+}
+
+[node name="Placeholder_Notebook" type="Sprite2D" unique_id=2138698721]
 z_index = 5
 scale = Vector2(0.268, 0.324)
 texture = ExtResource("1_uhysx")
 script = ExtResource("1_6daru")
 item_type = "notebook"
+delete_after_interaction = null
+open_after_interaction = null
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-position = Vector2(-3.7313278, -9.259279)
+position = Vector2(-18.656723, 9.259254)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Notebook_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0
 bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1267802906]
+root_node = NodePath("")
+libraries/ = SubResource("AnimationLibrary_uctva")
 
 [connection signal="input_event" from="collision_area" to="." method="object_is_held"]
 [connection signal="mouse_entered" from="collision_area" to="." method="_change_cursor"]

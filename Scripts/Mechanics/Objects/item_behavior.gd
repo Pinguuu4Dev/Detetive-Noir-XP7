@@ -6,6 +6,8 @@ class_name Item
 @export_category("Parâmetros de Interação")
 @export var item_type: String
 @export var delete_after_interaction:= true
+@export var open_after_interaction:= false
+
 var object_held:= false
 
 ## Sinal para comunicar com outros scripts
@@ -34,3 +36,5 @@ func object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if delete_after_interaction:
 			queue_free() # Destrói o item
 		_reset_cursor() 
+		if open_after_interaction:
+			

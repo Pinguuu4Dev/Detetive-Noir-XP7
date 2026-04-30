@@ -3,7 +3,8 @@ class_name PuzzleLine
 
 var hovered:= false
 var selected:= false
-var initial_pos: Vector2
+var inside_area: Selectable
+var initial_pos:= Vector2(100, 100)
 
 @export_range(1.1, 2, 0.1) var scale_up = 1.3
 var new_scale = Vector2(scale_up, scale_up)
@@ -22,11 +23,10 @@ func _on_mouse_exited() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_with_items"):
-		if hovered:
-			PuzzleManager._set_selected_line(self)
-		elif selected:
-			PuzzleManager._set_selected_line(self)
-		
+		if hovered or selected:
+			if !inside_area:
+				PuzzleManager._set_selected_line(self)
+			
 func _selected(b: bool) -> void:
 	if b:
 		selected = true
@@ -38,6 +38,9 @@ func _selected(b: bool) -> void:
 		%Line_Areas.visible = false
 		scale = original_scale
 		
+func _set_in_area(area: Selectable):
+	inside_area = area
+
 func _hover(h: bool):
 	if h:
 		hovered = true
