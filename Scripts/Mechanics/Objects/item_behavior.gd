@@ -5,7 +5,7 @@ class_name Item
 ## Pra colocar um tipo para o item, default sendo 'leek'
 @export_category("Parâmetros de Interação")
 @export var item_type: String
-@export var scene_ref: BecoManager
+@export var scene_ref: Node2D
 @export var delete_after_interaction:= true
 @export var open_after_interaction:= false
 @export var notebook: Notebook

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://db44gscp1u8mn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
+size = Vector2(537.31354, 462.963)
+
+[node name="OfficeShelf" type="Sprite2D" unique_id=796953314]
+z_index = 2
+
+[node name="collision_area" type="Area2D" parent="." unique_id=170533037]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=372847164]
+position = Vector2(-3.7313278, -9.259279)
+scale = Vector2(0.3735205, 0.3915547)
+shape = SubResource("RectangleShape2D_n05nh")

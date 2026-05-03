@@ -10,4 +10,4 @@ protagonist: [i]Assim como os pesadelos e os sonhos[/i]
 audio sfx "res://Assets/Audio/SFX/Objects/door_opening.wav" [volume="-5.0"]
 [wait time="1.2"]
 protagonist: Absurdamente específico, ainda acho que estou sonhando. Mas pelo menos deu certo. Hora de continuar a investigação.
-update protagonist left [length="1.4" z_index="1" move_time="1.2"]
+update protagonist left [length="1.4" z_index="1" mirrored="true" move_time="1.2"]

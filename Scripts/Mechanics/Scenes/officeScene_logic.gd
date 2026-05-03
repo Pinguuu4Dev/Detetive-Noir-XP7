@@ -18,10 +18,6 @@ func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
 
 	animation_player.play("Fade_In")
-	# Adquire todos os filhos da cena que são do tipo 'item'
-	for i in interactable_items.get_children():
-		if i is Item:  # Conecta o sinal destes itens com a função deste script
-			i.item_interacted_signal.connect(_on_item_interacted)
 
 ## Função quando o sinal de 'item_collected' dos itens ser ativado
 func _on_item_interacted(i: Item) -> void:

@@ -9,9 +9,6 @@ var timeline_playing:= false
 ## Objetos que devem ser interagidos pelo jogador antes de seguir a timeline
 var timelines_finished: Array[String] = []
 
-var notebook_finished:= false
-var trash_finished:= false
-
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
@@ -20,9 +17,9 @@ func _check_complete_timelines(t: String) -> bool:
 	return timelines_finished.has(t)
 	
 func _get_door_timeline() -> String:
-	if !_check_complete_timelines("beco_metal_door_1"):
+	if !_check_complete_timelines("beco_metal_door_1") and !_check_complete_timelines("beco_notebook_4"):
 		return "beco_metal_door_1"
-	if _check_complete_timelines("beco_metal_door_1") and _check_complete_timelines("beco_notebook_4"):
+	if _check_complete_timelines("beco_notebook_4"):
 		return "beco_metal_door_2"
 	else:
 		return "beco_incomplete_scene_3"
@@ -36,14 +33,13 @@ func _get_trash_timeline() -> String:
 			return "beco_trash_2"
 		else:
 			return "beco_trash_1"
-	elif !_check_complete_timelines("beco_trash_2") and !_check_complete_timelines("beco_trash_3"):
+	elif !_check_complete_timelines("beco_trash_3"):
 		if !PuzzleManager.puzzle_started:
 			PuzzleManager.puzzle_started = true
 		notebook_ref._remove_blood(1); notebook_ref._remove_blood(4)
 		return "beco_trash_3"
-	elif !trash_finished and _check_complete_timelines("beco_notebook_2") and correct_lines.has("1") and correct_lines.has("4"):
+	elif !_check_complete_timelines("beco_trash_4") and correct_lines.has("1") and correct_lines.has("4"):
 		notebook_ref._remove_blood(2); notebook_ref._remove_blood(3)
-		trash_finished = true
 		return "beco_trash_4"
 	else:
 		return "beco_incomplete_scene_2"
@@ -51,13 +47,11 @@ func _get_trash_timeline() -> String:
 func _get_notebook_timeline() -> String:
 	if !_check_complete_timelines("beco_notebook_1") and !_check_complete_timelines("beco_trash_2") and !_check_complete_timelines("beco_trash_3"):
 		return "beco_notebook_1"
-	elif !_check_complete_timelines("beco_notebook_2") and _check_complete_timelines("beco_trash_3") or _check_complete_timelines("beco_trash_2"):
+	elif !_check_complete_timelines("beco_notebook_2"):
 		return "beco_notebook_2"
 	elif !_check_complete_timelines("beco_notebook_3") and _check_complete_timelines("beco_trash_4"):
 		return "beco_notebook_3"
-		print("Is notebook finished: ", notebook_finished, " and ", correct_lines.has("2"), " and ", correct_lines.has("3"))
-	elif !notebook_finished and correct_lines.has("2") and correct_lines.has("3"):
-		notebook_finished = true
+	elif !_check_complete_timelines("beco_notebook_4") and correct_lines.has("2") and correct_lines.has("3"):
 		notebook_ref._remove_blood(5)
 		return "beco_notebook_4"
 	else:
