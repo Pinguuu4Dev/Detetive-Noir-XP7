@@ -6,8 +6,9 @@
 [ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Globals/cursor_manager.gd" id="3_e1qge"]
 [ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/Office_Phone.tscn" id="3_s3noc"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
+[ext_resource type="PackedScene" uid="uid://bbdolkaqxed24" path="res://Scenes/Items/Office_Lamp.tscn" id="6_jheww"]
 [ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
-[ext_resource type="PackedScene" uid="uid://db44gscp1u8mn" path="res://Scenes/Items/Office_Shelf.tscn" id="8_sjxch"]
+[ext_resource type="PackedScene" uid="uid://db44gscp1u8mn" path="res://Scenes/Items/Office_Shelf_R.tscn" id="8_sjxch"]
 
 [sub_resource type="Animation" id="Animation_wkffy"]
 resource_name = "Fade_In"
@@ -133,10 +134,24 @@ grow_vertical = 2
 scale = Vector2(0.6295754, 0.6890516)
 
 [node name="Placeholder_Phone" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=114531261 node_paths=PackedStringArray("scene_ref") instance=ExtResource("3_s3noc")]
-position = Vector2(-33.510075, -8.34523)
-scale = Vector2(0.114648454, 0.12413737)
+position = Vector2(-31.726936, -8.345221)
+scale = Vector2(0.093799576, 0.10500854)
 item_type = "phone"
 scene_ref = NodePath("../../../..")
+
+[node name="OfficeShelf_R" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=796953314 instance=ExtResource("8_sjxch")]
+position = Vector2(339.16443, -70.84524)
+rotation = 0.076575674
+scale = Vector2(0.8458299, 1.2794245)
+
+[node name="Office_Lamp" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1025107382 instance=ExtResource("6_jheww")]
+position = Vector2(-90.570274, -22.630928)
+scale = Vector2(0.2226014, 0.38674366)
+
+[node name="OfficeShelf_L" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=892271006 instance=ExtResource("8_sjxch")]
+position = Vector2(-358.03998, -79.77377)
+rotation = -0.07621294
+scale = Vector2(1.040297, 2.4636164)
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1765385306]
 visible = false
@@ -167,7 +182,3 @@ autoplay = true
 process_priority = 1
 process_physics_priority = 1
 layer = 128
-
-[node name="OfficeShelf" parent="." unique_id=796953314 instance=ExtResource("8_sjxch")]
-position = Vector2(249.63844, 166.07138)
-scale = Vector2(1.6780269, 1.5139501)

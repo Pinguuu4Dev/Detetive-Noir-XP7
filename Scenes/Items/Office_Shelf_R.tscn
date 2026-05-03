@@ -13,3 +13,8 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(-3.7313278, -9.259279)
 scale = Vector2(0.3735205, 0.3915547)
 shape = SubResource("RectangleShape2D_n05nh")
+
+[node name="item_collision2" type="CollisionShape2D" parent="collision_area" unique_id=493882081]
+position = Vector2(109.000015, -42.000004)
+scale = Vector2(0.34478816, 0.2467331)
+shape = SubResource("RectangleShape2D_n05nh")
