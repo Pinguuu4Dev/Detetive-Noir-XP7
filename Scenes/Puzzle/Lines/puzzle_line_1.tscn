@@ -6,9 +6,6 @@
 
 [node name="Puzzle_Line" unique_id=1598418759 instance=ExtResource("1_y1hn6")]
 
-[node name="ColorRect" parent="." index="1" unique_id=2109676678]
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
 [node name="Line_1" type="RichTextLabel" parent="." index="2" unique_id=1349686354]
 z_index = -1
 layout_mode = 0

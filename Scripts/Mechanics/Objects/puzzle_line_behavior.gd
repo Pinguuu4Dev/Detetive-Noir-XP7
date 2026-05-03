@@ -14,10 +14,12 @@ func _ready() -> void:
 	initial_pos = global_position
 
 func _on_mouse_entered() -> void:
+	print("ha")
 	if !selected:
 		_hover(true)
 		
 func _on_mouse_exited() -> void:
+	print("ha")
 	if !selected:
 		_hover(false)
 	

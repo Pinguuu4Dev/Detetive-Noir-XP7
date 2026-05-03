@@ -1,4 +1,4 @@
-extends Node
+extends Control
 class_name Item
 ## Script para configurarmos os itens que forem criados
 
@@ -37,4 +37,4 @@ func object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			queue_free() # Destrói o item
 		_reset_cursor() 
 		if open_after_interaction:
-			
+			pass

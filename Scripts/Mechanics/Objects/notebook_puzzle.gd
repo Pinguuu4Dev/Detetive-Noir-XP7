@@ -1,6 +1,6 @@
-extends Node2D
+extends Control
 
-@onready var p_lines:= $Notebook_Page/Puzzle_Lines
+@onready var p_lines:= %Puzzle_Lines
 @onready var p_areas:= %Line_Areas
 
 func _on_reset_button_pressed() -> void:
