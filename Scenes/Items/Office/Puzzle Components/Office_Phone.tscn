@@ -23,7 +23,3 @@ stream = ExtResource("2_1y1qc")
 volume_db = -9.0
 autoplay = true
 bus = &"SFX"
-
-[connection signal="input_event" from="collision_area" to="." method="object_is_held"]
-[connection signal="mouse_entered" from="collision_area" to="." method="_change_cursor"]
-[connection signal="mouse_exited" from="collision_area" to="." method="_reset_cursor"]

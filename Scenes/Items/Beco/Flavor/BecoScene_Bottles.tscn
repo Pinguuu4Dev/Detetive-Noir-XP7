@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://bpfnqi71pwocb"]
+[gd_scene format=3 uid="uid://cbonrrwwa5v1j"]
 
-[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_82rd8"]
+[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_voj3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
 size = Vector2(537.31354, 462.963)
 
-[node name="Placeholder_Door" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Bottles" type="Sprite2D" unique_id=114531261]
 z_index = 2
 scale = Vector2(0.268, 0.324)
-script = ExtResource("1_82rd8")
+script = ExtResource("1_voj3b")
+item_type = "bottles"
+delete_after_interaction = false
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)
@@ -21,7 +23,3 @@ shape = SubResource("RectangleShape2D_kwdtm")
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0
 bus = &"SFX"
-
-[connection signal="input_event" from="collision_area" to="." method="object_is_held"]
-[connection signal="mouse_entered" from="collision_area" to="." method="_change_cursor"]
-[connection signal="mouse_exited" from="collision_area" to="." method="_reset_cursor"]

@@ -26,3 +26,5 @@ func _on_item_interacted(i: Item) -> void:
 			Dialogic.start(TimelineManager._get_notebook_timeline())
 		"trash":
 			Dialogic.start(TimelineManager._get_trash_timeline())
+		_:
+			Dialogic.start("beco_" + i.item_type)

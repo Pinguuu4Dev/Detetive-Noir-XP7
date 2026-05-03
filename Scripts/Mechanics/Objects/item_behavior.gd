@@ -1,7 +1,7 @@
 extends Node2D
 class_name Item
 ## Script para configurarmos os itens que forem criados
-
+@onready var col_area:= $collision_area
 ## Pra colocar um tipo para o item, default sendo 'leek'
 @export_category("Parâmetros de Interação")
 @export var item_type: String
@@ -12,9 +12,11 @@ class_name Item
 
 var object_held:= false
 
-## Sinal para comunicar com outros scripts
-signal item_interacted_signal(i: Item)
-
+func _ready() -> void:
+	col_area.connect("mouse_entered", _change_cursor)
+	col_area.connect("mouse_exited", _reset_cursor)
+	col_area.connect("input_event", _object_is_held)
+	
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
@@ -24,7 +26,7 @@ func _reset_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.default_icon)
 	
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
-func object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("interact_with_items"):
 		scene_ref._on_item_interacted(self)
 		Input.set_custom_mouse_cursor(CursorManager.grab_icon)

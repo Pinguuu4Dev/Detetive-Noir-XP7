@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://db44gscp1u8mn"]
 
+[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_g10lv"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
 size = Vector2(537.31354, 462.963)
 
-[node name="OfficeShelf" type="Sprite2D" unique_id=796953314]
+[node name="OfficeShelf_L" type="Sprite2D" unique_id=796953314]
 z_index = 2
+script = ExtResource("1_g10lv")
+item_type = "shelf_l"
+delete_after_interaction = false
 
 [node name="collision_area" type="Area2D" parent="." unique_id=170533037]
 scale = Vector2(0.99999994, 0.99999994)

@@ -1,10 +1,15 @@
-[gd_scene format=3 uid="uid://chw3lqqkb5qb5"]
+[gd_scene format=3 uid="uid://bbdolkaqxed24"]
+
+[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_rlofg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
 size = Vector2(537.31354, 462.963)
 
-[node name="OfficeShelf" type="Sprite2D" unique_id=796953314]
+[node name="Office_Lamp" type="Sprite2D" unique_id=796953314]
 z_index = 2
+script = ExtResource("1_rlofg")
+item_type = "lamp"
+delete_after_interaction = false
 
 [node name="collision_area" type="Area2D" parent="." unique_id=170533037]
 scale = Vector2(0.99999994, 0.99999994)

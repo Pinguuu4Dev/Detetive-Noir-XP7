@@ -2,13 +2,20 @@
 
 [ext_resource type="Script" uid="uid://w4kxkpanccg1" path="res://Scripts/Mechanics/Scenes/becoScene_logic.gd" id="1_rwci3"]
 [ext_resource type="PackedScene" uid="uid://6dm6tvn0abm4" path="res://Scenes/Game Levels/RitualRoom_Scene.tscn" id="2_4qler"]
-[ext_resource type="PackedScene" uid="uid://1k0u5t53vji6" path="res://Scenes/Items/BecoScene_Notebook.tscn" id="3_wgc12"]
+[ext_resource type="PackedScene" uid="uid://1k0u5t53vji6" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Notebook.tscn" id="3_wgc12"]
 [ext_resource type="Texture2D" uid="uid://c1pur3awrv7k7" path="res://Assets/Placeholder/Levels/alley-bg.jpg" id="4_4qler"]
-[ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/BecoScene_Door_1.tscn" id="4_6xvgo"]
+[ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Door_1.tscn" id="4_6xvgo"]
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
-[ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/BecoScene_Trash_1.tscn" id="5_lhagv"]
+[ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Trash_1.tscn" id="5_lhagv"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="7_xo8tj"]
 [ext_resource type="PackedScene" uid="uid://c5uce2natwtyk" path="res://Scenes/Puzzle/Notebook_Puzzle.tscn" id="8_ulfh7"]
+[ext_resource type="PackedScene" uid="uid://cxpq40re8o26j" path="res://Scenes/Items/Beco/Flavor/BecoScene_Wooden_Boxes.tscn" id="9_tkmna"]
+[ext_resource type="PackedScene" uid="uid://vsh0oym0n17u" path="res://Scenes/Items/Beco/Flavor/BecoScene_Camera.tscn" id="10_6xuvt"]
+[ext_resource type="PackedScene" uid="uid://cmhx88bg4qiwj" path="res://Scenes/Items/Beco/Flavor/BecoScene_Cob_Web.tscn" id="11_dacbk"]
+[ext_resource type="PackedScene" uid="uid://dawf61uem15cr" path="res://Scenes/Items/Beco/Flavor/BecoScene_Chair.tscn" id="12_1x0hl"]
+[ext_resource type="PackedScene" uid="uid://b2myv0kgipi4d" path="res://Scenes/Items/Beco/Flavor/BecoScene_Broom.tscn" id="13_keoxq"]
+[ext_resource type="PackedScene" uid="uid://cbonrrwwa5v1j" path="res://Scenes/Items/Beco/Flavor/BecoScene_Bottles.tscn" id="14_krims"]
+[ext_resource type="PackedScene" uid="uid://din0k7f55wrqv" path="res://Scenes/Items/Beco/Flavor/BecoScene_Lamp.tscn" id="15_6udud"]
 
 [sub_resource type="Animation" id="Animation_4qler"]
 resource_name = "Fade_In"
@@ -160,7 +167,7 @@ delete_after_interaction = false
 open_after_interaction = true
 notebook = NodePath("../NotebookPuzzle")
 
-[node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 node_paths=PackedStringArray("scene_ref") groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
+[node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 node_paths=PackedStringArray("scene_ref") instance=ExtResource("4_6xvgo")]
 position = Vector2(612.5, 321.4286)
 rotation = 0.014495522
 scale = Vector2(0.15417561, 0.42900252)
@@ -168,10 +175,49 @@ item_type = "metal_door"
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 
-[node name="Placeholder_Trash2" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 node_paths=PackedStringArray("scene_ref") groups=["start_hidden"] instance=ExtResource("5_lhagv")]
-position = Vector2(935.71436, 394.64288)
+[node name="Placeholder_Trash" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 node_paths=PackedStringArray("scene_ref") instance=ExtResource("5_lhagv")]
+position = Vector2(942.85724, 391.07144)
 rotation = 0.07442681
 scale = Vector2(0.44867325, 0.3371964)
+scene_ref = NodePath("../../../..")
+delete_after_interaction = false
+
+[node name="Placeholder_W_Box" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1168854118 node_paths=PackedStringArray("scene_ref") instance=ExtResource("9_tkmna")]
+position = Vector2(107.14286, 428.5714)
+rotation = -0.24544448
+scale = Vector2(0.3889519, 0.25144646)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Camera" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=736206283 node_paths=PackedStringArray("scene_ref") instance=ExtResource("10_6xuvt")]
+position = Vector2(241.0714, 144.64284)
+rotation = 0.2742958
+scale = Vector2(0.11207759, 0.12253628)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Web" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1516952482 node_paths=PackedStringArray("scene_ref") instance=ExtResource("11_dacbk")]
+position = Vector2(405.3571, 116.07143)
+scale = Vector2(0.37329042, 0.19434445)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Chair" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=198399156 node_paths=PackedStringArray("scene_ref") instance=ExtResource("12_1x0hl")]
+position = Vector2(773.2143, 391.07147)
+scale = Vector2(0.13657911, 0.2683126)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Broom" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=512478918 node_paths=PackedStringArray("scene_ref") instance=ExtResource("13_keoxq")]
+position = Vector2(464.28574, 473.2142)
+rotation = -0.21619053
+scale = Vector2(0.3054001, 0.027911332)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Bottles" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=411188176 node_paths=PackedStringArray("scene_ref") instance=ExtResource("14_krims")]
+position = Vector2(683.92847, 412.5)
+scale = Vector2(0.03825605, 0.07209459)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Lamp" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=539538923 node_paths=PackedStringArray("scene_ref") instance=ExtResource("15_6udud")]
+position = Vector2(607.14294, 123.21429)
+scale = Vector2(0.086825676, 0.08448958)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 

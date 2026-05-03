@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cxpq40re8o26j"]
+
+[ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_qme0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
+size = Vector2(537.31354, 462.963)
+
+[node name="Placeholder_W_Box" type="Sprite2D" unique_id=114531261]
+z_index = 2
+scale = Vector2(0.268, 0.324)
+script = ExtResource("1_qme0i")
+item_type = "w_box"
+
+[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
+z_index = 2
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_kwdtm")
+
+[node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
+volume_db = -9.0
+bus = &"SFX"
