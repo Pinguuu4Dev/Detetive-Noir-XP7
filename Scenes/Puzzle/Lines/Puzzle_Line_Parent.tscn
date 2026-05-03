@@ -1,6 +1,120 @@
 [gd_scene format=3 uid="uid://brkstk8ovdg6c"]
 
 [ext_resource type="Script" uid="uid://h4iwvj483gku" path="res://Scripts/Mechanics/Objects/puzzle_line_behavior.gd" id="1_t04r4"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_jfqxa"]
+
+[sub_resource type="Animation" id="Animation_iahjl"]
+resource_name = "Display_Text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:theme_override_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jfqxa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:theme_override_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Text/Blood:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Text/Blood:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ukfm1"]
+resource_name = "Remove_Blood"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text/Blood:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text/Blood:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukfm1"]
+_data = {
+&"Display_Text": SubResource("Animation_iahjl"),
+&"RESET": SubResource("Animation_jfqxa"),
+&"Remove_Blood": SubResource("Animation_ukfm1")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4s8a"]
 size = Vector2(294, 24)
@@ -13,18 +127,21 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_t04r4")
 scale_up = 1.2000000000000002
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1332443462]
+libraries/ = SubResource("AnimationLibrary_ukfm1")
+
 [node name="Line_Collision" type="Area2D" parent="." unique_id=757495385]
 z_index = 10
 priority = 2
 
 [node name="Collision_Shape" type="CollisionShape2D" parent="Line_Collision" unique_id=1025323229]
-z_index = 10
+z_index = 93
 position = Vector2(147, 12)
 shape = SubResource("RectangleShape2D_g4s8a")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2109676678]
-z_index = -2
+[node name="Text_Background" type="ColorRect" parent="." unique_id=2109676678]
+z_index = -643
+z_as_relative = false
 layout_mode = 0
 offset_left = -2.0
 offset_top = -2.0
@@ -33,6 +150,29 @@ offset_bottom = 26.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 color = Color(0.7297845, 0.7297845, 0.7297845, 0.50980395)
+
+[node name="Text" type="RichTextLabel" parent="." unique_id=2049074672]
+layout_mode = 0
+offset_right = 295.0
+offset_bottom = 27.0
+mouse_filter = 2
+theme = ExtResource("2_jfqxa")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Placeholder Text"
+fit_content = true
+scroll_active = false
+meta_underlined = false
+hint_underlined = false
+
+[node name="Blood" type="Control" parent="Text" unique_id=544437492]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="mouse_entered" from="Line_Collision" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Line_Collision" to="." method="_on_mouse_exited"]

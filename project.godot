@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://cf0njx8j6s6dd"
 Dialogic="*uid://ds2q0uclmolvu"
 CursorManager="*uid://b3h3ytrkd0ee5"
 PuzzleManager="*uid://dq4tkeyg8xe7j"
+TimelineManager="*uid://ckoculcl6u311"
 
 [dialogic]
 

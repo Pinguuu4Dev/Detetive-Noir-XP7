@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
 [ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/BecoScene_Trash_1.tscn" id="5_lhagv"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="7_xo8tj"]
+[ext_resource type="PackedScene" uid="uid://c5uce2natwtyk" path="res://Scenes/Puzzle/Notebook_Puzzle.tscn" id="8_ulfh7"]
 
 [sub_resource type="Animation" id="Animation_4qler"]
 resource_name = "Fade_In"
@@ -112,6 +113,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Beco_BG" type="TextureRect" parent="Scene_Elements" unique_id=1296039237]
+z_index = -10
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -127,37 +129,55 @@ size_flags_horizontal = 4
 texture = ExtResource("4_4qler")
 
 [node name="Interactable_Items" type="Control" parent="Scene_Elements/Beco_BG" unique_id=752073450]
+z_index = 1
 anchors_preset = 0
 scale = Vector2(0.56, 0.56)
 
-[node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 instance=ExtResource("3_wgc12")]
+[node name="NotebookPuzzle" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=375376209 node_paths=PackedStringArray("b_scene") instance=ExtResource("8_ulfh7")]
+visible = false
+z_index = 6
+z_as_relative = true
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 605.3571
+offset_top = 330.35715
+offset_right = 605.3571
+offset_bottom = 330.35715
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.8038398, 1.2129034)
+b_scene = NodePath("../../../..")
+
+[node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 node_paths=PackedStringArray("scene_ref", "notebook") instance=ExtResource("3_wgc12")]
 modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
 position = Vector2(741.07153, 541.0715)
 rotation = 0.3030762
 scale = Vector2(0.15667646, 0.12706041)
+scene_ref = NodePath("../../../..")
 delete_after_interaction = false
-layout_mode = 1
-offset_left = 703.57153
-offset_top = 510.71436
-offset_right = 2455.3623
-offset_bottom = 1267.9983
+open_after_interaction = true
+notebook = NodePath("../NotebookPuzzle")
 
-[node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
+[node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 node_paths=PackedStringArray("scene_ref") groups=["start_hidden"] instance=ExtResource("4_6xvgo")]
 position = Vector2(612.5, 321.4286)
 rotation = 0.014495522
 scale = Vector2(0.15417561, 0.42900252)
 item_type = "metal_door"
+scene_ref = NodePath("../../../..")
 delete_after_interaction = false
-open_after_interaction = null
 
-[node name="Placeholder_Trash2" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 groups=["start_hidden"] instance=ExtResource("5_lhagv")]
+[node name="Placeholder_Trash2" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 node_paths=PackedStringArray("scene_ref") groups=["start_hidden"] instance=ExtResource("5_lhagv")]
 position = Vector2(935.71436, 394.64288)
 rotation = 0.07442681
 scale = Vector2(0.44867325, 0.3371964)
+scene_ref = NodePath("../../../..")
 delete_after_interaction = false
-open_after_interaction = null
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=434344345]
+z_index = 6
+z_as_relative = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -173,3 +193,4 @@ color = Color(0, 0, 0, 1)
 libraries/ = SubResource("AnimationLibrary_tkmna")
 
 [node name="Pause_Screen" parent="." unique_id=602457543 instance=ExtResource("7_xo8tj")]
+layer = 1261

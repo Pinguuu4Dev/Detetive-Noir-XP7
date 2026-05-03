@@ -10,16 +10,18 @@ var original_scale:= Vector2(1, 1)
 func _on_mouse_entered() -> void:
 	_hover(true)
 	PuzzleManager._set_hovered_area(self)
-	print("Hovered area of Manager: '", name.substr(name.length() - 1), "' has line: '", puzzleLine_ref, "'.")
-		
+
 func _on_mouse_exited() -> void:
 	_hover(false)
 	PuzzleManager._set_hovered_area(null)
 		
 func _set_line(p: PuzzleLine):
-	p.position = global_position
+	p.position = position
 	puzzleLine_ref = p
 	puzzleLine_ref._set_in_area(self)
+	
+	if puzzleLine_ref.name.substr(puzzleLine_ref.name.length() - 1) == name.substr(name.length() - 1):
+		TimelineManager.correct_lines.append(name.substr(name.length() - 1))
 
 func _clear_line():
 	puzzleLine_ref._set_in_area(null)

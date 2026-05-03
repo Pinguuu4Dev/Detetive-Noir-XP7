@@ -1,50 +1,16 @@
-[gd_scene format=3 uid="uid://6d7xdun01qoe"]
+[gd_scene format=3 uid="uid://6a86nikhn82j"]
 
-[ext_resource type="PackedScene" uid="uid://brkstk8ovdg6c" path="res://Scenes/Puzzle/Lines/Puzzle_Line_Parent.tscn" id="1_y1hn6"]
-[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_j30ln"]
-[ext_resource type="Texture2D" uid="uid://d0jdqb8snv56j" path="res://Assets/Placeholder/Effects/blood_splash_1.png" id="3_g3ek1"]
+[ext_resource type="PackedScene" uid="uid://brkstk8ovdg6c" path="res://Scenes/Puzzle/Lines/Puzzle_Line_Parent.tscn" id="1_ikpie"]
+[ext_resource type="Texture2D" uid="uid://d0jdqb8snv56j" path="res://Assets/Placeholder/Effects/blood_splash_1.png" id="2_cexo5"]
 
-[node name="Puzzle_Line" unique_id=1598418759 instance=ExtResource("1_y1hn6")]
+[node name="Puzzle_Line" unique_id=83627724 instance=ExtResource("1_ikpie")]
 
-[node name="Line_1" type="RichTextLabel" parent="." index="2" unique_id=1349686354]
-z_index = -1
-layout_mode = 0
-anchor_left = 0.045
-anchor_top = 0.120000005
-anchor_right = 0.045
-anchor_bottom = 0.120000005
-offset_right = 295.0
-offset_bottom = 27.0
-mouse_filter = 2
-theme = ExtResource("2_j30ln")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-bbcode_enabled = true
+[node name="Text" parent="." index="3" unique_id=2049074672]
 text = " Em suas patas
 "
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-meta_underlined = false
-hint_underlined = false
-metadata/_edit_use_anchors_ = true
 
-[node name="Blood_Splashes" type="Control" parent="Line_1" index="2" unique_id=142368521]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Group_1" type="Control" parent="Line_1/Blood_Splashes" index="0" unique_id=540793364]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Blood_1" type="ColorRect" parent="Line_1/Blood_Splashes/Group_1" index="0" unique_id=958870216]
-z_index = 1
+[node name="Blood_1" type="ColorRect" parent="Text/Blood" parent_id_path=PackedInt32Array(544437492) index="0" unique_id=671499515]
+z_index = -2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 15.000001
@@ -56,7 +22,7 @@ mouse_filter = 2
 color = Color(0.6627451, 0.19215687, 0.19607843, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="BloodSplash" type="TextureRect" parent="Line_1/Blood_Splashes/Group_1/Blood_1" index="0" unique_id=1734295176]
+[node name="BloodSplash" type="TextureRect" parent="Text/Blood/Blood_1" index="0" unique_id=1129653290]
 z_index = 2
 layout_mode = 0
 offset_left = -59.184845
@@ -66,12 +32,12 @@ offset_bottom = 88.38279
 rotation = -0.6780848
 scale = Vector2(0.9260237, 1.1193962)
 mouse_filter = 2
-texture = ExtResource("3_g3ek1")
+texture = ExtResource("2_cexo5")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Blood_2" type="ColorRect" parent="Line_1/Blood_Splashes/Group_1" index="1" unique_id=1342643585]
-z_index = 1
+[node name="Blood_2" type="ColorRect" parent="Text/Blood" parent_id_path=PackedInt32Array(544437492) index="1" unique_id=1201253825]
+z_index = -2
 layout_mode = 0
 offset_left = 93.00001
 offset_top = 9.0
@@ -83,7 +49,7 @@ mouse_filter = 2
 color = Color(0.6627451, 0.19215687, 0.19607843, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="BloodSplash" type="TextureRect" parent="Line_1/Blood_Splashes/Group_1/Blood_2" index="0" unique_id=192849414]
+[node name="BloodSplash" type="TextureRect" parent="Text/Blood/Blood_2" index="0" unique_id=1271621161]
 z_index = 2
 layout_mode = 0
 offset_left = -59.184845
@@ -93,12 +59,12 @@ offset_bottom = 88.38279
 rotation = -0.6780848
 scale = Vector2(0.9260237, 1.1193962)
 mouse_filter = 2
-texture = ExtResource("3_g3ek1")
+texture = ExtResource("2_cexo5")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Blood_3" type="ColorRect" parent="Line_1/Blood_Splashes/Group_1" index="2" unique_id=2142930380]
-z_index = 1
+[node name="Blood_3" type="ColorRect" parent="Text/Blood" parent_id_path=PackedInt32Array(544437492) index="2" unique_id=918105775]
+z_index = -2
 layout_mode = 0
 offset_left = 57.000008
 offset_top = 17.000004
@@ -110,7 +76,7 @@ mouse_filter = 2
 color = Color(0.6627451, 0.19215687, 0.19607843, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="BloodSplash" type="TextureRect" parent="Line_1/Blood_Splashes/Group_1/Blood_3" index="0" unique_id=757506262]
+[node name="BloodSplash" type="TextureRect" parent="Text/Blood/Blood_3" index="0" unique_id=1398879615]
 z_index = 2
 layout_mode = 0
 offset_left = -59.184845
@@ -120,12 +86,12 @@ offset_bottom = 88.38279
 rotation = -0.6780848
 scale = Vector2(0.9260237, 1.1193962)
 mouse_filter = 2
-texture = ExtResource("3_g3ek1")
+texture = ExtResource("2_cexo5")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Blood_4" type="ColorRect" parent="Line_1/Blood_Splashes/Group_1" index="3" unique_id=1184269756]
-z_index = 1
+[node name="Blood_4" type="ColorRect" parent="Text/Blood" parent_id_path=PackedInt32Array(544437492) index="3" unique_id=823452674]
+z_index = -2
 layout_mode = 0
 offset_left = 69.00001
 offset_top = 25.000004
@@ -137,7 +103,7 @@ mouse_filter = 2
 color = Color(0.6627451, 0.19215687, 0.19607843, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="BloodSplash" type="TextureRect" parent="Line_1/Blood_Splashes/Group_1/Blood_4" index="0" unique_id=512696982]
+[node name="BloodSplash" type="TextureRect" parent="Text/Blood/Blood_4" index="0" unique_id=836034595]
 z_index = 2
 layout_mode = 0
 offset_left = -59.184845
@@ -147,6 +113,6 @@ offset_bottom = 88.38279
 rotation = -0.6780848
 scale = Vector2(0.9260237, 1.1193962)
 mouse_filter = 2
-texture = ExtResource("3_g3ek1")
+texture = ExtResource("2_cexo5")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true

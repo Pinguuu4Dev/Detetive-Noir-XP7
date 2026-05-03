@@ -6,7 +6,7 @@
 size = Vector2(537.31354, 462.963)
 
 [node name="Placeholder_Door" type="Sprite2D" unique_id=114531261]
-z_index = 5
+z_index = 2
 scale = Vector2(0.268, 0.324)
 script = ExtResource("1_82rd8")
 
@@ -14,6 +14,7 @@ script = ExtResource("1_82rd8")
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
+z_index = 2
 position = Vector2(-3.7313278, -9.259279)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")

@@ -6,7 +6,7 @@
 size = Vector2(537.31354, 462.963)
 
 [node name="Placeholder_Trash" type="Sprite2D" unique_id=114531261]
-z_index = 5
+z_index = 2
 scale = Vector2(0.268, 0.324)
 script = ExtResource("1_cxnq1")
 item_type = "trash"
