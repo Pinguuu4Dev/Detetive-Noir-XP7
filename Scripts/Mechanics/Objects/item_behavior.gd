@@ -28,7 +28,8 @@ func _reset_cursor() -> void:
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
 func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("interact_with_items"):
-		scene_ref._on_item_interacted(self)
+		if scene_ref:
+			scene_ref._on_item_interacted(self)
 		Input.set_custom_mouse_cursor(CursorManager.grab_icon)
 		object_held = true
 	if event.is_action_released("interact_with_items") and object_held:

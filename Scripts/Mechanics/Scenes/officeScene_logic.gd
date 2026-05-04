@@ -24,18 +24,9 @@ func _on_item_interacted(i: Item) -> void:
 	match i.item_type:
 		"phone": 
 			Dialogic.start("office_phone_call")
-		"blinds":
+		_:
 			Dialogic.start("office_" + i.item_type)
-		"lamp":
-			Dialogic.start("office_" + i.item_type)
-		"hanger":
-			Dialogic.start("office_" + i.item_type)
-		"shelf_l":
-			Dialogic.start("office_" + i.item_type)
-		"shelf_r":
-			Dialogic.start("office_" + i.item_type)
-		"chair":
-			Dialogic.start("office_" + i.item_type)
+			
 ## Quando uma timeline começar
 func _on_timeline_started() -> void:
 	cur_timeline = Dialogic.current_timeline #  Guarda qual timeline é na variável

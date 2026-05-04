@@ -33,14 +33,14 @@ directories/dch_directory={
 "protagonist": "res://Characters/protagonist.dch"
 }
 directories/dtl_directory={
-"beco_bottles": "res://Timelines/Office/Flavor/beco_bottles.dtl",
-"beco_broom": "res://Timelines/Office/Flavor/beco_broom.dtl",
-"beco_camera": "res://Timelines/Office/Flavor/beco_camera.dtl",
-"beco_chair": "res://Timelines/Office/Flavor/beco_chair.dtl",
+"beco_bottles": "res://Timelines/Beco/Flavor/beco_bottles.dtl",
+"beco_broom": "res://Timelines/Beco/Flavor/beco_broom.dtl",
+"beco_camera": "res://Timelines/Beco/Flavor/beco_camera.dtl",
+"beco_chair": "res://Timelines/Beco/Flavor/beco_chair.dtl",
 "beco_incomplete_scene_1": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_1.dtl",
 "beco_incomplete_scene_2": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_2.dtl",
 "beco_incomplete_scene_3": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_3.dtl",
-"beco_lamp": "res://Timelines/Office/Flavor/beco_lamp.dtl",
+"beco_lamp": "res://Timelines/Beco/Flavor/beco_lamp.dtl",
 "beco_metal_door_1": "res://Timelines/Beco/Puzzle/Metal Door Interactions/beco_metal_door_1.dtl",
 "beco_metal_door_2": "res://Timelines/Beco/Puzzle/Metal Door Interactions/beco_metal_door_2.dtl",
 "beco_notebook_1": "res://Timelines/Beco/Puzzle/Notebook Interactions/beco_notebook_1.dtl",
@@ -53,7 +53,7 @@ directories/dtl_directory={
 "beco_trash_3": "res://Timelines/Beco/Puzzle/Trash Interactions/beco_trash_3.dtl",
 "beco_trash_4": "res://Timelines/Beco/Puzzle/Trash Interactions/beco_trash_4.dtl",
 "beco_w_box": "res://Timelines/Beco/Flavor/beco_w_box.dtl",
-"beco_web": "res://Timelines/Office/Flavor/beco_web.dtl",
+"beco_web": "res://Timelines/Beco/Flavor/beco_web.dtl",
 "office_blinds": "res://Timelines/Office/Flavor/office_blinds.dtl",
 "office_chair": "res://Timelines/Office/Flavor/office_chair.dtl",
 "office_hanger": "res://Timelines/Office/Flavor/office_hanger.dtl",

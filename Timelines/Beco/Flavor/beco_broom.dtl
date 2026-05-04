@@ -1,0 +1,3 @@
+join protagonist (curious) center [animation="Fade In" length="0.6" wait="true" mirrored="true"]
+protagonist (sad): Tentaram limpar a cena. Esforço patético.
+leave protagonist [animation="Fade Out" length="0.4"]

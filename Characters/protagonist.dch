@@ -17,6 +17,33 @@
 &"nicknames": ["Jynx"],
 &"offset": Vector2(-60, 10),
 &"portraits": {
+"curious": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxcurious.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"disgust": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxdisgust.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fear": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxfear.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "placeholder_protagonist": {
 "export_overrides": {
 "image": "\"res://Assets/Placeholder/Characters/placeholder_jinx.png\""
@@ -25,6 +52,42 @@
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ritual": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxritual.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sad": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxsad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"scare": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxscare.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"worried": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/jynxworry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 }
 },
 &"scale": 0.8

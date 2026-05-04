@@ -1,1 +1,5 @@
-protagonist: Que saco. Jurei que eu tinha deixado meu cigarro na gaveta…
+join protagonist (placeholder_protagonist) right [animation="Slide From Left" length="0.3" wait="true"]
+[wait time="0.2"]
+protagonist (sad): Que saco. Jurei que eu tinha deixado meu cigarro na gaveta…
+[wait time="0.2"]
+leave protagonist [animation="Slide To Right" length="0.6"]
