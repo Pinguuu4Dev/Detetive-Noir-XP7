@@ -1,4 +1,4 @@
-join protagonist center [animation="Slide From Left" length="0.4" wait="true" z_index="1"]
+join protagonist rightmost [animation="Slide From Left" length="0.4" wait="true" z_index="1" mirrored="true"]
 protagonist: Ah, essa deve ser a entrada pro prédio…
 [wait time="0.1"]
 protagonist: Hmmm… é metálica, e parece ter se oxidado um tanto por conta da chuva, eu imagino… mas não vejo nada demais. Será que alguém atende se eu bater?

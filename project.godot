@@ -34,10 +34,12 @@ directories/dch_directory={
 "protagonist": "res://Characters/protagonist.dch"
 }
 directories/dtl_directory={
+"beco_book": "res://Timelines/Office/Flavor/beco_book.dtl",
+"beco_book_done": "res://Timelines/Office/Flavor/beco_book_done.dtl",
 "beco_bottles": "res://Timelines/Beco/Flavor/beco_bottles.dtl",
+"beco_box": "res://Timelines/Beco/Puzzle/Hints/beco_box.dtl",
 "beco_broom": "res://Timelines/Beco/Flavor/beco_broom.dtl",
 "beco_camera": "res://Timelines/Beco/Flavor/beco_camera.dtl",
-"beco_chair": "res://Timelines/Beco/Flavor/beco_chair.dtl",
 "beco_incomplete_scene_1": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_1.dtl",
 "beco_incomplete_scene_2": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_2.dtl",
 "beco_incomplete_scene_3": "res://Timelines/Beco/Puzzle/Hints to Incomplete Scene/beco_incomplete_scene_3.dtl",
@@ -73,9 +75,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Layout_Styles/placeholder_vn_style.tres"]
 layout/default_style="res://Assets/Layout_Styles/placeholder_vn_style.tres"
 variables={
-"main_vars": {
-"picked_phone": false
-}
+"got_book": false
 }
 text/letter_speed=0.05
 text/initial_text_reveal_skippable=true

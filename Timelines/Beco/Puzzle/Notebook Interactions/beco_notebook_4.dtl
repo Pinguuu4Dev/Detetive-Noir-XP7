@@ -1,4 +1,4 @@
-join protagonist center [animation="Fade In" length="0.3" wait="true" z_index="1"]
+join protagonist rightmost [animation="Fade In" length="0.3" wait="true" z_index="1" mirrored="true"]
 protagonist: [i]“Assim como os pesadelos e os sonhos.”[/i]
 update protagonist [animation="Shake Y" length="0.3" wait="true" repeat="2"]
 protagonist: Consegui deixar a página inteira legível!

@@ -1,1 +1,3 @@
-protagonist: Páginas cheias de mentiras bem contadas.
+join protagonist (placeholder_protagonist) rightmost [animation="Slide From Right" length="0.4" wait="true" mirrored="true"]
+update protagonist (disgust) [animation="Shake Y" length="0.2" fade="Fade Cross" fade_length="0.3"]
+protagonist: Atchim! Ai, o que não tem de livro, tem de poeira…

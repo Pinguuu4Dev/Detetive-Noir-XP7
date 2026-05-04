@@ -223,7 +223,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("8_isv3y")
 action_mode = 0
-text = "Resetar"
+text = "Reiniciar"
 
 [node name="Close_Button" type="Button" parent="Notebook_Page" unique_id=724506987]
 layout_mode = 1

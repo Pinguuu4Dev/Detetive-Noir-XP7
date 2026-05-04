@@ -1,7 +1,10 @@
 extends Node
 
 var notebook_ref: Notebook
+var n_interaction_ref: Item
+
 var correct_lines: Array[String]
+
 ## Para poder guardar qual 'timeline' está em cena atualmente
 var cur_timeline: DialogicTimeline
 ## Para poder sabermos se uma timeline está acontecendo ou não
@@ -12,7 +15,7 @@ var timelines_finished: Array[String] = []
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
-
+	
 func _check_complete_timelines(t: String) -> bool:
 	return timelines_finished.has(t)
 	
@@ -45,9 +48,10 @@ func _get_trash_timeline() -> String:
 		return "beco_incomplete_scene_2"
 	
 func _get_notebook_timeline() -> String:
-	if !_check_complete_timelines("beco_notebook_1") and !_check_complete_timelines("beco_trash_2") and !_check_complete_timelines("beco_trash_3"):
+	if !_check_complete_timelines("beco_notebook_1") and !_check_complete_timelines("beco_trash_1") and !_check_complete_timelines("beco_trash_2") and !_check_complete_timelines("beco_trash_3"):
 		return "beco_notebook_1"
-	elif !_check_complete_timelines("beco_notebook_2"):
+	elif !_check_complete_timelines("beco_notebook_2") and _check_complete_timelines("beco_metal_door_1") and _check_complete_timelines("beco_trash_2") or _check_complete_timelines("beco_trash_3"):
+		notebook_ref._open_notebook()
 		return "beco_notebook_2"
 	elif !_check_complete_timelines("beco_notebook_3") and _check_complete_timelines("beco_trash_4"):
 		return "beco_notebook_3"

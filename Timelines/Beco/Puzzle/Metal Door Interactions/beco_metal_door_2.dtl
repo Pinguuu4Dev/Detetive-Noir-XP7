@@ -1,4 +1,4 @@
-join protagonist center [animation="Slide From Right" length="0.4" wait="true" z_index="1"]
+join protagonist rightmost [animation="Slide From Right" length="0.4" wait="true" z_index="1" mirrored="true"]
 protagonist: Nada mudou… que droga…
 protagonist: Talvez tenha a ver com o próprio texto na caderneta. Não custa tentar, né?
 protagonist: [i]Em suas patas,[/i]
@@ -10,4 +10,3 @@ protagonist: [i]Assim como os pesadelos e os sonhos[/i]
 audio sfx "res://Assets/Audio/SFX/Objects/door_opening.wav" [volume="-5.0"]
 [wait time="1.2"]
 protagonist: Absurdamente específico, ainda acho que estou sonhando. Mas pelo menos deu certo. Hora de continuar a investigação.
-update protagonist left [length="1.4" z_index="1" mirrored="true" move_time="1.2"]

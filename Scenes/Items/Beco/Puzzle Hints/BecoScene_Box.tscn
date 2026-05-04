@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
 size = Vector2(537.31354, 462.963)
 
-[node name="Placeholder_Chair" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Box" type="Sprite2D" unique_id=114531261]
 z_index = 2
 scale = Vector2(0.268, 0.324)
 script = ExtResource("1_u8ycp")

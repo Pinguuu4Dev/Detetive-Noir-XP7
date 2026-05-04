@@ -1,4 +1,4 @@
-join protagonist center [animation="Instant In" z_index="1"]
+join protagonist rightmost [animation="Instant In" z_index="1" mirrored="true"]
 protagonist: Vamos ver o que temos aqui…
 [wait time="0.15" hide_text="false"]
 protagonist: Meu… deus? A caligrafia é idêntica à minha. Mas não me recordo de ter escrito isso.

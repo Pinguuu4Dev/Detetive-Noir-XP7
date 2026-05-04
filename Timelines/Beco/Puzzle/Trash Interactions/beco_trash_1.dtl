@@ -1,6 +1,6 @@
 join protagonist center [animation="Slide In Down" length="0.3" wait="true" z_index="1"]
 protagonist: Uma lata de lixo. Verde musgo, molhada por conta da chuva, parece ter sido atingida por alguma coisa afiada…
-update protagonist right [animation="Shake X" length="0.2" wait="true" repeat="2" move_time="0.4" move_ease="in" move_trans="linear"]
+update protagonist rightmost [animation="Shake X" length="0.2" wait="true" repeat="2" mirrored="true" move_time="0.4" move_ease="in" move_trans="linear"]
 protagonist: Levemente danificada nas laterais, nada de relevante na tampa.
 protagonist: Agora, hora de ver a parte de dentro…
 protagonist: É definitivamente lixo orgânico. Meu olfato já devia estar acostumado com coisas do tipo, mas parece que não.

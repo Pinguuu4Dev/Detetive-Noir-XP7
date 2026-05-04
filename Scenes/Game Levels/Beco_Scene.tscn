@@ -12,10 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://cxpq40re8o26j" path="res://Scenes/Items/Beco/Flavor/BecoScene_Wooden_Boxes.tscn" id="9_tkmna"]
 [ext_resource type="PackedScene" uid="uid://vsh0oym0n17u" path="res://Scenes/Items/Beco/Flavor/BecoScene_Camera.tscn" id="10_6xuvt"]
 [ext_resource type="PackedScene" uid="uid://cmhx88bg4qiwj" path="res://Scenes/Items/Beco/Flavor/BecoScene_Cob_Web.tscn" id="11_dacbk"]
-[ext_resource type="PackedScene" uid="uid://dawf61uem15cr" path="res://Scenes/Items/Beco/Flavor/BecoScene_Chair.tscn" id="12_1x0hl"]
+[ext_resource type="PackedScene" uid="uid://dawf61uem15cr" path="res://Scenes/Items/Beco/Puzzle Hints/BecoScene_Box.tscn" id="12_1x0hl"]
 [ext_resource type="PackedScene" uid="uid://b2myv0kgipi4d" path="res://Scenes/Items/Beco/Flavor/BecoScene_Broom.tscn" id="13_keoxq"]
 [ext_resource type="PackedScene" uid="uid://cbonrrwwa5v1j" path="res://Scenes/Items/Beco/Flavor/BecoScene_Bottles.tscn" id="14_krims"]
 [ext_resource type="PackedScene" uid="uid://din0k7f55wrqv" path="res://Scenes/Items/Beco/Flavor/BecoScene_Lamp.tscn" id="15_6udud"]
+[ext_resource type="PackedScene" uid="uid://be885c8iwcq2e" path="res://Scenes/Items/Beco/Puzzle Hints/BecoScene_Book.tscn" id="16_h26ys"]
 
 [sub_resource type="Animation" id="Animation_4qler"]
 resource_name = "Fade_In"
@@ -199,10 +200,12 @@ position = Vector2(405.3571, 116.07143)
 scale = Vector2(0.37329042, 0.19434445)
 scene_ref = NodePath("../../../..")
 
-[node name="Placeholder_Chair" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=198399156 node_paths=PackedStringArray("scene_ref") instance=ExtResource("12_1x0hl")]
-position = Vector2(773.2143, 391.07147)
-scale = Vector2(0.13657911, 0.2683126)
+[node name="Placeholder_Box" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=198399156 node_paths=PackedStringArray("scene_ref") instance=ExtResource("12_1x0hl")]
+position = Vector2(757.1428, 391.07144)
+scale = Vector2(0.05663467, 0.036383964)
+item_type = "box"
 scene_ref = NodePath("../../../..")
+delete_after_interaction = true
 
 [node name="Placeholder_Broom" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=512478918 node_paths=PackedStringArray("scene_ref") instance=ExtResource("13_keoxq")]
 position = Vector2(464.28574, 473.2142)
@@ -220,6 +223,12 @@ position = Vector2(607.14294, 123.21429)
 scale = Vector2(0.086825676, 0.08448958)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
+
+[node name="Placeholder_Book" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1019729110 node_paths=PackedStringArray("scene_ref") instance=ExtResource("16_h26ys")]
+position = Vector2(557.1428, 514.2857)
+rotation = -0.1213317
+scale = Vector2(0.08917339, 0.04195844)
+scene_ref = NodePath("../../../..")
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=434344345]
 z_index = 6

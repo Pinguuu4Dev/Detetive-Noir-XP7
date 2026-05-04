@@ -1,4 +1,4 @@
-join protagonist center [animation="Bounce In" length="1.0" wait="true" z_index="1" mirrored="true"]
+join protagonist rightmost [animation="Bounce In" length="1.0" wait="true" z_index="1"]
 [wait time="0.3"]
 audio sfx "res://Assets/Audio/SFX/Ambience/scary_sound.wav"
 [wait time="0.1"]

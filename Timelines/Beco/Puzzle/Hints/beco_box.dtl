@@ -1,0 +1,7 @@
+join protagonist (placeholder_protagonist) rightmost [animation="Slide From Left" length="0.8" mirrored="true"]
+protagonist (curious): Tem uma caixa em cima da cadeira… por que alguém deixaria isso aqui? O que será que é?…
+DE\: ------ PARA\: Jinx”; TENHA CUIDADO EM PRIMEIRO LUGAR, PRINCIPALMENTE AO ABRIR NO ESCURO.
+protagonist (worried): Jinx… é quase o meu nome… que coisa estranha. Vou tentar abrir.
+[wait time="1.5"]
+protagonist (sad): Não dá, que tipo de fita é essa? A prova de garras?
+protagonist: Ah, esquece.

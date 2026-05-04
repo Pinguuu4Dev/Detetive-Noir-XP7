@@ -1,4 +1,4 @@
-join protagonist (placeholder_protagonist) right [animation="Slide From Left" length="0.3" wait="true"]
+join protagonist (placeholder_protagonist) rightmost [animation="Slide From Left" length="0.3" wait="true" mirrored="true"]
 [wait time="0.2"]
 protagonist (sad): Que saco. Jurei que eu tinha deixado meu cigarro na gaveta…
 [wait time="0.2"]

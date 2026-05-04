@@ -1,4 +1,4 @@
-join protagonist center [animation="Zoom In" length="0.6" wait="true" z_index="1"]
+join protagonist rightmost [animation="Zoom In" length="0.6" wait="true" z_index="1" mirrored="true"]
 protagonist: [i]"Em suas patas… assim… sonhos…"[/i]
 protagonist: [i]"Em meio às trevas… os números nos amaldiçoam"[/i]
 protagonist: [i]“No sangue que uniria os mundos”[/i]

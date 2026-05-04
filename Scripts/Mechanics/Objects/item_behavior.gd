@@ -17,6 +17,8 @@ func _ready() -> void:
 	col_area.connect("mouse_exited", _reset_cursor)
 	col_area.connect("input_event", _object_is_held)
 	
+	if item_type == "notebook":
+		TimelineManager.n_interaction_ref = self
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
@@ -35,7 +37,6 @@ func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_released("interact_with_items") and object_held:
 		object_held = false
 		if open_after_interaction and PuzzleManager.puzzle_started:
-			notebook._open_notebook()
 			for i in scene_ref.interactable_items.get_children():
 				if i != notebook:
 					i.visible = false
