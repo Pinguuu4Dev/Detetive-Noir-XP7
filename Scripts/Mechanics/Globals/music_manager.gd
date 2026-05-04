@@ -10,6 +10,6 @@ func play_music(file: AudioStreamOggVorbis, volume: float = 0, fadeout: bool = f
 		print("tween acabou")
 	
 	stream = file
-	volume_db = 0
+	volume_db = volume
 	play()
 	print("tocando nova musica")
