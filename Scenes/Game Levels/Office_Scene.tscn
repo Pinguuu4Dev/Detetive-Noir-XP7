@@ -201,8 +201,9 @@ script = ExtResource("3_e1qge")
 
 [node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1327138087]
 stream = ExtResource("6_s3noc")
-volume_db = -14.0
+volume_db = -10.0
 autoplay = true
+bus = &"Muffled Rain"
 
 [node name="PauseScreen" parent="." unique_id=1931167145 instance=ExtResource("4_q8kq6")]
 process_priority = 1

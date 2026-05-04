@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 ## Quando o botão "Iniciar" for pressionado
 func _on_start_pressed() -> void:
-	MusicManager.play_music(menu_theme, true, 2) # o menu_theme aqui é placeholder
+	MusicManager.play_music(menu_theme, 0, true, 2) # o menu_theme aqui é placeholder
 	
 	animation_player.play("Fade-Out")
 	await animation_player.animation_finished
