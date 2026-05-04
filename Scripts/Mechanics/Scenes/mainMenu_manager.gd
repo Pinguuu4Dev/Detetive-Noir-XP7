@@ -11,11 +11,17 @@ class_name MainMenu_Manager
 @onready var animation_player = $Transition_FX
 @onready var background = $Menu_BG
 
+var menu_theme := preload("res://Assets/Audio/Music/Menu Theme.ogg")
+var gameplay_theme := preload("res://Assets/Audio/Music/Gameplay Theme.ogg")
+
 func _ready() -> void:
+	MusicManager.play_music(menu_theme)
 	options_animationPlayer = options_menu_ref.get_node("Transition_FX")
 	
 ## Quando o botão "Iniciar" for pressionado
 func _on_start_pressed() -> void:
+	MusicManager.play_music(gameplay_theme, -12, true, 2)
+	
 	animation_player.play("Fade-Out")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_packed(level_to) # Vai para cena indicada pelo Level_To

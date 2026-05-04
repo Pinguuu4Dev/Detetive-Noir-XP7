@@ -25,6 +25,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 CursorManager="*uid://b3h3ytrkd0ee5"
 PuzzleManager="*uid://dq4tkeyg8xe7j"
 TimelineManager="*uid://ckoculcl6u311"
+MusicManager="*uid://deckaqaidjng5"
 
 [dialogic]
 
