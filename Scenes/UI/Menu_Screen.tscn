@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dd3ja6w7yaep0" path="res://Scenes/Game Levels/Office_Scene.tscn" id="2_se15k"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="3_2bnp2"]
 [ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Settings_Screen.tscn" id="3_ruads"]
-[ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_rjge0"]
+[ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="5_2dlhk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dlhk"]
 content_margin_left = 10.0
@@ -187,8 +187,9 @@ root_node = NodePath("../Menu_BG/Button_Container")
 libraries/ = SubResource("AnimationLibrary_rjge0")
 
 [node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1190858699]
-stream = ExtResource("4_rjge0")
+stream = ExtResource("5_2dlhk")
 autoplay = true
+bus = &"SFX"
 
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Start_BT" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Options_BT" to="." method="_on_options_pressed"]
