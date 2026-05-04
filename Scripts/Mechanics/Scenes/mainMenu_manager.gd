@@ -12,6 +12,7 @@ class_name MainMenu_Manager
 @onready var background = $Menu_BG
 
 var menu_theme := preload("res://Assets/Audio/Music/Menu Theme.ogg")
+var gameplay_theme := preload("res://Assets/Audio/Music/Gameplay Theme.ogg")
 
 func _ready() -> void:
 	MusicManager.play_music(menu_theme)
@@ -19,7 +20,7 @@ func _ready() -> void:
 	
 ## Quando o botão "Iniciar" for pressionado
 func _on_start_pressed() -> void:
-	MusicManager.play_music(menu_theme, 0, true, 2) # o menu_theme aqui é placeholder
+	MusicManager.play_music(gameplay_theme, -12, true, 2)
 	
 	animation_player.play("Fade-Out")
 	await animation_player.animation_finished
