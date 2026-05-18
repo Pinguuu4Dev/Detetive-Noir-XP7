@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://calefmhq714iv" path="res://Scripts/Mechanics/Scenes/officeScene_logic.gd" id="1_4ri1a"]
 [ext_resource type="PackedScene" uid="uid://cnw2ei7sdvg4l" path="res://Scenes/Game Levels/Beco_Scene.tscn" id="2_4ri1a"]
-[ext_resource type="Texture2D" uid="uid://c54vdb0jy168o" path="res://Assets/Placeholder/Levels/office-bg.jpg" id="3_4ri1a"]
 [ext_resource type="Script" uid="uid://b3h3ytrkd0ee5" path="res://Scripts/Mechanics/Globals/cursor_manager.gd" id="3_e1qge"]
 [ext_resource type="PackedScene" uid="uid://jpcg38jxvprg" path="res://Scenes/Items/Office/Puzzle Components/Office_Phone.tscn" id="3_s3noc"]
+[ext_resource type="Texture2D" uid="uid://bq44er0rn45o" path="res://Assets/Backgrounds/Escritório.png" id="4_es0d8"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="4_q8kq6"]
 [ext_resource type="PackedScene" uid="uid://bbdolkaqxed24" path="res://Scenes/Items/Office/Flavor/Office_Lamp.tscn" id="6_jheww"]
 [ext_resource type="AudioStream" uid="uid://lu62bpxjup3b" path="res://Assets/Audio/SFX/Rain on window loop.ogg" id="6_s3noc"]
@@ -111,8 +111,9 @@ next_scene = ExtResource("2_4ri1a")
 
 [node name="Scene_Elements" type="Node" parent="." unique_id=311925423]
 
-[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=253579388]
+[node name="Placeholder_BG" type="Control" parent="Scene_Elements" unique_id=638828434]
 z_index = -2
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -124,7 +125,23 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.89077675, 0.8127115)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("3_4ri1a")
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="Scene_Elements/Placeholder_BG" unique_id=1304905371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -356.75922
+offset_top = -226.00066
+offset_right = 1790.9999
+offset_bottom = 1096.5479
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("4_es0d8")
 
 [node name="Interactable_Items" type="Control" parent="Scene_Elements/Placeholder_BG" unique_id=484792981]
 layout_mode = 1

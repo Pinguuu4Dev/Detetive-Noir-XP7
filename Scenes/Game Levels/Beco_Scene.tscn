@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://w4kxkpanccg1" path="res://Scripts/Mechanics/Scenes/becoScene_logic.gd" id="1_rwci3"]
 [ext_resource type="PackedScene" uid="uid://6dm6tvn0abm4" path="res://Scenes/Game Levels/RitualRoom_Scene.tscn" id="2_4qler"]
 [ext_resource type="PackedScene" uid="uid://1k0u5t53vji6" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Notebook.tscn" id="3_wgc12"]
-[ext_resource type="Texture2D" uid="uid://c1pur3awrv7k7" path="res://Assets/Placeholder/Levels/alley-bg.jpg" id="4_4qler"]
 [ext_resource type="PackedScene" uid="uid://bpfnqi71pwocb" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Door_1.tscn" id="4_6xvgo"]
+[ext_resource type="Texture2D" uid="uid://cn3wb3j71dnuu" path="res://Assets/Backgrounds/Beco.png" id="4_h26ys"]
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="4_nbpvd"]
 [ext_resource type="PackedScene" uid="uid://cct720hgxob16" path="res://Scenes/Items/Beco/Puzzle Components/BecoScene_Trash_1.tscn" id="5_lhagv"]
 [ext_resource type="PackedScene" uid="uid://dxl6rtqsu87qb" path="res://Scenes/UI/Pause_Screen.tscn" id="7_xo8tj"]
@@ -120,8 +120,9 @@ stream = ExtResource("4_nbpvd")
 volume_db = -10.0
 autoplay = true
 
-[node name="Beco_BG" type="TextureRect" parent="Scene_Elements" unique_id=1296039237]
+[node name="Beco_BG" type="Control" parent="Scene_Elements" unique_id=1767691408]
 z_index = -10
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -134,7 +135,23 @@ offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-texture = ExtResource("4_4qler")
+mouse_filter = 2
+
+[node name="Beco_BG" type="TextureRect" parent="Scene_Elements/Beco_BG" unique_id=958022227]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 1600.0
+offset_bottom = 900.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("4_h26ys")
 
 [node name="Interactable_Items" type="Control" parent="Scene_Elements/Beco_BG" unique_id=752073450]
 z_index = 1
