@@ -1,7 +1,8 @@
-extends Node2D
+extends Sprite2D
 class_name Item
 ## Script para configurarmos os itens que forem criados
 @onready var col_area:= $collision_area
+@onready var shader_outline: ShaderMaterial = self.material
 ## Pra colocar um tipo para o item, default sendo 'leek'
 @export_category("Parâmetros de Interação")
 @export var item_type: String
@@ -19,13 +20,18 @@ func _ready() -> void:
 	
 	if item_type == "notebook":
 		TimelineManager.n_interaction_ref = self
+		
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
+	if shader_outline:
+		shader_outline.set_shader_parameter("Outline_Width", 12.0)
 	
 ## Função para resetar o cursor com o sinal do sprite de quando o mouse sai
 func _reset_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.default_icon)
+	if shader_outline:
+		shader_outline.set_shader_parameter("Outline_Width", 0.0)
 	
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
 func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:

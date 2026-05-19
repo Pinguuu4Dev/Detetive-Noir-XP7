@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6naj2snnknf4"
-path="res://.godot/imported/jynxdisgust.png-325c27c044528c5cc4bdf5494a1c50cb.ctex"
+uid="uid://cqtlw6o4qtwvx"
+path="res://.godot/imported/beco_door.png-5edee99c992914f096e70173f615a405.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/jynxdisgust.png"
-dest_files=["res://.godot/imported/jynxdisgust.png-325c27c044528c5cc4bdf5494a1c50cb.ctex"]
+source_file="res://Assets/Sprites/Objects/beco_door.png"
+dest_files=["res://.godot/imported/beco_door.png-5edee99c992914f096e70173f615a405.ctex"]
 
 [params]
 

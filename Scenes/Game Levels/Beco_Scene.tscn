@@ -186,9 +186,9 @@ open_after_interaction = true
 notebook = NodePath("../NotebookPuzzle")
 
 [node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 node_paths=PackedStringArray("scene_ref") instance=ExtResource("4_6xvgo")]
-position = Vector2(612.5, 321.4286)
+position = Vector2(612.5, 305.35715)
 rotation = 0.014495522
-scale = Vector2(0.15417561, 0.42900252)
+scale = Vector2(0.6492162, 0.6021783)
 item_type = "metal_door"
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false

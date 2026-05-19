@@ -17,7 +17,7 @@ script = ExtResource("2_q0vxy")
 scene = ExtResource("1_22g87")
 overrides = {
 "follow_viewport": "true",
-"global_font": "\"res://Assets/Fonts/Milk Choco.otf\"",
+"global_font": "\"res://Assets/Fonts/Biro_Script_reduced.ttf\"",
 "global_font_size": "16.0"
 }
 
@@ -57,7 +57,7 @@ overrides = {
 "text_size": "30.0",
 "text_use_global_color": "false",
 "typing_sounds_mode": "2",
-"typing_sounds_sounds_folder": "\"res://Assets/Audio/SFX/Typewriter Sounds\""
+"typing_sounds_sounds_folder": "\"res://Assets/Audio/SFX/UI/Scratch\""
 }
 
 [sub_resource type="Resource" id="Resource_jp5tn"]
@@ -91,4 +91,4 @@ layer_info = {
 "16": SubResource("Resource_dl86o"),
 "17": SubResource("Resource_bjbbs")
 }
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "13"

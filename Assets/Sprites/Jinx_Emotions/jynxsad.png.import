@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkn0wr5ln2sed"
-path="res://.godot/imported/jynxritual.png-31d572d40c4c8f7b7a08949fcb8fdc7f.ctex"
+uid="uid://civvnebg1hhse"
+path="res://.godot/imported/jynxsad.png-0bc898d73decf59984a507c260b72fed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/jynxritual.png"
-dest_files=["res://.godot/imported/jynxritual.png-31d572d40c4c8f7b7a08949fcb8fdc7f.ctex"]
+source_file="res://Assets/Sprites/Jinx_Emotions/jynxsad.png"
+dest_files=["res://.godot/imported/jynxsad.png-0bc898d73decf59984a507c260b72fed.ctex"]
 
 [params]
 
