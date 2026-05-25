@@ -81,7 +81,6 @@ scale_up = 1.2000000000000002
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1332443462]
 libraries/ = SubResource("AnimationLibrary_ukfm1")
-autoplay = &"Display_Text"
 
 [node name="Line_Collision" type="Area2D" parent="." unique_id=757495385]
 z_index = 10

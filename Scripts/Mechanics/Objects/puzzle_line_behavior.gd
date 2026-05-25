@@ -8,8 +8,10 @@ var inside_area: Selectable
 var initial_pos:= Vector2(100, 100)
 
 @onready var a_player:= $AnimationPlayer
+@onready var text_node:= $Text_Background/Text
 
 @export_range(1.1, 2, 0.1) var scale_up = 1.3
+@export var clean_text: Texture2D
 
 var new_scale = Vector2(scale_up, scale_up)
 var original_scale:= Vector2(1, 1)

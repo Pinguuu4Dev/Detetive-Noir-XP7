@@ -7,6 +7,9 @@ var puzzleLine_ref: PuzzleLine
 @export_range(1.1, 2, 0.1) var scale_up = 1.3
 var original_scale:= Vector2(1, 1)
 
+func _ready() -> void:
+	original_scale = scale
+
 func _on_mouse_entered() -> void:
 	_hover(true)
 	PuzzleManager._set_hovered_area(self)
@@ -30,7 +33,7 @@ func _clear_line():
 func _hover(h: bool):
 	if h:
 		hovered = true
-		scale = Vector2(scale_up, scale_up)
+		scale *= Vector2(scale_up, scale_up)
 	else:
 		hovered = false
 		scale = original_scale

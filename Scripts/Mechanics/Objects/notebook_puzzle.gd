@@ -14,17 +14,19 @@ func _open_notebook():
 	visible = true
 	
 	for p in p_lines:
+		print("yes")
 		if p.a_player and first_time_open:
-			var anim_player_temp: AnimationPlayer
-			anim_player_temp = p.a_player
-			anim_player_temp.play("Display_Text")
+			print("ok")
+			p.a_player.play("Display_Text")
 			
 	if first_time_open:
 		first_time_open = false
 
 func _remove_blood(p_int: int):
-	p_lines[p_int - 1].a_player.play("Remove_Blood")
-	p_lines[p_int - 1]._enable_interaction()
+	var puzzle_line_temp = p_lines[p_int - 1]
+	
+	puzzle_line_temp.text_node.set("texture", puzzle_line_temp.clean_text)
+	puzzle_line_temp._enable_interaction()
 	
 func _on_reset_button_pressed() -> void:
 	for i in p_lines:

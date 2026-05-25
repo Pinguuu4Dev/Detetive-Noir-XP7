@@ -160,18 +160,17 @@ scale = Vector2(0.56, 0.56)
 
 [node name="NotebookPuzzle" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=375376209 node_paths=PackedStringArray("b_scene") instance=ExtResource("8_ulfh7")]
 visible = false
-z_index = 6
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 605.3571
-offset_top = 330.35715
-offset_right = 605.3571
-offset_bottom = 330.35715
-grow_horizontal = 1
-grow_vertical = 1
-scale = Vector2(0.8038398, 1.2129034)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 567.8572
+offset_top = 301.7857
+offset_right = 567.8572
+offset_bottom = 301.7857
+scale = Vector2(0.67192763, 0.6064517)
 b_scene = NodePath("../../../..")
 
 [node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 node_paths=PackedStringArray("scene_ref", "notebook") instance=ExtResource("3_wgc12")]
