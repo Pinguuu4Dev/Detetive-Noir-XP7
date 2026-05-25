@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bpfnqi71pwocb"]
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_82rd8"]
-[ext_resource type="Texture2D" uid="uid://cqtlw6o4qtwvx" path="res://Assets/Sprites/Objects/beco_door.png" id="1_ar61p"]
 [ext_resource type="Shader" uid="uid://dwi3saujatgxf" path="res://Shaders/Item Outline/outline_material.tres" id="1_y17lw"]
+[ext_resource type="Texture2D" uid="uid://btpdkp1wnripq" path="res://Assets/Backgrounds/assets beco/porta.png" id="2_y17lw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yc8mb"]
 shader = ExtResource("1_y17lw")
@@ -10,21 +10,21 @@ shader_parameter/Outline_Color = Color(1, 1, 1, 1)
 shader_parameter/Outline_Width = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(197.76123, 401.23462)
+size = Vector2(220.1493, 401.23462)
 
 [node name="Placeholder_Door" type="Sprite2D" unique_id=114531261]
 z_index = 2
 material = SubResource("ShaderMaterial_yc8mb")
 scale = Vector2(0.268, 0.324)
-texture = ExtResource("1_ar61p")
 script = ExtResource("1_82rd8")
+hovered_texture = ExtResource("2_y17lw")
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
 z_index = 2
-position = Vector2(1.8656719, 3.0864186)
+position = Vector2(13.0597105, 3.0864186)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")
 

@@ -10,6 +10,7 @@ class_name Item
 @export var delete_after_interaction:= true
 @export var open_after_interaction:= false
 @export var notebook: Notebook
+@export var hovered_texture: Texture2D
 
 var object_held:= false
 
@@ -24,14 +25,14 @@ func _ready() -> void:
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
-	if shader_outline:
-		shader_outline.set_shader_parameter("Outline_Width", 12.0)
+	if self.hovered_texture:
+		self.set("texture", hovered_texture)
 	
 ## Função para resetar o cursor com o sinal do sprite de quando o mouse sai
 func _reset_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.default_icon)
-	if shader_outline:
-		shader_outline.set_shader_parameter("Outline_Width", 0.0)
+	if self.hovered_texture:
+		self.set("texture", null)
 	
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
 func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:

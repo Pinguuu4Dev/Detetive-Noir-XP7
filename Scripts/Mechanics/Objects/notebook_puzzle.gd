@@ -17,7 +17,6 @@ func _open_notebook():
 		if p.a_player and first_time_open:
 			var anim_player_temp: AnimationPlayer
 			anim_player_temp = p.a_player
-				
 			anim_player_temp.play("Display_Text")
 			
 	if first_time_open:

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cbonrrwwa5v1j"]
 
+[ext_resource type="Texture2D" uid="uid://ucg3sddorgw4" path="res://Assets/Backgrounds/assets beco/garrafas.png" id="1_ikr7m"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_voj3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(537.31354, 462.963)
+size = Vector2(55.970154, 86.41977)
 
 [node name="Placeholder_Bottles" type="Sprite2D" unique_id=114531261]
 z_index = 2
@@ -11,12 +12,14 @@ scale = Vector2(0.268, 0.324)
 script = ExtResource("1_voj3b")
 item_type = "bottles"
 delete_after_interaction = false
+hovered_texture = ExtResource("1_ikr7m")
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
 z_index = 2
+position = Vector2(1.8656719, -5.886879e-06)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")
 

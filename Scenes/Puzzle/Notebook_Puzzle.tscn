@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b0kymjqxulia3" path="res://Scripts/Mechanics/Objects/notebook_puzzle.gd" id="1_0v856"]
 [ext_resource type="Texture2D" uid="uid://buofng6w240tk" path="res://Assets/Placeholder/Objects/notebook_page.png" id="1_lfsmi"]
-[ext_resource type="PackedScene" uid="uid://csy0jd2rp4d4x" path="res://Scenes/Puzzle/Lines/puzzle_line_2.tscn" id="3_0v856"]
-[ext_resource type="PackedScene" uid="uid://56j8af32k4uq" path="res://Scenes/Puzzle/Lines/puzzle_line_3.tscn" id="4_2oifp"]
-[ext_resource type="PackedScene" uid="uid://dcsbs8aomy5y0" path="res://Scenes/Puzzle/Lines/puzzle_line_4.tscn" id="5_wd4mk"]
-[ext_resource type="PackedScene" uid="uid://2huxjn0odarf" path="res://Scenes/Puzzle/Lines/puzzle_line_5.tscn" id="6_cg02q"]
+[ext_resource type="PackedScene" uid="uid://3ki72tskxevx" path="res://Scenes/Puzzle/Lines/puzzle_line_2.tscn" id="3_0v856"]
+[ext_resource type="PackedScene" uid="uid://cyq4dkkmjpd7s" path="res://Scenes/Puzzle/Lines/puzzle_line_3.tscn" id="4_2oifp"]
+[ext_resource type="PackedScene" uid="uid://lvw638o26cnj" path="res://Scenes/Puzzle/Lines/puzzle_line_4.tscn" id="5_wd4mk"]
+[ext_resource type="PackedScene" uid="uid://d1qnm4pdv2iy0" path="res://Scenes/Puzzle/Lines/puzzle_line_5.tscn" id="6_cg02q"]
 [ext_resource type="PackedScene" uid="uid://gwgr1dxsgm5p" path="res://Scenes/Puzzle/Areas/Selectable_Areas.tscn" id="7_n811j"]
-[ext_resource type="PackedScene" uid="uid://6a86nikhn82j" path="res://Scenes/Puzzle/Lines/puzzle_line_1.tscn" id="8_2oifp"]
+[ext_resource type="PackedScene" uid="uid://bvgrwhhexs38r" path="res://Scenes/Puzzle/Lines/puzzle_line_1.tscn" id="8_2oifp"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
 [ext_resource type="Texture2D" uid="uid://xwbmln37irhe" path="res://Assets/Placeholder/Icons/fechar.png" id="10_2oifp"]
 
@@ -77,8 +77,6 @@ script = ExtResource("1_0v856")
 libraries/ = SubResource("AnimationLibrary_44k4v")
 
 [node name="Notebook_Page" type="TextureRect" parent="." unique_id=343645507]
-z_index = -10
-z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,85 +98,70 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Puzzle_Line1" parent="Notebook_Page/Puzzle_Lines" unique_id=83627724 instance=ExtResource("8_2oifp")]
-z_index = 10
-z_as_relative = false
+[node name="Puzzle_Line1" parent="Notebook_Page/Puzzle_Lines" unique_id=1598418759 instance=ExtResource("8_2oifp")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.522
-anchor_top = 0.40300003
-anchor_right = 0.522
-anchor_bottom = 0.40300003
-offset_left = -0.08001709
-offset_top = -0.08001709
-offset_right = -0.08001709
-offset_bottom = -0.08001709
+anchor_left = 0.51600003
+anchor_top = 0.72300005
+anchor_right = 0.51600003
+anchor_bottom = 0.72300005
+offset_left = -1.2400208
+offset_top = 0.7199707
+offset_right = -1.2400208
+offset_bottom = 0.7199707
+scale = Vector2(3.3255184, 1.3744689)
 
-[node name="Puzzle_Line2" parent="Notebook_Page/Puzzle_Lines" unique_id=2080902045 instance=ExtResource("3_0v856")]
-z_index = 10
-z_as_relative = false
+[node name="Puzzle_Line2" parent="Notebook_Page/Puzzle_Lines" unique_id=511174525 instance=ExtResource("3_0v856")]
 layout_mode = 1
-anchor_left = 0.522
-anchor_top = 0.294
-anchor_right = 0.522
-anchor_bottom = 0.294
-offset_left = -0.08001709
-offset_top = 0.16000366
-offset_right = -0.08001709
-offset_bottom = 0.16000366
-pivot_offset_ratio = Vector2(0, 0)
-mouse_force_pass_scroll_events = false
-scale_up = 1.3
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.29500002
+anchor_right = 0.517
+anchor_bottom = 0.29500002
+offset_left = -0.8800049
+offset_top = -0.20000458
+offset_right = -0.8800049
+offset_bottom = -0.20000458
+scale = Vector2(3.308705, 1.4548514)
 
-[node name="Puzzle_Line3" parent="Notebook_Page/Puzzle_Lines" unique_id=431103160 instance=ExtResource("4_2oifp")]
-z_index = 10
-z_as_relative = false
+[node name="Puzzle_Line3" parent="Notebook_Page/Puzzle_Lines" unique_id=1377653458 instance=ExtResource("4_2oifp")]
 layout_mode = 1
-anchor_left = 0.522
-anchor_top = 0.083000004
-anchor_right = 0.522
-anchor_bottom = 0.083000004
-offset_left = -0.08001709
-offset_top = 0.11999893
-offset_right = -0.08001709
-offset_bottom = 0.11999893
-pivot_offset_ratio = Vector2(0, 0)
-mouse_force_pass_scroll_events = false
-scale_up = 1.3
+anchors_preset = -1
+anchor_left = 0.51500005
+anchor_top = 0.11400001
+anchor_right = 0.51500005
+anchor_bottom = 0.11400001
+offset_left = 0.3999939
+offset_top = 0.9599991
+offset_right = 0.3999939
+offset_bottom = 0.9599991
+scale = Vector2(3.3200953, 1.5172012)
 
-[node name="Puzzle_Line4" parent="Notebook_Page/Puzzle_Lines" unique_id=1939637381 instance=ExtResource("5_wd4mk")]
-z_index = 10
-z_as_relative = false
+[node name="Puzzle_Line4" parent="Notebook_Page/Puzzle_Lines" unique_id=327031170 instance=ExtResource("5_wd4mk")]
 layout_mode = 1
-anchor_left = 0.522
-anchor_top = 0.5
-anchor_right = 0.522
-anchor_bottom = 0.5
-offset_left = -0.08001709
-offset_top = 4.0
-offset_right = -0.08001709
-offset_bottom = 4.0
-pivot_offset_ratio = Vector2(0, 0)
-mouse_force_pass_scroll_events = false
-scale_up = 1.3
+anchors_preset = -1
+anchor_left = 0.51600003
+anchor_top = 0.43800002
+anchor_right = 0.51600003
+anchor_bottom = 0.43800002
+offset_left = -1.2400208
+offset_top = -0.68000793
+offset_right = -1.2400208
+offset_bottom = -0.68000793
+scale = Vector2(3.3012414, 1.4326226)
 
-[node name="Puzzle_Line5" parent="Notebook_Page/Puzzle_Lines" unique_id=2109427686 instance=ExtResource("6_cg02q")]
-z_index = 10
-z_as_relative = false
+[node name="Puzzle_Line5" parent="Notebook_Page/Puzzle_Lines" unique_id=2045814904 instance=ExtResource("6_cg02q")]
 layout_mode = 1
-anchor_left = 0.522
-anchor_top = 0.192
-anchor_right = 0.522
-anchor_bottom = 0.192
-offset_left = -0.08001709
-offset_top = -0.12000275
-offset_right = -0.08001709
-offset_bottom = -0.12000275
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0, 0)
-mouse_force_pass_scroll_events = false
-scale_up = 1.3
+anchors_preset = -1
+anchor_left = 0.514
+anchor_top = 0.578
+anchor_right = 0.514
+anchor_bottom = 0.578
+offset_left = 1.0400085
+offset_top = -0.07998657
+offset_right = 1.0400085
+offset_bottom = -0.07998657
+scale = Vector2(3.3240347, 1.3626881)
 
 [node name="Line_Areas" type="Node2D" parent="Notebook_Page" unique_id=2120271775]
 unique_name_in_owner = true
@@ -210,18 +193,16 @@ position = Vector2(30, 183)
 z_index = 2
 z_as_relative = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -78.0
-offset_top = -81.0
-offset_right = 78.0
-offset_bottom = -37.0
+offset_left = -33.0
+offset_top = 7.0
+offset_right = 34.0
+offset_bottom = 36.0
 grow_horizontal = 2
-grow_vertical = 0
 theme = ExtResource("8_isv3y")
+theme_override_font_sizes/font_size = 10
 action_mode = 0
 text = "Reiniciar"
 

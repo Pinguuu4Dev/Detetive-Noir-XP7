@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://1k0u5t53vji6"]
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_6daru"]
-[ext_resource type="Texture2D" uid="uid://bv2o42w0fkj08" path="res://Assets/Placeholder/Objects/notebook.png" id="1_uhysx"]
+[ext_resource type="Texture2D" uid="uid://buhi22xrbwf6m" path="res://Assets/Backgrounds/assets beco/cadernopuzzle.png" id="2_7mir5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(429.10413, 324.0741)
+size = Vector2(152.98509, 80.24692)
 
 [sub_resource type="Animation" id="Animation_1q37m"]
 resource_name = "Open"
@@ -16,18 +16,18 @@ _data = {
 
 [node name="Placeholder_Notebook" type="Sprite2D" unique_id=2138698721]
 z_index = 2
-scale = Vector2(0.268, 0.324)
-texture = ExtResource("1_uhysx")
+scale = Vector2(0.6241691, 0.75459254)
 script = ExtResource("1_6daru")
 item_type = "notebook"
 delete_after_interaction = null
 open_after_interaction = null
+hovered_texture = ExtResource("2_7mir5")
 
 [node name="collision_area" type="Area2D" parent="." unique_id=378280439]
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-position = Vector2(-18.656723, 9.259254)
+position = Vector2(5.5970154, 0)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_kwdtm")
 

@@ -161,7 +161,6 @@ scale = Vector2(0.56, 0.56)
 [node name="NotebookPuzzle" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=375376209 node_paths=PackedStringArray("b_scene") instance=ExtResource("8_ulfh7")]
 visible = false
 z_index = 6
-z_as_relative = true
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -176,75 +175,74 @@ scale = Vector2(0.8038398, 1.2129034)
 b_scene = NodePath("../../../..")
 
 [node name="Placeholder_Notebook" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=114531261 node_paths=PackedStringArray("scene_ref", "notebook") instance=ExtResource("3_wgc12")]
-modulate = Color(0.41503215, 0.51384026, 0.92255026, 1)
-position = Vector2(741.07153, 541.0715)
-rotation = 0.3030762
-scale = Vector2(0.15667646, 0.12706041)
+position = Vector2(555.3572, 525)
+rotation = 0.011885643
+scale = Vector2(0.5351819, 0.52825844)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 open_after_interaction = true
 notebook = NodePath("../NotebookPuzzle")
 
 [node name="Placeholder_Door" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1451948297 node_paths=PackedStringArray("scene_ref") instance=ExtResource("4_6xvgo")]
-position = Vector2(612.5, 305.35715)
+position = Vector2(617.85706, 298.21426)
 rotation = 0.014495522
-scale = Vector2(0.6492162, 0.6021783)
+scale = Vector2(0.6198126, 0.5749051)
 item_type = "metal_door"
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 
 [node name="Placeholder_Trash" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=39230814 node_paths=PackedStringArray("scene_ref") instance=ExtResource("5_lhagv")]
-position = Vector2(942.85724, 391.07144)
-rotation = 0.07442681
-scale = Vector2(0.44867325, 0.3371964)
+position = Vector2(971.4285, 391.07144)
+rotation = -0.0090392195
+scale = Vector2(0.5789004, 0.63035923)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 
 [node name="Placeholder_W_Box" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1168854118 node_paths=PackedStringArray("scene_ref") instance=ExtResource("9_tkmna")]
-position = Vector2(107.14286, 428.5714)
-rotation = -0.24544448
-scale = Vector2(0.3889519, 0.25144646)
+position = Vector2(91.450066, 454.97852)
+rotation = -0.030724268
+scale = Vector2(0.59839666, 0.5484181)
 scene_ref = NodePath("../../../..")
 
 [node name="Placeholder_Camera" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=736206283 node_paths=PackedStringArray("scene_ref") instance=ExtResource("10_6xuvt")]
-position = Vector2(241.0714, 144.64284)
-rotation = 0.2742958
-scale = Vector2(0.11207759, 0.12253628)
+position = Vector2(245.49783, 137.63797)
+rotation = -0.006277293
+scale = Vector2(0.5505054, 0.6814681)
 scene_ref = NodePath("../../../..")
 
 [node name="Placeholder_Web" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1516952482 node_paths=PackedStringArray("scene_ref") instance=ExtResource("11_dacbk")]
-position = Vector2(405.3571, 116.07143)
-scale = Vector2(0.37329042, 0.19434445)
+position = Vector2(382.08337, 46.72959)
+scale = Vector2(0.5862251, 0.6029746)
 scene_ref = NodePath("../../../..")
 
 [node name="Placeholder_Box" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=198399156 node_paths=PackedStringArray("scene_ref") instance=ExtResource("12_1x0hl")]
-position = Vector2(757.1428, 391.07144)
-scale = Vector2(0.05663467, 0.036383964)
+position = Vector2(785.71423, 392.8572)
+scale = Vector2(0.5811703, 0.5730345)
 item_type = "box"
 scene_ref = NodePath("../../../..")
 delete_after_interaction = true
 
 [node name="Placeholder_Broom" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=512478918 node_paths=PackedStringArray("scene_ref") instance=ExtResource("13_keoxq")]
-position = Vector2(464.28574, 473.2142)
-rotation = -0.21619053
-scale = Vector2(0.3054001, 0.027911332)
+position = Vector2(456.82568, 490.84116)
+rotation = 0.008101612
+scale = Vector2(0.5855458, 0.6726674)
 scene_ref = NodePath("../../../..")
 
 [node name="Placeholder_Bottles" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=411188176 node_paths=PackedStringArray("scene_ref") instance=ExtResource("14_krims")]
-position = Vector2(683.92847, 412.5)
-scale = Vector2(0.03825605, 0.07209459)
+position = Vector2(691.0714, 408.92856)
+scale = Vector2(0.4999997, 0.57277626)
 scene_ref = NodePath("../../../..")
 
 [node name="Placeholder_Lamp" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=539538923 node_paths=PackedStringArray("scene_ref") instance=ExtResource("15_6udud")]
-position = Vector2(607.14294, 123.21429)
-scale = Vector2(0.086825676, 0.08448958)
+position = Vector2(606.47327, 106.02679)
+scale = Vector2(0.5309795, 0.5543154)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 
 [node name="Placeholder_Book" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1019729110 node_paths=PackedStringArray("scene_ref") instance=ExtResource("16_h26ys")]
-position = Vector2(557.1428, 514.2857)
-rotation = -0.1213317
-scale = Vector2(0.08917339, 0.04195844)
+position = Vector2(705.35724, 467.8571)
+rotation = -0.04218024
+scale = Vector2(0.5280125, 0.6215404)
 scene_ref = NodePath("../../../..")
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=434344345]
