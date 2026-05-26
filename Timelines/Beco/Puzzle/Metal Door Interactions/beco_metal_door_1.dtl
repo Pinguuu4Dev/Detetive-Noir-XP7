@@ -4,13 +4,14 @@ protagonist: Ah, essa deve ser a entrada pro prédio…
 protagonist: Hmmm… é metálica, e parece ter se oxidado um tanto por conta da chuva, eu imagino… mas não vejo nada demais. Será que alguém atende se eu bater?
 audio "res://Assets/Audio/SFX/Objects/Knock 2.wav" [volume="0.0"]
 protagonist: ...
-audio "res://Assets/Audio/SFX/Objects/Knock 2.wav" [volume="6.0"]
+audio "res://Assets/Audio/SFX/Objects/Knock 2.wav" [volume="0.0"]
 protagonist: ...
 [wait time="0.2" skippable="true"]
 protagonist: ...
 [wait time="0.2" skippable="true"]
 protagonist: Tá, cansei de esperar, vou tentar abrir.
-audio "res://Assets/Audio/SFX/Ambience/scary_sound_2.wav"
+[wait time="1.0"]
+audio "res://Assets/Audio/SFX/Objects/Sangue Pingando 3.wav" [volume="4.5"]
 [wait time="0.3"]
-protagonist: Já imaginei que estivesse trancada, mas que barulho foi esse?
 protagonist: Bem, vou investigar melhor os arredores.
+protagonist: Já imaginei que estivesse trancada, mas que barulho foi esse?
