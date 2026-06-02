@@ -17,7 +17,15 @@ func _ready() -> void:
 	current_parent = get_parent()
 	music_bus_index = AudioServer.get_bus_index("Music")
 	sfx_bus_index = AudioServer.get_bus_index("SFX")
-	
+
+## Altera o volume do bus Master
+func _on_master_volume_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(0, linear_to_db(value))
+
+## Muta e desmuta o bus Master
+func _on_master_mute_toggled(toggled_on: bool) -> void:
+	AudioServer.set_bus_mute(0, toggled_on)
+
 ## Altera o volume do bus de música
 func _on_music_volume_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(music_bus_index, linear_to_db(value))

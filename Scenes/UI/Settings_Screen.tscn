@@ -87,6 +87,44 @@ layout_mode = 2
 text = "Volume"
 label_settings = ExtResource("2_cwmog")
 
+[node name="Master_Volume_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=764056759]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 19
+
+[node name="Bus_label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section" unique_id=1621701748]
+custom_minimum_size = Vector2(55, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cwmog")
+text = "Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Master_Volume_Slider" type="HSlider" parent="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section" unique_id=1859159779]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 0.7
+scrollable = false
+
+[node name="Mute_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section" unique_id=2112441254]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Mute_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Mute_Section" unique_id=1496702524]
+layout_mode = 2
+text = "Silenciar"
+label_settings = ExtResource("2_cwmog")
+
+[node name="Master_Mute_Option" type="CheckBox" parent="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Mute_Section" unique_id=216924007]
+layout_mode = 2
+theme_override_constants/check_v_offset = 1
+
 [node name="Music_Volume_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=120937255]
 layout_direction = 2
 layout_mode = 2
@@ -123,20 +161,21 @@ label_settings = ExtResource("2_cwmog")
 layout_mode = 2
 theme_override_constants/check_v_offset = 1
 
-[node name="SFX_Volume_Section2" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=595009833]
+[node name="SFX_Volume_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout" unique_id=595009833]
 layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 19
 
-[node name="Bus_label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section2" unique_id=401060089]
+[node name="Bus_label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section" unique_id=401060089]
 custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_cwmog")
-text = "SFX
-"
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="SFX_Volume_Slider" type="HSlider" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section2" unique_id=557474249]
+[node name="SFX_Volume_Slider" type="HSlider" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section" unique_id=557474249]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -145,18 +184,18 @@ step = 0.001
 value = 0.7
 scrollable = false
 
-[node name="Mute_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section2" unique_id=314388561]
+[node name="Mute_Section" type="HBoxContainer" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section" unique_id=314388561]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Mute_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section2/Mute_Section" unique_id=2094138007]
+[node name="Mute_Label" type="Label" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/Mute_Section" unique_id=2094138007]
 layout_mode = 2
 text = "Silenciar"
 label_settings = ExtResource("2_cwmog")
 
-[node name="SFX_Mute_Option" type="CheckBox" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section2/Mute_Section" unique_id=1251531974]
+[node name="SFX_Mute_Option" type="CheckBox" parent="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/Mute_Section" unique_id=1251531974]
 layout_mode = 2
 theme_override_constants/check_v_offset = 1
 
@@ -201,7 +240,11 @@ text = "Done"
 libraries/ = SubResource("AnimationLibrary_jay2q")
 autoplay = &"Fade-In"
 
+[connection signal="value_changed" from="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Master_Volume_Slider" to="." method="_on_master_volume_changed"]
+[connection signal="toggled" from="Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Mute_Section/Master_Mute_Option" to="." method="_on_master_mute_toggled"]
 [connection signal="value_changed" from="Settings_BG/Settings_Container/Vertical_Layout/Music_Volume_Section/Music_Volume_Slider" to="." method="_on_music_volume_changed"]
 [connection signal="toggled" from="Settings_BG/Settings_Container/Vertical_Layout/Music_Volume_Section/Mute_Section/Music_Mute_Option" to="." method="_on_music_mute_toggled"]
+[connection signal="value_changed" from="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/SFX_Volume_Slider" to="." method="_on_sfx_volume_changed"]
+[connection signal="toggled" from="Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/Mute_Section/SFX_Mute_Option" to="." method="_on_sfx_mute_toggled"]
 [connection signal="item_selected" from="Settings_BG/Settings_Container/Vertical_Layout/Screen_Section/Screen_Options" to="." method="_on_screen_options_selected"]
 [connection signal="pressed" from="Settings_BG/Settings_Container/Vertical_Layout/Done_Section/Done_Button" to="." method="_on_done_pressed"]
