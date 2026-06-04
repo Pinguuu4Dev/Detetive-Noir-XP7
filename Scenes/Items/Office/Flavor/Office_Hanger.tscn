@@ -2,21 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://d4hhhikpvmro" path="res://Assets/Sprites/assets escritorio/cabide.png" id="1_euybr"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_rt4hr"]
+[ext_resource type="BitMap" uid="uid://bdydo40citrvj" path="res://Assets/Sprites/assets escritorio/click masks/cabide_click_mask.png" id="2_k0mmj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
-size = Vector2(414.97064, 1422.5345)
-
-[node name="Office_Coat_Hanger" type="Sprite2D" unique_id=796953314]
+[node name="Office_Coat_Hanger" type="TextureButton" unique_id=1941379312]
 z_index = 2
+texture_hover = ExtResource("1_euybr")
+texture_click_mask = ExtResource("2_k0mmj")
 script = ExtResource("1_rt4hr")
 item_type = "hanger"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_euybr")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=170533037]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=372847164]
-position = Vector2(-6.4999948, 10.500018)
-scale = Vector2(0.37352037, 0.3915546)
-shape = SubResource("RectangleShape2D_n05nh")

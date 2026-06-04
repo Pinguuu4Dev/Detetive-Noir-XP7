@@ -2,21 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://4hsak0ii411i" path="res://Assets/Sprites/assets escritorio/abajur.png" id="1_feeyw"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_rlofg"]
+[ext_resource type="BitMap" uid="uid://bjpkvprujw2rd" path="res://Assets/Sprites/assets escritorio/click masks/abajur_click_mask.png" id="2_6tv2e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
-size = Vector2(294.49524, 314.1324)
-
-[node name="Office_Lamp" type="Sprite2D" unique_id=796953314]
+[node name="Office_Lamp" type="TextureButton" unique_id=1053112212]
 z_index = 2
+texture_hover = ExtResource("1_feeyw")
+texture_click_mask = ExtResource("2_6tv2e")
 script = ExtResource("1_rlofg")
 item_type = "lamp"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_feeyw")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=170533037]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=372847164]
-position = Vector2(0.99999994, -0.4999971)
-scale = Vector2(0.37352043, 0.39155465)
-shape = SubResource("RectangleShape2D_n05nh")

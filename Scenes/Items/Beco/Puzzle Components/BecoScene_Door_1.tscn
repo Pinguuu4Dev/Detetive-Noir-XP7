@@ -9,24 +9,13 @@ shader = ExtResource("1_y17lw")
 shader_parameter/Outline_Color = Color(1, 1, 1, 1)
 shader_parameter/Outline_Width = 0.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(220.1493, 401.23462)
-
-[node name="Placeholder_Door" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Door" type="TextureButton" unique_id=394839884]
 z_index = 2
 material = SubResource("ShaderMaterial_yc8mb")
 scale = Vector2(0.268, 0.324)
+texture_hover = ExtResource("2_y17lw")
 script = ExtResource("1_82rd8")
 hovered_texture = ExtResource("2_y17lw")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-z_index = 2
-position = Vector2(13.0597105, 3.0864186)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

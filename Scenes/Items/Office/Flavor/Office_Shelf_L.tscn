@@ -2,21 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_g10lv"]
 [ext_resource type="Texture2D" uid="uid://diotc0ygcuhpr" path="res://Assets/Sprites/assets escritorio/estante.png" id="1_l7xh1"]
+[ext_resource type="BitMap" uid="uid://sqthpfvo73vd" path="res://Assets/Sprites/assets escritorio/click masks/estante_click_mask.png" id="2_wlf21"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n05nh"]
-size = Vector2(795.13727, 1580.8777)
-
-[node name="OfficeShelf_L" type="Sprite2D" unique_id=796953314]
+[node name="OfficeShelf_L" type="TextureButton" unique_id=964380096]
 z_index = 2
+texture_hover = ExtResource("1_l7xh1")
+texture_click_mask = ExtResource("2_wlf21")
 script = ExtResource("1_g10lv")
 item_type = "shelf_l"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_l7xh1")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=170533037]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=372847164]
-position = Vector2(0.49998376, 0.5000228)
-scale = Vector2(0.37352037, 0.3915546)
-shape = SubResource("RectangleShape2D_n05nh")

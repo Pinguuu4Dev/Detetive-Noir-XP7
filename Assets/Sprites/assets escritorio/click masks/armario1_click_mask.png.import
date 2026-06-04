@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dcuxy75fflym1"
+path="res://.godot/imported/armario1_click_mask.png-daf9bfadd326dcae1f657ab400e313ee.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets escritorio/click masks/armario1_click_mask.png"
+dest_files=["res://.godot/imported/armario1_click_mask.png-daf9bfadd326dcae1f657ab400e313ee.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

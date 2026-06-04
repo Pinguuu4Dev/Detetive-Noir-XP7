@@ -3,23 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://mdvw3cqvgbsa" path="res://Assets/Sprites/assets escritorio/telefone.png" id="1_3h6ei"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_k4sy6"]
 [ext_resource type="AudioStream" uid="uid://4s4r02dcud3b" path="res://Assets/Audio/SFX/Objects/Phone_Ringing.wav" id="2_1y1qc"]
+[ext_resource type="BitMap" uid="uid://brjenqjeyo8ht" path="res://Assets/Sprites/assets escritorio/click masks/telefone_click_mask.png" id="2_jad5f"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(141.79108, 101.85187)
-
-[node name="Placeholder_Phone" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Phone" type="TextureButton" unique_id=1824336128]
 z_index = 5
 scale = Vector2(0.268, 0.324)
+texture_hover = ExtResource("1_3h6ei")
+texture_click_mask = ExtResource("2_jad5f")
 script = ExtResource("1_k4sy6")
 hovered_texture = ExtResource("1_3h6ei")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-position = Vector2(1.3344325e-06, 1.54321)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Phone_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 stream = ExtResource("2_1y1qc")

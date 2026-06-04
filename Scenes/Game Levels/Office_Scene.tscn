@@ -155,46 +155,80 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6295754, 0.6890516)
 
+[node name="Office_Blinds" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=982609040 node_paths=PackedStringArray("scene_ref") instance=ExtResource("8_03h1x")]
+layout_mode = 0
+offset_left = -390.13635
+offset_top = -224.41656
+offset_right = 194.86365
+offset_bottom = 267.58344
+scale = Vector2(0.6006544, 0.58155483)
+scene_ref = NodePath("../../../..")
+
+[node name="Office_Coat_Hanger" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=2079518193 node_paths=PackedStringArray("scene_ref") instance=ExtResource("9_srdwx")]
+layout_mode = 0
+offset_left = -391.9196
+offset_top = -181.55946
+offset_right = -157.91959
+offset_bottom = 432.44055
+scale = Vector2(0.54311234, 0.5907823)
+scene_ref = NodePath("../../../..")
+
+[node name="Placeholder_Door" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=627670481 node_paths=PackedStringArray("scene_ref") instance=ExtResource("10_xyajt")]
+layout_mode = 0
+offset_left = 269.62228
+offset_top = -256.55942
+offset_right = 653.6223
+offset_bottom = 538.44055
+scale = Vector2(0.59780926, 0.61545354)
+scene_ref = NodePath("../../../..")
+delete_after_interaction = false
+
+[node name="OfficeShelf_L" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=796953314 instance=ExtResource("8_sjxch")]
+z_index = 1
+layout_mode = 0
+offset_left = -95.91966
+offset_top = -265.488
+offset_right = 291.08032
+offset_bottom = 406.512
+scale = Vector2(0.5856042, 0.5856042)
+
+[node name="OfficeShelf_R" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1915879513 instance=ExtResource("7_26bys")]
+z_index = 1
+layout_mode = 0
+offset_left = 53.863373
+offset_top = -133.34518
+offset_right = 379.86337
+offset_bottom = 369.65482
+scale = Vector2(0.5836534, 0.58365345)
+
+[node name="Office_Lamp" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1025107382 node_paths=PackedStringArray("scene_ref") instance=ExtResource("6_jheww")]
+layout_mode = 0
+offset_left = -67.38956
+offset_top = -45.845215
+offset_right = 54.610443
+offset_bottom = 108.154785
+scale = Vector2(0.5497757, 0.5760248)
+scene_ref = NodePath("../../../..")
+
 [node name="Placeholder_Phone" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=114531261 node_paths=PackedStringArray("scene_ref") instance=ExtResource("3_s3noc")]
-position = Vector2(-179.72684, 41.65476)
+layout_mode = 0
+offset_left = -222.522
+offset_top = 9.511902
+offset_right = -73.522
+offset_bottom = 117.5119
 rotation = 0.007945925
 scale = Vector2(0.5650997, 0.56813204)
 item_type = "phone"
 scene_ref = NodePath("../../../..")
 
-[node name="Office_Lamp" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1025107382 node_paths=PackedStringArray("scene_ref") instance=ExtResource("6_jheww")]
-position = Vector2(-35.293217, -1.2023624)
-scale = Vector2(0.5497757, 0.5760248)
-scene_ref = NodePath("../../../..")
-
-[node name="Office_Blinds" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=982609040 node_paths=PackedStringArray("scene_ref") instance=ExtResource("8_03h1x")]
-position = Vector2(-217.1726, -79.773766)
-scale = Vector2(0.6006544, 0.58155483)
-scene_ref = NodePath("../../../..")
-
-[node name="Office_Coat_Hanger" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=2079518193 node_paths=PackedStringArray("scene_ref") instance=ExtResource("9_srdwx")]
-position = Vector2(-325.9436, -2.2154202)
-scale = Vector2(0.54311234, 0.5907823)
-scene_ref = NodePath("../../../..")
-
 [node name="Office_Chair" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1858440459 node_paths=PackedStringArray("scene_ref") instance=ExtResource("11_0hx8r")]
-position = Vector2(78.82726, 105.047615)
+layout_mode = 0
+offset_left = -1.4136963
+offset_top = -31.55951
+offset_right = 283.5863
+offset_bottom = 400.4405
 scale = Vector2(0.56309426, 0.59937143)
 scene_ref = NodePath("../../../..")
-
-[node name="Placeholder_Door" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=627670481 node_paths=PackedStringArray("scene_ref") instance=ExtResource("10_xyajt")]
-position = Vector2(385.52585, -1.2023621)
-scale = Vector2(0.60366464, 0.61545354)
-scene_ref = NodePath("../../../..")
-delete_after_interaction = false
-
-[node name="OfficeShelf_L" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=796953314 instance=ExtResource("8_sjxch")]
-position = Vector2(20.961, -66.93924)
-scale = Vector2(0.5856042, 0.5856042)
-
-[node name="OfficeShelf_R" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1915879513 instance=ExtResource("7_26bys")]
-position = Vector2(147.7398, 16.0673)
-scale = Vector2(0.5836534, 0.58365345)
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1765385306]
 visible = false

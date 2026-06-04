@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bel31m7q0m75c"
+path="res://.godot/imported/janela_click_mask.png-de35009af886c40d9c209329c19a806f.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets escritorio/click masks/janela_click_mask.png"
+dest_files=["res://.godot/imported/janela_click_mask.png-de35009af886c40d9c209329c19a806f.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

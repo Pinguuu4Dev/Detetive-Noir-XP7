@@ -1,8 +1,8 @@
-extends Sprite2D
+extends TextureButton
 class_name Item
 ## Script para configurarmos os itens que forem criados
-@onready var col_area:= $collision_area
-@onready var shader_outline: ShaderMaterial = self.material
+#@onready var col_area:= $collision_area
+@onready var shader_outline: ShaderMaterial = self.material # será removido
 ## Pra colocar um tipo para o item, default sendo 'leek'
 @export_category("Parâmetros de Interação")
 @export var item_type: String
@@ -10,14 +10,19 @@ class_name Item
 @export var delete_after_interaction:= true
 @export var open_after_interaction:= false
 @export var notebook: Notebook
-@export var hovered_texture: Texture2D
+@export var hovered_texture: Texture2D # será removido
 
 var object_held:= false
 
 func _ready() -> void:
-	col_area.connect("mouse_entered", _change_cursor)
-	col_area.connect("mouse_exited", _reset_cursor)
-	col_area.connect("input_event", _object_is_held)
+	#col_area.connect("mouse_entered", _change_cursor)
+	mouse_entered.connect(_change_cursor)
+	
+	#col_area.connect("mouse_exited", _reset_cursor)
+	mouse_exited.connect(_reset_cursor)
+	
+	# tem que resolver
+	#col_area.connect("input_event", _object_is_held)
 	
 	if item_type == "notebook":
 		TimelineManager.n_interaction_ref = self
@@ -25,14 +30,10 @@ func _ready() -> void:
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.hover_icon)
-	if self.hovered_texture:
-		self.set("texture", hovered_texture)
 	
 ## Função para resetar o cursor com o sinal do sprite de quando o mouse sai
 func _reset_cursor() -> void:
 	Input.set_custom_mouse_cursor(CursorManager.default_icon)
-	if self.hovered_texture:
-		self.set("texture", null)
 	
 ## Função para mudar o ícone para segurando enquanto o jogador estiver segurando enquanto está com o mouse no item
 func _object_is_held(viewport: Node, event: InputEvent, shape_idx: int) -> void:

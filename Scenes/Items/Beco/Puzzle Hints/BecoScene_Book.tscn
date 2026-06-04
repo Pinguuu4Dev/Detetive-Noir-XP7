@@ -3,26 +3,16 @@
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_f0uhb"]
 [ext_resource type="Texture2D" uid="uid://bpc7nff1kcr6m" path="res://Assets/Sprites/assets beco/caderneta.png" id="2_xtp12"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(100.74629, 52.46913)
-
-[node name="Placeholder_Book" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Book" type="TextureButton" unique_id=441664740]
 z_index = 2
-position = Vector2(1.5258789e-05, -3.8146973e-06)
+offset_left = 1.5258789e-05
+offset_right = 1.5258789e-05
 scale = Vector2(1.282834, 1.5508889)
+texture_hover = ExtResource("2_xtp12")
 script = ExtResource("1_f0uhb")
 item_type = "book"
 delete_after_interaction = false
 hovered_texture = ExtResource("2_xtp12")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-z_index = 2
-position = Vector2(-1.8656719, 1.54321)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

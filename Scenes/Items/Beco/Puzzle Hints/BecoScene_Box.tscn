@@ -3,25 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dvjp84xbnye84" path="res://Assets/Sprites/assets beco/cadeira.png" id="1_13slv"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_u8ycp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(138.05972, 246.91362)
-
-[node name="Placeholder_Box" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Box" type="TextureButton" unique_id=265130541]
 z_index = 2
 scale = Vector2(0.268, 0.324)
+texture_hover = ExtResource("1_13slv")
 script = ExtResource("1_u8ycp")
 item_type = "chair"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_13slv")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-z_index = 2
-position = Vector2(-1.865679, 0)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

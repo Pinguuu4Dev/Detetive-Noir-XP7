@@ -2,16 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://qeflx8kvbrt0" path="res://Assets/Sprites/assets escritorio/janela.png" id="1_cmr6a"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_ol5fi"]
+[ext_resource type="BitMap" uid="uid://bel31m7q0m75c" path="res://Assets/Sprites/assets escritorio/click masks/janela_click_mask.png" id="2_6afmt"]
 
-[node name="Office_Blinds" type="Sprite2D" unique_id=796953314]
+[node name="Office_Blinds" type="TextureButton" unique_id=660719719]
 z_index = 2
+texture_hover = ExtResource("1_cmr6a")
+texture_click_mask = ExtResource("2_6afmt")
 script = ExtResource("1_ol5fi")
 item_type = "blinds"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_cmr6a")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=170533037]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision_area" unique_id=1684941848]
-polygon = PackedVector2Array(-240, -204, 192, -229, 233, -208, 237, 130, 200, 136, 198, 166, -211, 231, -243, -146, -262, -152, -265, -185, -244, -189)

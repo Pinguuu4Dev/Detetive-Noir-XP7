@@ -3,35 +3,16 @@
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_2wh7p"]
 [ext_resource type="Texture2D" uid="uid://cax7hmow0avo" path="res://Assets/Sprites/assets beco/vassoura.png" id="1_synos"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(87.45221, 49.86453)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_synos"]
-height = 265.805
-
-[node name="Placeholder_Broom" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Broom" type="TextureButton" unique_id=960761507]
 z_index = 2
+offset_right = 388.0
+offset_bottom = 192.0
 scale = Vector2(0.268, 0.324)
+texture_hover = ExtResource("1_synos")
 script = ExtResource("1_2wh7p")
 item_type = "broom"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_synos")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-z_index = 2
-position = Vector2(-118.48733, 20.347153)
-rotation = 0.34633574
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_kwdtm")
-
-[node name="item_collision2" type="CollisionShape2D" parent="collision_area" unique_id=484130009]
-z_index = 2
-position = Vector2(18.65672, -18.51852)
-rotation = 1.3950312
-shape = SubResource("CapsuleShape2D_synos")
 
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

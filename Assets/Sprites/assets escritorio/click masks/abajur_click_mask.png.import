@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bjpkvprujw2rd"
+path="res://.godot/imported/abajur_click_mask.png-09613287348635c565d5e95c13c50323.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets escritorio/click masks/abajur_click_mask.png"
+dest_files=["res://.godot/imported/abajur_click_mask.png-09613287348635c565d5e95c13c50323.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

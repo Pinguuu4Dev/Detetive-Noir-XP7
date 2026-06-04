@@ -3,24 +3,15 @@
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_cxnq1"]
 [ext_resource type="Texture2D" uid="uid://cab17gwhu0pkp" path="res://Assets/Sprites/assets beco/lixeira1.png" id="2_hyr36"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwdtm"]
-size = Vector2(537.31354, 385.80252)
-
-[node name="Placeholder_Trash" type="Sprite2D" unique_id=114531261]
+[node name="Placeholder_Trash" type="TextureButton" unique_id=243417557]
 z_index = 2
-position = Vector2(33.23492, -24.121996)
+offset_right = 563.0
+offset_bottom = 338.0
 scale = Vector2(0.38606367, 0.46673372)
+texture_hover = ExtResource("2_hyr36")
 script = ExtResource("1_cxnq1")
 item_type = "trash"
 hovered_texture = ExtResource("2_hyr36")
-
-[node name="collision_area" type="Area2D" parent="." unique_id=378280439]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="item_collision" type="CollisionShape2D" parent="collision_area" unique_id=1491647141]
-position = Vector2(-3.7313287, 4.6296287)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_kwdtm")
 
 [node name="Trash_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

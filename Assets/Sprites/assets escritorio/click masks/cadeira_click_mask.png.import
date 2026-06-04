@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b7rxpt8dm3k8y"
+path="res://.godot/imported/cadeira_click_mask.png-e47a78819cbb90b71f820ae637b7ccd9.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets escritorio/click masks/cadeira_click_mask.png"
+dest_files=["res://.godot/imported/cadeira_click_mask.png-e47a78819cbb90b71f820ae637b7ccd9.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
