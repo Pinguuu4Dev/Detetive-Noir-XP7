@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cct720hgxob16"]
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_cxnq1"]
+[ext_resource type="BitMap" uid="uid://csactffvsjdp3" path="res://Assets/Sprites/assets beco/click masks/lixeira1_click_mask.png" id="2_501aj"]
 [ext_resource type="Texture2D" uid="uid://cab17gwhu0pkp" path="res://Assets/Sprites/assets beco/lixeira1.png" id="2_hyr36"]
 
 [node name="Placeholder_Trash" type="TextureButton" unique_id=243417557]
@@ -9,6 +10,7 @@ offset_right = 563.0
 offset_bottom = 338.0
 scale = Vector2(0.38606367, 0.46673372)
 texture_hover = ExtResource("2_hyr36")
+texture_click_mask = ExtResource("2_501aj")
 script = ExtResource("1_cxnq1")
 item_type = "trash"
 hovered_texture = ExtResource("2_hyr36")

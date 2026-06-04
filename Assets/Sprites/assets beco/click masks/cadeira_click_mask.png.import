@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bory24nydgsuu"
+path="res://.godot/imported/cadeira_click_mask.png-189733860bc561089063d709c44d1200.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets beco/click masks/cadeira_click_mask.png"
+dest_files=["res://.godot/imported/cadeira_click_mask.png-189733860bc561089063d709c44d1200.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

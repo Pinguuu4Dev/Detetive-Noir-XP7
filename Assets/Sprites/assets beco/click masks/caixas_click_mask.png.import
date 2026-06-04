@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c51wvhoen6tiq"
+path="res://.godot/imported/caixas_click_mask.png-39904e46f795dc18fea34b9fd4e953dd.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets beco/click masks/caixas_click_mask.png"
+dest_files=["res://.godot/imported/caixas_click_mask.png-39904e46f795dc18fea34b9fd4e953dd.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

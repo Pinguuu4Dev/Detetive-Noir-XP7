@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://wwxu8edqp20j" path="res://Assets/Sprites/assets beco/lampada.png" id="1_p1asm"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_pkyds"]
+[ext_resource type="BitMap" uid="uid://chjdfnvhnlumu" path="res://Assets/Sprites/assets beco/click masks/lampada_click_mask.png" id="2_2vv40"]
 
 [node name="Placeholder_Lamp" type="TextureButton" unique_id=690514666]
 z_index = 2
 scale = Vector2(0.268, 0.324)
 texture_hover = ExtResource("1_p1asm")
+texture_click_mask = ExtResource("2_2vv40")
 script = ExtResource("1_pkyds")
 item_type = "lamp"
 hovered_texture = ExtResource("1_p1asm")

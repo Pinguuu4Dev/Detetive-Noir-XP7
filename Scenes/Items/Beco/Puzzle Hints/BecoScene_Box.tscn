@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dvjp84xbnye84" path="res://Assets/Sprites/assets beco/cadeira.png" id="1_13slv"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_u8ycp"]
+[ext_resource type="BitMap" uid="uid://bory24nydgsuu" path="res://Assets/Sprites/assets beco/click masks/cadeira_click_mask.png" id="2_y2oy2"]
 
 [node name="Placeholder_Box" type="TextureButton" unique_id=265130541]
 z_index = 2
 scale = Vector2(0.268, 0.324)
 texture_hover = ExtResource("1_13slv")
+texture_click_mask = ExtResource("2_y2oy2")
 script = ExtResource("1_u8ycp")
 item_type = "chair"
 delete_after_interaction = false

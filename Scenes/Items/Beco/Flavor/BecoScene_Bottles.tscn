@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ucg3sddorgw4" path="res://Assets/Sprites/assets beco/garrafas.png" id="1_ikr7m"]
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_voj3b"]
+[ext_resource type="BitMap" uid="uid://cqt8eh2730xif" path="res://Assets/Sprites/assets beco/click masks/garrafasClick_mask.png" id="2_m3pmx"]
 
 [node name="Placeholder_Bottles" type="TextureButton" unique_id=2067916710]
 z_index = 2
@@ -9,10 +10,8 @@ offset_right = 75.0
 offset_bottom = 106.0
 scale = Vector2(0.268, 0.324)
 texture_hover = ExtResource("1_ikr7m")
+texture_click_mask = ExtResource("2_m3pmx")
 script = ExtResource("1_voj3b")
 item_type = "bottles"
 delete_after_interaction = false
 hovered_texture = ExtResource("1_ikr7m")
-
-[connection signal="mouse_entered" from="." to="." method="_change_cursor"]
-[connection signal="mouse_exited" from="." to="." method="_reset_cursor"]

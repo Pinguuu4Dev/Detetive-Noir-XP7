@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_kx1vl"]
 [ext_resource type="Texture2D" uid="uid://cm6r8vvi7kjxp" path="res://Assets/Sprites/assets beco/camera.png" id="1_udhjc"]
+[ext_resource type="BitMap" uid="uid://3vkl24l8xqe2" path="res://Assets/Sprites/assets beco/click masks/camera_click_mask.png" id="2_c37jl"]
 
 [node name="Placeholder_Camera" type="TextureButton" unique_id=611493086]
 z_index = 2
 scale = Vector2(0.268, 0.324)
 texture_hover = ExtResource("1_udhjc")
+texture_click_mask = ExtResource("2_c37jl")
 script = ExtResource("1_kx1vl")
 item_type = "camera"
 delete_after_interaction = false

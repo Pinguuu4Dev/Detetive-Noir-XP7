@@ -136,6 +136,13 @@ mouse_cursor/custom_image="uid://cl6ilmdnp7gho"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[importer_defaults]
+
+bitmap={
+"create_from": 1,
+"threshold": 0.5
+}
+
 [input]
 
 dialogic_default_action={

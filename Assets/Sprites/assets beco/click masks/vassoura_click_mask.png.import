@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b2ykc4sih7rc0"
+path="res://.godot/imported/vassoura_click_mask.png-76e34a38624929b78057ded821d123cd.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets beco/click masks/vassoura_click_mask.png"
+dest_files=["res://.godot/imported/vassoura_click_mask.png-76e34a38624929b78057ded821d123cd.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

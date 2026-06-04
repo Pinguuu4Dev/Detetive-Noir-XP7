@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cqt8eh2730xif"
+path="res://.godot/imported/garrafasClick_mask.png-cb5a50ad12967021467fb00e98d2cdf9.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/assets beco/click masks/garrafasClick_mask.png"
+dest_files=["res://.godot/imported/garrafasClick_mask.png-cb5a50ad12967021467fb00e98d2cdf9.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

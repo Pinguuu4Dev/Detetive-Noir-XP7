@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhgc1f54l02db" path="res://Scripts/Mechanics/Objects/item_behavior.gd" id="1_6daru"]
 [ext_resource type="Texture2D" uid="uid://buhi22xrbwf6m" path="res://Assets/Sprites/assets beco/cadernopuzzle.png" id="2_7mir5"]
+[ext_resource type="BitMap" uid="uid://exq5msll1gdw" path="res://Assets/Sprites/assets beco/click masks/cadernopuzzle_click_mask.png" id="2_uatqo"]
 
 [sub_resource type="Animation" id="Animation_1q37m"]
 resource_name = "Open"
@@ -15,6 +16,7 @@ _data = {
 z_index = 2
 scale = Vector2(0.6241691, 0.75459254)
 texture_hover = ExtResource("2_7mir5")
+texture_click_mask = ExtResource("2_uatqo")
 script = ExtResource("1_6daru")
 item_type = "notebook"
 delete_after_interaction = null
