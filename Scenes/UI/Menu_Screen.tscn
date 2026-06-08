@@ -6,6 +6,59 @@
 [ext_resource type="Texture2D" uid="uid://bj31cioo8lpqu" path="res://Assets/Sprites/UI/menu.png" id="3_2dlhk"]
 [ext_resource type="PackedScene" uid="uid://d1fliddd0r1x8" path="res://Scenes/UI/Settings_Screen.tscn" id="3_ruads"]
 [ext_resource type="AudioStream" uid="uid://d24pga3qm4j7k" path="res://Assets/Audio/Music/Menu.ogg" id="5_2dlhk"]
+[ext_resource type="Texture2D" uid="uid://dkgtecuuibclg" path="res://Assets/Sprites/UI/guaxo.png" id="7_ko0lm"]
+
+[sub_resource type="Animation" id="Animation_7p8kg"]
+resource_name = "Fade-In"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Team_BG:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(0.9659363, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Team_BG:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(0.9659363, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ruads"]
 resource_name = "Fade-Out"
@@ -85,9 +138,58 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../Team_BG:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Team_BG:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("..:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("..:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rjge0"]
 _data = {
+&"Fade-In": SubResource("Animation_7p8kg"),
 &"Fade-Out": SubResource("Animation_ruads"),
 &"RESET": SubResource("Animation_rjge0")
 }
@@ -103,6 +205,7 @@ script = ExtResource("1_cdisa")
 level_to = ExtResource("2_se15k")
 
 [node name="Menu_BG" type="TextureRect" parent="." unique_id=394341370]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,11 +275,59 @@ layout_mode = 1
 [node name="Transition_FX" type="AnimationPlayer" parent="." unique_id=625350323]
 root_node = NodePath("../Menu_BG/Button_Container")
 libraries/ = SubResource("AnimationLibrary_rjge0")
+autoplay = &"Fade-In"
 
 [node name="Audio_Player" type="AudioStreamPlayer2D" parent="." unique_id=1190858699]
 stream = ExtResource("5_2dlhk")
 volume_db = -10.0
 bus = &"Muffled Rain"
+
+[node name="Team_BG" type="ColorRect" parent="." unique_id=1464656128]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Team_Logo" type="TextureRect" parent="Team_BG" unique_id=1884092880]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4984375
+anchor_top = 0.14444445
+anchor_right = 0.4984375
+anchor_bottom = 0.14444445
+offset_left = -102.0
+offset_right = 102.0
+offset_bottom = 204.0
+grow_horizontal = 2
+texture = ExtResource("7_ko0lm")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Team_BG" unique_id=564558456]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = 47.0
+offset_right = 131.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2bnp2")
+theme_override_colors/font_color = Color(0.43529412, 0.27058825, 0.67058825, 1)
+theme_override_colors/font_outline_color = Color(0.74509805, 0.68235296, 0.95686275, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 42
+text = "25% Roxo"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Start_BT" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu_BG/Button_Container/Vertical_Layout/Options_BT" to="." method="_on_options_pressed"]

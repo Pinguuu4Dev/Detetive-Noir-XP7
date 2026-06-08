@@ -11,7 +11,6 @@ texture_hover = ExtResource("1_p1asm")
 texture_click_mask = ExtResource("2_2vv40")
 script = ExtResource("1_pkyds")
 item_type = "lamp"
-hovered_texture = ExtResource("1_p1asm")
 
 [node name="Door_Audio" type="AudioStreamPlayer2D" parent="." unique_id=44139505]
 volume_db = -9.0

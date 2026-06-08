@@ -29,6 +29,14 @@ func _on_timeline_ended() -> void:
 	if cur_timeline.get_identifier() == "ritualRoom_start":
 		anim_player.play("Fade_Out")
 		await anim_player.animation_finished
+		anim_player.play("Continua_In")
+		await anim_player.animation_finished
+		anim_player.play("Continua_Out")
+		await anim_player.animation_finished
+		anim_player.play("Creditos_In")
+		await anim_player.animation_finished
+		anim_player.play("Creditos_Out")
+		await anim_player.animation_finished
 		get_tree().change_scene_to_file("res://Scenes/UI/Menu_Screen.tscn")
 		
 	cur_timeline = null

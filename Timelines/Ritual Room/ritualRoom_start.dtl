@@ -2,7 +2,7 @@ join protagonist rightmost [animation="Bounce In" length="1.0" wait="true" z_ind
 [wait time="0.3"]
 audio sfx "res://Assets/Audio/SFX/Ambience/scary_sound.wav"
 [wait time="0.1"]
-update protagonist [animation="Bounce" length="0.1" repeat="2" mirrored="false"]
+update protagonist (scare) [animation="Bounce" length="0.1" repeat="2" mirrored="true"]
 protagonist: Que barulho foi esse?
-protagonist: O que… o que é isso? Eu… alguém…
+protagonist (worried): O que… o que é isso? Eu… alguém…
 leave protagonist [animation="Slide To Right" length="0.3" wait="true"]

@@ -1,8 +1,115 @@
 [gd_scene format=3 uid="uid://6dm6tvn0abm4"]
 
-[ext_resource type="Texture2D" uid="uid://cjn4fe8j5ldum" path="res://Assets/Placeholder/Levels/ritual_room.png" id="1_i4k8b"]
 [ext_resource type="Script" uid="uid://b55saolj2the2" path="res://Scripts/Mechanics/Scenes/ritualScene_logic.gd" id="1_mcrfp"]
+[ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="2_bb25a"]
 [ext_resource type="AudioStream" uid="uid://l68a8wu7c2c4" path="res://Assets/Audio/SFX/Rain loop.ogg" id="3_bb25a"]
+
+[sub_resource type="Animation" id="Animation_njdut"]
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/TextEdit:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/TextEdit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_57var"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/TextEdit:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/TextEdit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t4e6g"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ev63s"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_Elements/Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_Elements/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mcrfp"]
 resource_name = "Fade_In"
@@ -86,9 +193,61 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene_Elements/TextEdit:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene_Elements/TextEdit:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene_Elements/Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene_Elements/Label:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bb25a"]
 _data = {
+&"Continua_In": SubResource("Animation_njdut"),
+&"Continua_Out": SubResource("Animation_57var"),
+&"Creditos_In": SubResource("Animation_t4e6g"),
+&"Creditos_Out": SubResource("Animation_ev63s"),
 &"Fade_In": SubResource("Animation_mcrfp"),
 &"Fade_Out": SubResource("Animation_bb25a"),
 &"RESET": SubResource("Animation_egwkw")
@@ -99,15 +258,22 @@ script = ExtResource("1_mcrfp")
 
 [node name="Scene_Elements" type="Node" parent="." unique_id=1190844019]
 
-[node name="Placeholder_BG" type="TextureRect" parent="Scene_Elements" unique_id=393998331]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Placeholder_BG" type="ColorRect" parent="Scene_Elements" unique_id=1186968440]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.27917
+offset_top = -177.76862
+offset_right = 316.27917
+offset_bottom = 177.76862
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.33593747, 0.33611107)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("1_i4k8b")
+color = Color(0, 0, 0, 1)
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1718756825]
 anchors_preset = 15
@@ -124,6 +290,44 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scene_Elements" unique_id=1350356664]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_bb25a")
+
+[node name="TextEdit" type="Label" parent="Scene_Elements" unique_id=397734250]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -14.5
+offset_right = 57.5
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bb25a")
+text = "Continua..."
+
+[node name="Label" type="Label" parent="Scene_Elements" unique_id=1295676144]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bb25a")
+theme_override_font_sizes/font_size = 20
+text = "Créditos
+
+João Vitor Rossafa - Sound Designer & Programador
+Carolina \"Thai\" de Deus - Producer & Artista 
+Guilherme Lenz - Game Designer & Escritor
+Igor de Jesus - Programador Chefe"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BG_Music" type="AudioStreamPlayer2D" parent="." unique_id=1316121338]
 stream = ExtResource("3_bb25a")

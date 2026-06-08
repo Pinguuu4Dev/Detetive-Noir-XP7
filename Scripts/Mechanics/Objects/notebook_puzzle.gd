@@ -1,49 +1,36 @@
 extends Control
 class_name Notebook
 
-@onready var p_lines: Array[PuzzleLine] = [$Notebook_Page/Puzzle_Lines/Puzzle_Line1, $Notebook_Page/Puzzle_Lines/Puzzle_Line2, $Notebook_Page/Puzzle_Lines/Puzzle_Line3, $Notebook_Page/Puzzle_Lines/Puzzle_Line4, $Notebook_Page/Puzzle_Lines/Puzzle_Line5]
-@onready var p_areas:= %Line_Areas
+@onready var visibility_player: AnimationPlayer = $Visibility_Player
+@onready var notebook_audio: AudioStreamPlayer2D = $Notebook_Audio
+@onready var areas_data: Array[TextData] = [load("res://Scenes/Puzzle/Resources/text_1.tres"), load("res://Scenes/Puzzle/Resources/text_2.tres"), load("res://Scenes/Puzzle/Resources/text_3.tres"), load("res://Scenes/Puzzle/Resources/text_4.tres"), load("res://Scenes/Puzzle/Resources/text_5.tres")]
+@onready var areas_ref: Array[PuzzleText] = [$Panel/Margins/Grid/Area_1, $Panel/Margins/Grid/Starter_1, $Panel/Margins/Grid/Area_2, $Panel/Margins/Grid/Starter_2, $Panel/Margins/Grid/Area_3, $Panel/Margins/Grid/Starter_3, $Panel/Margins/Grid/Area_4, $Panel/Margins/Grid/Starter_4, $Panel/Margins/Grid/Area_5, $Panel/Margins/Grid/Starter_5]
+
+var save_path = "user://save"
+var save_name = "puzzleSave.tres"
+
 @export var b_scene: BecoManager
 
 var first_time_open:= true
 
 func _ready() -> void:
 	TimelineManager.notebook_ref = self
+	_verify_save_path(save_path)
+	
+func _verify_save_path(path: String):
+	DirAccess.make_dir_absolute(save_path)
 
 func _open_notebook():
-	visible = true
-	
-	for p in p_lines:
-		print("yes")
-		if p.a_player and first_time_open:
-			print("ok")
-			p.a_player.play("Display_Text")
-			
+	visibility_player.play("open_notebook")
+
 	if first_time_open:
 		first_time_open = false
 
-func _remove_blood(p_int: int):
-	var puzzle_line_temp = p_lines[p_int - 1]
+func _areas_to_clean(text_num: int):
+	areas_data[text_num - 1]._set_current_sprite(2)
+	ResourceSaver.save(areas_data[text_num - 1], areas_data[text_num - 1].resource_path)
+	areas_data[text_num - 1] = ResourceLoader.load(areas_data[text_num - 1].resource_path)
 	
-	puzzle_line_temp.text_node.set("texture", puzzle_line_temp.clean_text)
-	puzzle_line_temp._enable_interaction()
-	
-func _on_reset_button_pressed() -> void:
-	for i in p_lines:
-		i.position = i.initial_pos
-		i._set_in_area(null)
-	for i in p_areas.get_children():
-		if i is Selectable:
-			if i.puzzleLine_ref:
-				i._clear_line()
-			
-	if PuzzleManager.hovered_area:
-		PuzzleManager._clear_values(PuzzleManager.hovered_area)
-	if PuzzleManager.selected_line:
-		PuzzleManager._clear_values(PuzzleManager.selected_line)
-	if !TimelineManager.correct_lines.is_empty():
-		TimelineManager.correct_lines.clear()
-
 func _on_close_pressed() -> void:
 	visible = false
 	for i in b_scene.interactable_items.get_children():
