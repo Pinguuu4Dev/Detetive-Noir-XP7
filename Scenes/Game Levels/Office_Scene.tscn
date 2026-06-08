@@ -156,7 +156,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6295754, 0.6890516)
 
-[node name="OfficeShelf_L" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=796953314 instance=ExtResource("8_sjxch")]
+[node name="OfficeShelf_L" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=796953314 node_paths=PackedStringArray("scene_ref") instance=ExtResource("8_sjxch")]
 z_index = 1
 layout_mode = 0
 offset_left = -95.91965
@@ -164,6 +164,7 @@ offset_top = -265.488
 offset_right = 291.08035
 offset_bottom = 406.512
 scale = Vector2(0.5856042, 0.5856042)
+scene_ref = NodePath("../../../..")
 
 [node name="Shelf_Blocker" type="TextureButton" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=223443363]
 layout_mode = 0
@@ -202,7 +203,7 @@ scale = Vector2(0.59780926, 0.61545354)
 scene_ref = NodePath("../../../..")
 delete_after_interaction = false
 
-[node name="OfficeShelf_R" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1915879513 instance=ExtResource("7_26bys")]
+[node name="OfficeShelf_R" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1915879513 node_paths=PackedStringArray("scene_ref") instance=ExtResource("7_26bys")]
 z_index = 1
 layout_mode = 0
 offset_left = 53.863373
@@ -210,6 +211,7 @@ offset_top = -133.34518
 offset_right = 379.86337
 offset_bottom = 369.65482
 scale = Vector2(0.5836534, 0.58365345)
+scene_ref = NodePath("../../../..")
 
 [node name="Office_Lamp" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=1025107382 node_paths=PackedStringArray("scene_ref") instance=ExtResource("6_jheww")]
 layout_mode = 0
