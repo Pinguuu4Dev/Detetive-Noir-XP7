@@ -298,15 +298,16 @@ rotation = -0.04218024
 scale = Vector2(0.5280125, 0.6215404)
 scene_ref = NodePath("../../../..")
 
-[node name="Placeholder_Window" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=611493086 instance=ExtResource("17_kuu5w")]
+[node name="Placeholder_Window" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=611493086 node_paths=PackedStringArray("scene_ref") instance=ExtResource("17_kuu5w")]
 layout_mode = 0
 offset_left = 717.85706
 offset_top = 191.07143
 offset_right = 977.71814
 offset_bottom = 566.6388
 stretch_mode = 0
+scene_ref = NodePath("../../../..")
 
-[node name="BecoSceneSign" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1425186902 instance=ExtResource("18_l515w")]
+[node name="BecoSceneSign" parent="Scene_Elements/Beco_BG/Interactable_Items" unique_id=1425186902 node_paths=PackedStringArray("scene_ref") instance=ExtResource("18_l515w")]
 layout_mode = 0
 offset_left = 232.14285
 offset_top = 241.07143
@@ -314,6 +315,7 @@ offset_right = 446.4286
 offset_bottom = 464.28577
 ignore_texture_size = true
 stretch_mode = 0
+scene_ref = NodePath("../../../..")
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=434344345]
 z_index = 6

@@ -41,6 +41,6 @@ func _on_item_interacted(i: Item) -> void:
 			if TimelineManager._check_complete_timelines("beco_trash_1") or TimelineManager._check_complete_timelines("beco_trash_2") or TimelineManager._check_complete_timelines("beco_trash_3"):
 				Dialogic.start("beco_window")
 			else:
-				Dialogic.start("beco_incomplete_scene_1")
+				Dialogic.start("beco_window_incomplete")
 		_:
 			Dialogic.start("beco_" + i.item_type)

@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://csp8igfyrw8js" path="res://Scenes/Items/Office/Flavor/Office_Hanger.tscn" id="9_srdwx"]
 [ext_resource type="PackedScene" uid="uid://bxe1w5clrd6a5" path="res://Scenes/Items/Office/Puzzle Components/Office_Door.tscn" id="10_xyajt"]
 [ext_resource type="PackedScene" uid="uid://c2i3jody8lnp3" path="res://Scenes/Items/Office/Flavor/Office_Chair.tscn" id="11_0hx8r"]
+[ext_resource type="PackedScene" uid="uid://smg8dtvjjf77" path="res://Scenes/Items/Office/Flavor/Office_Clock.tscn" id="13_2rppr"]
 
 [sub_resource type="Animation" id="Animation_wkffy"]
 resource_name = "Fade_In"
@@ -240,6 +241,15 @@ offset_top = -31.55951
 offset_right = 283.5863
 offset_bottom = 400.4405
 scale = Vector2(0.56309426, 0.59937143)
+scene_ref = NodePath("../../../..")
+
+[node name="Office_Clock" parent="Scene_Elements/Placeholder_BG/Interactable_Items" unique_id=660719719 node_paths=PackedStringArray("scene_ref") instance=ExtResource("13_2rppr")]
+layout_mode = 0
+offset_left = 139.4537
+offset_top = -238.70229
+offset_right = 295.4537
+offset_bottom = -55.702286
+scale = Vector2(0.57369876, 0.5985257)
 scene_ref = NodePath("../../../..")
 
 [node name="Fade_Color" type="ColorRect" parent="Scene_Elements" unique_id=1765385306]

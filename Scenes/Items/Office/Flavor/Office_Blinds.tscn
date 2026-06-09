@@ -11,4 +11,3 @@ texture_click_mask = ExtResource("2_6afmt")
 script = ExtResource("1_ol5fi")
 item_type = "blinds"
 delete_after_interaction = false
-hovered_texture = ExtResource("1_cmr6a")
