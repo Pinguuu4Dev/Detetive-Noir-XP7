@@ -28,7 +28,8 @@ func _on_item_interacted(i: Item) -> void:
 				await animation_player.animation_finished
 				get_tree().change_scene_to_packed(next_scene)
 		"notebook":
-			Dialogic.start(TimelineManager._get_notebook_timeline())
+			if !PuzzleManager.puzzle_started:
+				Dialogic.start(TimelineManager._get_notebook_timeline())
 		"trash":
 			Dialogic.start(TimelineManager._get_trash_timeline())
 		"book":
