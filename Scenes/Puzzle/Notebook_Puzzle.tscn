@@ -5,14 +5,14 @@
 [ext_resource type="Script" uid="uid://cg2onmd3v31p7" path="res://Scenes/Puzzle/text_areas.gd" id="5_3w2e8"]
 [ext_resource type="Script" uid="uid://b0chad6sovis5" path="res://Scenes/Puzzle/area_configs.gd" id="5_isv3y"]
 [ext_resource type="StyleBox" uid="uid://cboqtg0pqtoiu" path="res://Assets/Styles/puzzle_box_areas.tres" id="6_n811j"]
-[ext_resource type="Resource" path="res://Scenes/Puzzle/Resources/text_3.tres" id="7_wd4mk"]
-[ext_resource type="Resource" path="res://Scenes/Puzzle/Resources/text_5.tres" id="8_cg02q"]
+[ext_resource type="Resource" uid="uid://kjiy8efcyyif" path="res://Scenes/Puzzle/Resources/text_3.tres" id="7_wd4mk"]
+[ext_resource type="Resource" uid="uid://bu44hvdc1t1m1" path="res://Scenes/Puzzle/Resources/text_5.tres" id="8_cg02q"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
 [ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen5.png" id="9_cg02q"]
-[ext_resource type="Resource" path="res://Scenes/Puzzle/Resources/text_2.tres" id="9_n811j"]
+[ext_resource type="Resource" uid="uid://cevkr05ev201e" path="res://Scenes/Puzzle/Resources/text_2.tres" id="9_n811j"]
 [ext_resource type="Texture2D" uid="uid://xwbmln37irhe" path="res://Assets/Placeholder/Icons/fechar.png" id="10_2oifp"]
-[ext_resource type="Resource" path="res://Scenes/Puzzle/Resources/text_1.tres" id="10_ralg1"]
-[ext_resource type="Resource" path="res://Scenes/Puzzle/Resources/text_4.tres" id="11_8dqsx"]
+[ext_resource type="Resource" uid="uid://be5yoxmd7vwr6" path="res://Scenes/Puzzle/Resources/text_1.tres" id="10_ralg1"]
+[ext_resource type="Resource" uid="uid://c15ip1nry2co3" path="res://Scenes/Puzzle/Resources/text_4.tres" id="11_8dqsx"]
 
 [sub_resource type="Animation" id="Animation_n811j"]
 length = 0.001
@@ -154,8 +154,6 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="NotebookPuzzle" type="TextureRect" unique_id=628655249]
-visible = false
-modulate = Color(1, 1, 1, 0)
 z_index = 4096
 z_as_relative = false
 anchors_preset = 15
