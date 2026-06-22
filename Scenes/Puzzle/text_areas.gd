@@ -6,6 +6,8 @@ class_name PuzzleText
 ## O resource do texto vem aqui, para identificar número e sprites censurados e limpos
 @export var text_data: TextData
 
+var notebook: Notebook
+
 ## Faz com que o sprite inicial da área seja sempre sua versão censurada
 func _ready() -> void:
 	if text_data:
@@ -33,6 +35,9 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	if !text_data || text_data.is_censored:
 		return
 	
+	# Remove da lista até o jogador soltar o texto na posição correta
+	remove_line()
+	
 	## Caso tenha algo no espaço, cria um preview do objeto, para o jogador ver o que ele está arrastando
 	var preview = duplicate()
 	# Faz com que o preview fique centralizado }
@@ -59,26 +64,10 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	## Cria um valor temporário caso já tenha uma das frases no espaço }
 	var tmp_text = text_data # }
-	## Caso o texto novo que foi arrastado para dentro do espaço, condiz com a numeração do espaço em si, 
-	## irá fazer com que aquele espaço esteja com a variável 'correct_line' como true }
-	if name.begins_with("A"): # }
-		if str(data.text_data.text_num) == name.substr(name.length() - 1):
-			TimelineManager.correct_lines.append(int(name.substr(name.length() - 1)))
-			if (TimelineManager.correct_lines.has(1) && 
-				TimelineManager.correct_lines.has(2)):
-					if (TimelineManager.correct_lines.has(3) &&
-						TimelineManager.correct_lines.has(4) &&
-						!TimelineManager.correct_lines.has(5)):
-						TimelineManager.clean_text_5()
-						Dialogic.start("beco_notebook_4")
-					elif !TimelineManager._check_complete_timelines("beco_notebook_3"):
-						Dialogic.start("beco_notebook_3")
-		else: 
-			while TimelineManager.correct_lines.has(data.text_data.text_num):
-				TimelineManager.correct_lines.erase(data.text_data.text_num)
-				
-		print(TimelineManager.correct_lines)
-	## Faz com que o espaço selecionado tenha o novo texto atribuído a ele }
+	
+	add_line(data)
+	
+	## Faz com que o espaço selecionado tenha o novo texto atribuído a ele } 
 	text_data = data.text_data # }
 	# e caso necessário, troca o texto que estava anteriormente nele
 	data.text_data = tmp_text # }
@@ -87,3 +76,32 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	data.text.show() # }
 	_update_ui() # } 
 	data._update_ui() # }
+
+## Testa se o texto está no lugar correto e adiciona no array. Também gerencia os diálogos.
+func add_line(data: Variant) -> void:
+	if !name.begins_with("A"):
+		return
+		
+	# se o nome começar com "A" ->
+	if str(data.text_data.text_num) != name.substr(name.length() - 1):
+		return
+		
+	# se o texto estiver no lugar correto ->
+	# adiciona texto no array e chama os diálogos
+	TimelineManager.correct_lines.append(int(name.substr(name.length() - 1)))
+	print("Adding " + str(data.text_data.text_num) + " to array")
+	if (TimelineManager.correct_lines.has(1) && 
+		TimelineManager.correct_lines.has(2)):
+			if (TimelineManager.correct_lines.has(3) &&
+				TimelineManager.correct_lines.has(4) &&
+				!TimelineManager.correct_lines.has(5)):
+				TimelineManager.clean_text_5()
+				Dialogic.start("beco_notebook_4")
+			elif !TimelineManager._check_complete_timelines("beco_notebook_3"):
+				Dialogic.start("beco_notebook_3")
+
+## Remove o texto do array caso esteja nele.
+func remove_line() -> void:
+	if TimelineManager.correct_lines.has(text_data.text_num):
+		TimelineManager.correct_lines.erase(text_data.text_num)
+		print("Removing " + str(text_data.text_num) + " from array")
