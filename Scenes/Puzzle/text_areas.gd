@@ -63,17 +63,19 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var tmp_text = text_data # }
 	## Caso o texto novo que foi arrastado para dentro do espaço, condiz com a numeração do espaço em si, 
 	## irá fazer com que aquele espaço esteja com a variável 'correct_line' como true }
-	if str(data.text_data.text_num) == name.substr(name.length() - 1) and name.begins_with("A"): # }
-		TimelineManager.correct_lines.append(int(name.substr(name.length() - 1)))
+	if name.begins_with("A"): # }
+		if str(data.text_data.text_num) == name.substr(name.length() - 1):
+			TimelineManager.correct_lines.append(int(name.substr(name.length() - 1)))
+			if (TimelineManager.correct_lines.has(1) && 
+				TimelineManager.correct_lines.has(2) &&
+				TimelineManager.correct_lines.has(3) &&
+				TimelineManager.correct_lines.has(4)):
+				TimelineManager.clean_text_5()
+		else: 
+			while TimelineManager.correct_lines.has(data.text_data.text_num):
+				TimelineManager.correct_lines.erase(data.text_data.text_num)
+				
 		print(TimelineManager.correct_lines)
-		
-		if (TimelineManager.correct_lines.has(1) && 
-			TimelineManager.correct_lines.has(2) &&
-			TimelineManager.correct_lines.has(3) &&
-			TimelineManager.correct_lines.has(4)):
-			print("Linhas 1 a 4 corretas")
-			TimelineManager.clean_text_5()
-			
 	## Faz com que o espaço selecionado tenha o novo texto atribuído a ele }
 	text_data = data.text_data # }
 	# e caso necessário, troca o texto que estava anteriormente nele

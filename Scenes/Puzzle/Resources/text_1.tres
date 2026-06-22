@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://qs5jvk5mrt2p"]
+[gd_resource type="Resource" script_class="TextData" format=3]
 
-[ext_resource type="Texture2D" uid="uid://dy7ih7lko11dc" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen4.png" id="1_arqrd"]
-[ext_resource type="Texture2D" uid="uid://c018boschsm3h" path="res://Assets/Sprites/UI/texto puzzle/frase4.png" id="2_vd75g"]
-[ext_resource type="Script" uid="uid://cnduxaj7f1kjg" path="res://Scenes/Puzzle/text_data.gd" id="3_tdb24"]
+[ext_resource type="Texture2D" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen4.png" id="1_arqrd"]
+[ext_resource type="Texture2D" path="res://Assets/Sprites/UI/texto puzzle/frase4.png" id="2_vd75g"]
+[ext_resource type="Script" path="res://Scenes/Puzzle/text_data.gd" id="3_tdb24"]
 
 [resource]
 script = ExtResource("3_tdb24")
