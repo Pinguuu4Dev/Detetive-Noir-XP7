@@ -1,8 +1,6 @@
 extends Panel
 class_name PuzzleText
 
-signal lines_1_to_4_correct
-
 ## Nomiei de 'text' o sprite do texto que é pra estar sendo mostrado
 @onready var text: TextureRect = $Text
 ## O resource do texto vem aqui, para identificar número e sprites censurados e limpos

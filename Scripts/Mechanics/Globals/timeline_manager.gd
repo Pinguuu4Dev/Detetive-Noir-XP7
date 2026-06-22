@@ -22,11 +22,18 @@ func _check_complete_timelines(t: String) -> bool:
 func _get_door_timeline() -> String:
 	if !_check_complete_timelines("beco_metal_door_1") and !_check_complete_timelines("beco_notebook_4"):
 		return "beco_metal_door_1"
-	if _check_complete_timelines("beco_notebook_4") and correct_lines.has(5):
+	if _check_complete_timelines("beco_notebook_4") and has_all_correct_lines():
 		return "beco_metal_door_2"
 	else:
 		return "beco_incomplete_scene_3"
-	
+
+func has_all_correct_lines() -> bool:
+	return (correct_lines.has(1) &&
+			correct_lines.has(2) &&
+			correct_lines.has(3) &&
+			correct_lines.has(4) &&
+			correct_lines.has(5))
+
 func _get_trash_timeline() -> String:
 	if !_check_complete_timelines("beco_trash_1") and !_check_complete_timelines("beco_trash_2"):
 		if _check_complete_timelines("beco_metal_door_1") and _check_complete_timelines("beco_notebook_1"):
