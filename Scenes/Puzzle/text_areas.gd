@@ -8,7 +8,6 @@ class_name PuzzleText
 
 ## Faz com que o sprite inicial da área seja sempre sua versão censurada
 func _ready() -> void:
-	print("PuzzleText chamou ready()")
 	if text_data:
 		ResourceSaver.save(text_data, text_data.resource_path)
 		text_data = ResourceLoader.load(text_data.resource_path)
@@ -31,7 +30,7 @@ func _update_ui() -> void:
 ## Seleciona a textura que deve ser arrastada para outro espaço
 func _get_drag_data(at_position: Vector2) -> Variant:
 	## Se não tiver algo no espaço, irá acontecer nada
-	if !text_data:
+	if !text_data || text_data.is_censored:
 		return
 	
 	## Caso tenha algo no espaço, cria um preview do objeto, para o jogador ver o que ele está arrastando
@@ -65,6 +64,13 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	if str(data.text_data.text_num) == name.substr(name.length() - 1) and name.begins_with("A"): # }
 		TimelineManager.correct_lines.append(int(name.substr(name.length() - 1)))
 		print(TimelineManager.correct_lines)
+		
+		if (TimelineManager.correct_lines.has(1) && 
+			TimelineManager.correct_lines.has(2) &&
+			TimelineManager.correct_lines.has(3) &&
+			TimelineManager.correct_lines.has(4)):
+			print("Linhas 1 a 4 corretas")
+			
 	## Faz com que o espaço selecionado tenha o novo texto atribuído a ele }
 	text_data = data.text_data # }
 	# e caso necessário, troca o texto que estava anteriormente nele

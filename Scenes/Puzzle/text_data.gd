@@ -6,6 +6,8 @@ class_name TextData
 @export var censored_sprite: Texture2D # } 
 @export var clean_sprite: Texture2D # }
 
+var is_censored: bool = true
+
 ## Atríbui um valor que deve ser mostrado atualmente, por exemplo, se é para mostrar a frase
 ## censurada ou não
 var current_sprite: Texture2D
@@ -17,6 +19,7 @@ func _set_current_sprite(sprite_num: int): # }
 			current_sprite = censored_sprite # }
 		2: # }
 			current_sprite = clean_sprite # }
+			is_censored = false
 		_: # }
 			current_sprite = null # }
 	ResourceSaver.save(self, resource_path)

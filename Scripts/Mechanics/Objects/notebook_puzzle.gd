@@ -33,6 +33,7 @@ func _open_notebook():
 		first_time_open = false
 
 func _areas_to_clean(text_num: int):
+	print("areas_to_clean() chamado com parâmetro " + str(text_num))
 	areas_data[text_num - 1]._set_current_sprite(2)
 	ResourceSaver.save(areas_data[text_num - 1], areas_data[text_num - 1].resource_path)
 	areas_data[text_num - 1] = ResourceLoader.load(areas_data[text_num - 1].resource_path)
