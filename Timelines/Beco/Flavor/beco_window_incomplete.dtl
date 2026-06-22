@@ -3,3 +3,4 @@ protagonist: Tem uma janela aqui, bem pequena, eu não conseguiria passar por a�
 protagonist (curious): E não dá pra ver nada do outro lado… mas… tem algo marcado aqui.
 protagonist: É uma pata felina. Dianteira, de cinco unhas, e não parece ser um desenho...
 protagonist (default): Ok, só consigo concluir a existência de uma pata por enquanto. É melhor eu voltar a investigar os arredores.
+do TimelineManager.increase_tips(true)

@@ -15,3 +15,4 @@ audio "res://Assets/Audio/SFX/Objects/Sangue Pingando 3.wav" [volume="4.5"]
 [wait time="0.3"]
 protagonist: Já imaginei que estivesse trancada, mas que barulho foi esse?
 protagonist: Bem, vou investigar melhor os arredores.
+do TimelineManager.increase_tips(true)

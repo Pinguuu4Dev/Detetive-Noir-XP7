@@ -8,3 +8,4 @@ Em segundo lugar, agilize o processo e contrate algum eletricista para consertar
 protagonist (worried): É… agora faz mais sentido.
 protagonist (default): Bem, pelo estado dos materiais aqui, parece que ainda há moradores nesse prédio… ou talvez eles tenham ido embora recentemente.
 leave protagonist [animation="Fade Out" length="0.4"]
+do TimelineManager.increase_tips(true)

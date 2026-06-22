@@ -12,9 +12,15 @@ var timeline_playing:= false
 ## Objetos que devem ser interagidos pelo jogador antes de seguir a timeline
 var timelines_finished: Array[String] = []
 
+var becoManager: BecoManager
+
 func _ready() -> void:
+	Dialogic.text_signal.connect(increase_tips)
 	Dialogic.timeline_started.connect(_on_timeline_started) # Fazer com que o sinal de quando a 'timeline' inicia seja conectada com a função deste script
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
+
+func increase_tips(last_tip: bool) -> void:
+	becoManager.increase_tips(last_tip)
 
 func _check_complete_timelines(t: String) -> bool:
 	return timelines_finished.has(t)

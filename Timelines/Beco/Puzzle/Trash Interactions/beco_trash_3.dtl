@@ -4,3 +4,4 @@ protagonist: Unhas de gato? Achei que eu fosse a única bichana por aqui! Eu nem
 protagonist: Estranho, mas ok. Treze unhas, cada uma com, em média, oito milímetros de comprimento, cinco delas estão manchadas com…
 protagonist: Sangue. Pelo visto, o indivíduo se machucou ou entrou em combate, pelo menos nos últimos 7 dias.
 protagonist: Tá, vou dar mais uma olhada por aí.
+do TimelineManager.increase_tips(false)

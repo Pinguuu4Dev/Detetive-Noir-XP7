@@ -6,3 +6,4 @@ protagonist (worried): Jinx… é quase o meu nome… que coisa estranha. Vou te
 [wait time="1.5"]
 protagonist (sad): Não dá, que tipo de fita é essa? A prova de garras?
 protagonist: Ah, esquece. Depois eu tento abrir isso.
+do TimelineManager.increase_tips(true)

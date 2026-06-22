@@ -3,3 +3,4 @@ protagonist: Hm, uma placa. Tem algo escrito… em letras miúdas.
 AVISO\: A luminária acima da porta está com mal funcionamento. Parece que algum mosquito deu um jeito de entrar e sujar com sangue.
 Em meio à situação, por favor não confie no que não possa ser enxergado corretamente. Não apenas pelo desgaste elétrico, mas também pelo sangue
 protagonist (curious): Nossa, que… específico? Bem, imagino que por negligência dos moradores, aqui seja um ninho para diversos insetos.
+do TimelineManager.increase_tips(true)

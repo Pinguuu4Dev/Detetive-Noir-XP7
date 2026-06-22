@@ -6,3 +6,4 @@ protagonist: Agora, hora de ver a parte de dentro…
 protagonist: É definitivamente lixo orgânico. Meu olfato já devia estar acostumado com coisas do tipo, mas parece que não.
 protagonist: Além de sacos de lixo com restos de comida, excremento animal e outras coisas que parecem ter sido descartadas… não tem nada de interessante por aqui.
 protagonist: Tá, vou dar mais uma olhada por aí.
+do TimelineManager.increase_tips(false)

@@ -13,6 +13,7 @@ class_name Item
 #@export var hovered_texture: Texture2D # será removido
 
 var object_held:= false
+var any_tips_left: bool = true
 
 func _ready() -> void:
 	#col_area.connect("mouse_entered", _change_cursor)
@@ -27,6 +28,7 @@ func _ready() -> void:
 	
 	if item_type == "notebook":
 		TimelineManager.n_interaction_ref = self
+		any_tips_left = false
 		
 ## Função para mudar o cursor com o sinal do sprite de quando o mouse entra
 func _change_cursor() -> void:

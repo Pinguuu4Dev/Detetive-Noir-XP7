@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://be885c8iwcq2e" path="res://Scenes/Items/Beco/Puzzle Hints/BecoScene_Book.tscn" id="16_h26ys"]
 [ext_resource type="PackedScene" uid="uid://cs3k18cyqi8yq" path="res://Scenes/Items/Beco/Flavor/BecoScene_Window.tscn" id="17_kuu5w"]
 [ext_resource type="PackedScene" uid="uid://cj23nctcbpsx7" path="res://Scenes/Items/Beco/Flavor/BecoScene_Sign.tscn" id="18_l515w"]
+[ext_resource type="Texture2D" uid="uid://buhi22xrbwf6m" path="res://Assets/Sprites/assets beco/cadernopuzzle.png" id="19_bi521"]
+[ext_resource type="FontFile" uid="uid://cb8rfkueyn4hy" path="res://Assets/Fonts/Raleway (texto menu)/static/Raleway-Light.ttf" id="20_f5cvb"]
 
 [sub_resource type="Animation" id="Animation_4qler"]
 resource_name = "Fade_In"
@@ -110,9 +112,10 @@ _data = {
 &"RESET": SubResource("Animation_ulfh7")
 }
 
-[node name="BecoScene" type="Node2D" unique_id=1615627716]
+[node name="BecoScene" type="Node2D" unique_id=1615627716 node_paths=PackedStringArray("tip_label")]
 scale = Vector2(0.56, 0.56)
 script = ExtResource("1_rwci3")
+tip_label = NodePath("Scene_Elements/Contador de pista/HBoxContainer/Text")
 next_scene = ExtResource("2_4qler")
 
 [node name="Scene_Elements" type="Node" parent="." unique_id=1264917687]
@@ -334,6 +337,37 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scene_Elements" unique_id=338705949]
 libraries/ = SubResource("AnimationLibrary_tkmna")
+
+[node name="Contador de pista" type="Control" parent="Scene_Elements" unique_id=790582434]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Scene_Elements/Contador de pista" unique_id=1604541964]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -131.0
+offset_bottom = 28.97
+grow_horizontal = 0
+
+[node name="Notebook Icon" type="TextureRect" parent="Scene_Elements/Contador de pista/HBoxContainer" unique_id=585314489]
+self_modulate = Color(3.4265816, 3.4265816, 3.4265816, 1)
+layout_mode = 2
+texture = ExtResource("19_bi521")
+expand_mode = 3
+
+[node name="Text" type="Label" parent="Scene_Elements/Contador de pista/HBoxContainer" unique_id=907767767]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_f5cvb")
+theme_override_font_sizes/font_size = 20
+text = "Pistas: 0/14"
+horizontal_alignment = 2
 
 [node name="Pause_Screen" parent="." unique_id=602457543 instance=ExtResource("7_xo8tj")]
 layer = 1261

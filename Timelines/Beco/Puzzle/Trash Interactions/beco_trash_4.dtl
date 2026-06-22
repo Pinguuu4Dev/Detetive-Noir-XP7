@@ -10,3 +10,4 @@ protagonist: Ah, é daí que estava vindo o sangue. Uma faca, certo.
 protagonist: Faca de combate, lâmina completamente lisa, sem serrilhado. Útil para perfurar carne humana e… pera aí.
 protagonist: Tem pelos escuros de gato na ponta da faca. Definitivamente há um felino envolvido no caso.
 protagonist: Estranho, extremamente estranho. Vou tentar investigar a caderneta de novo…
+do TimelineManager.increase_tips(true)
