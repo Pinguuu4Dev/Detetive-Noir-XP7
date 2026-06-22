@@ -67,7 +67,7 @@ tracks/0/path = NodePath("Scene_Elements/Label:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.01),
+"times": PackedFloat32Array(0, 0.033333335),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -306,6 +306,7 @@ offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_bb25a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Continua..."
 
 [node name="Label" type="Label" parent="Scene_Elements" unique_id=1295676144]
@@ -319,6 +320,7 @@ offset_right = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_bb25a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "Créditos
 
