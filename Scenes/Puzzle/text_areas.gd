@@ -59,10 +59,16 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 		return true
 		
 	return false
-	
+
 ## Após soltar o item, irá adiciona-lô ao espaço que estava sendo arrastado para cima
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	# data é de onde o jogador está arrastando
+	
+	if text_data != null:
+		if text_data.is_censored:
+			# cancela o drop se o texto no lugar for censurado
+			data.text.show()
+			return
 	
 	## Cria um valor temporário caso já tenha uma das frases no espaço }
 	# text_data é o texto atual no espaço que o jogador soltou o texto
@@ -70,9 +76,11 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	print(data)
 	
 	add_line(data.text_data, self)
+
 	if tmp_text != null && tmp_text != data.text_data:
 		remove_line(tmp_text)
-		add_line(tmp_text, data)
+		# checa se o texto que estava no lugar está sendo trocado para o lugar correto
+		add_line(tmp_text, data) 
 	
 	## Faz com que o espaço selecionado tenha o novo texto atribuído a ele } 
 	text_data = data.text_data # }
