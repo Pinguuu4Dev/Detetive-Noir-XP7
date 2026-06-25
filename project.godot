@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Detetive-Noir-XP7"
+config/name="Jinx Noir"
 run/main_scene="uid://n0lx6rvo7ub7"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Assets/Placeholder/Characters/icon.svg"
+config/icon="uid://cfg18ptsxnb6b"
 
 [audio]
 
