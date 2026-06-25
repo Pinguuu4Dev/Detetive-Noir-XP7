@@ -6,13 +6,8 @@
 [ext_resource type="Script" uid="uid://b0chad6sovis5" path="res://Scenes/Puzzle/area_configs.gd" id="5_isv3y"]
 [ext_resource type="StyleBox" uid="uid://cboqtg0pqtoiu" path="res://Assets/Styles/puzzle_box_areas.tres" id="6_n811j"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
-[ext_resource type="Resource" uid="uid://duopc3rc5hx12" path="res://Scenes/Puzzle/Resources/text_3.tres" id="9_0v856"]
 [ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen5.png" id="9_cg02q"]
 [ext_resource type="Texture2D" uid="uid://xwbmln37irhe" path="res://Assets/Placeholder/Icons/fechar.png" id="10_2oifp"]
-[ext_resource type="Resource" uid="uid://cqb8ei64h5pw4" path="res://Scenes/Puzzle/Resources/text_5.tres" id="10_wd4mk"]
-[ext_resource type="Resource" uid="uid://wla3je3xmfme" path="res://Scenes/Puzzle/Resources/text_2.tres" id="11_wd4mk"]
-[ext_resource type="Resource" uid="uid://bw56bgt2akse5" path="res://Scenes/Puzzle/Resources/text_1.tres" id="12_cg02q"]
-[ext_resource type="Resource" uid="uid://bb2g4nym7bst4" path="res://Scenes/Puzzle/Resources/text_4.tres" id="13_n811j"]
 
 [sub_resource type="Animation" id="Animation_n811j"]
 length = 0.001
@@ -249,7 +244,6 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
-text_data = ExtResource("9_0v856")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_1" unique_id=584438746]
 layout_mode = 1
@@ -281,7 +275,6 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
-text_data = ExtResource("10_wd4mk")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_2" unique_id=980252779]
 layout_mode = 1
@@ -313,7 +306,6 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
-text_data = ExtResource("11_wd4mk")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_3" unique_id=1133210877]
 layout_mode = 1
@@ -345,7 +337,6 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
-text_data = ExtResource("12_cg02q")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_4" unique_id=531596398]
 layout_mode = 1
@@ -377,7 +368,6 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
-text_data = ExtResource("13_n811j")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_5" unique_id=2001482922]
 layout_mode = 1
