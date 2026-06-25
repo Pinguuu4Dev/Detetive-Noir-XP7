@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b0chad6sovis5" path="res://Scenes/Puzzle/area_configs.gd" id="5_isv3y"]
 [ext_resource type="StyleBox" uid="uid://cboqtg0pqtoiu" path="res://Assets/Styles/puzzle_box_areas.tres" id="6_n811j"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
-[ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen5.png" id="9_cg02q"]
+[ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen_4.png" id="9_cg02q"]
 [ext_resource type="Texture2D" uid="uid://xwbmln37irhe" path="res://Assets/Placeholder/Icons/fechar.png" id="10_2oifp"]
 
 [sub_resource type="Animation" id="Animation_n811j"]

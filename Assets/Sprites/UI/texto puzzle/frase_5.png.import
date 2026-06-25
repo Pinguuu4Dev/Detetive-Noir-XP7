@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btwmoqdlmgwdq"
-path="res://.godot/imported/frase3.png-206f8e0d57598379c4f1f7993bd94804.ctex"
+uid="uid://dv5yts7oxhp6o"
+path="res://.godot/imported/frase_5.png-8a366efaf92c7b103bce763841aa6ccb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI/texto puzzle/frase3.png"
-dest_files=["res://.godot/imported/frase3.png-206f8e0d57598379c4f1f7993bd94804.ctex"]
+source_file="res://Assets/Sprites/UI/texto puzzle/frase_5.png"
+dest_files=["res://.godot/imported/frase_5.png-8a366efaf92c7b103bce763841aa6ccb.ctex"]
 
 [params]
 

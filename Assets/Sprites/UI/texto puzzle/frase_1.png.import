@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cydd836i5iwkg"
-path="res://.godot/imported/frasecen3.png-64f396f644fddc5b941ee325cc6327ce.ctex"
+uid="uid://c018boschsm3h"
+path="res://.godot/imported/frase_1.png-beaaffea7eb6604c6d0c1460f9303856.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen3.png"
-dest_files=["res://.godot/imported/frasecen3.png-64f396f644fddc5b941ee325cc6327ce.ctex"]
+source_file="res://Assets/Sprites/UI/texto puzzle/frase_1.png"
+dest_files=["res://.godot/imported/frase_1.png-beaaffea7eb6604c6d0c1460f9303856.ctex"]
 
 [params]
 
