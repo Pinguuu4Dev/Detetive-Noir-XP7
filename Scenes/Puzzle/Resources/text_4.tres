@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://c1330fxn7arl4"]
+
+[ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen_4.png" id="1_21mds"]
+[ext_resource type="Script" uid="uid://cnduxaj7f1kjg" path="res://Scenes/Puzzle/text_data.gd" id="1_ltxk7"]
+[ext_resource type="Texture2D" uid="uid://ie0ctg0xo0u4" path="res://Assets/Sprites/UI/texto puzzle/frase_4.png" id="2_3k4au"]
+
+[resource]
+script = ExtResource("1_ltxk7")
+text_num = 4
+censored_sprite = ExtResource("1_21mds")
+clean_sprite = ExtResource("2_3k4au")
+metadata/_custom_type_script = "uid://cnduxaj7f1kjg"
