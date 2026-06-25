@@ -7,7 +7,12 @@
 [ext_resource type="StyleBox" uid="uid://cboqtg0pqtoiu" path="res://Assets/Styles/puzzle_box_areas.tres" id="6_n811j"]
 [ext_resource type="Theme" uid="uid://i5qt2ugkwip0" path="res://Assets/Themes/button_theme.tres" id="8_isv3y"]
 [ext_resource type="Texture2D" uid="uid://jtoefv7ntva0" path="res://Assets/Sprites/UI/texto puzzle - censurado/frasecen_4.png" id="9_cg02q"]
+[ext_resource type="Resource" uid="uid://d0u5tjgupjc82" path="res://Scenes/Puzzle/Resources/text_3.tres" id="9_n811j"]
 [ext_resource type="Texture2D" uid="uid://xwbmln37irhe" path="res://Assets/Placeholder/Icons/fechar.png" id="10_2oifp"]
+[ext_resource type="Resource" uid="uid://tf4x5uiuq3o4" path="res://Scenes/Puzzle/Resources/text_5.tres" id="10_ralg1"]
+[ext_resource type="Resource" uid="uid://b2jx5obkkrolr" path="res://Scenes/Puzzle/Resources/text_2.tres" id="11_8dqsx"]
+[ext_resource type="Resource" uid="uid://cbywdqmmsabgw" path="res://Scenes/Puzzle/Resources/text_1.tres" id="12_na2qr"]
+[ext_resource type="Resource" uid="uid://c1330fxn7arl4" path="res://Scenes/Puzzle/Resources/text_4.tres" id="13_b0lqa"]
 
 [sub_resource type="Animation" id="Animation_n811j"]
 length = 0.001
@@ -244,6 +249,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
+text_data = ExtResource("9_n811j")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_1" unique_id=584438746]
 layout_mode = 1
@@ -275,6 +281,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
+text_data = ExtResource("10_ralg1")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_2" unique_id=980252779]
 layout_mode = 1
@@ -306,6 +313,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
+text_data = ExtResource("11_8dqsx")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_3" unique_id=1133210877]
 layout_mode = 1
@@ -337,6 +345,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
+text_data = ExtResource("12_na2qr")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_4" unique_id=531596398]
 layout_mode = 1
@@ -368,6 +377,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 script = ExtResource("5_3w2e8")
+text_data = ExtResource("13_b0lqa")
 
 [node name="Text" type="TextureRect" parent="Panel/Margins/Grid/Starter_5" unique_id=2001482922]
 layout_mode = 1
