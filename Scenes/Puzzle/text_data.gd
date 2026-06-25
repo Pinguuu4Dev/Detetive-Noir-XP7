@@ -22,5 +22,5 @@ func _set_current_sprite(sprite_num: int): # }
 			is_censored = false
 		_: # }
 			current_sprite = null # }
-	ResourceSaver.save(self, resource_path)
-	ResourceLoader.load(resource_path)
+	#ResourceSaver.save(self, resource_path)
+	#ResourceLoader.load(resource_path)

@@ -10,9 +10,9 @@ var notebook: Notebook
 
 ## Faz com que o sprite inicial da área seja sempre sua versão censurada
 func _ready() -> void:
-	if text_data:
-		ResourceSaver.save(text_data, text_data.resource_path)
-		text_data = ResourceLoader.load(text_data.resource_path)
+	#if text_data:
+		#ResourceSaver.save(text_data, text_data.resource_path)
+		#text_data = ResourceLoader.load(text_data.resource_path)
 	## Atualiza a UI por segurança, para que sempre que começe um jogo esteja com os sprites certos
 	_update_ui()
 

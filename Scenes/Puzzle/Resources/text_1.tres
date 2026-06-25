@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_iux5k")
+text_num = 1
 censored_sprite = ExtResource("2_vd75g")
 clean_sprite = ExtResource("1_arqrd")
 metadata/_custom_type_script = "uid://cnduxaj7f1kjg"
