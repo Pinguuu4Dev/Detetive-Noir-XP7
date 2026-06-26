@@ -33,24 +33,21 @@ func _ready() -> void:
 	music_bus_index = AudioServer.get_bus_index("Music")
 	sfx_bus_index = AudioServer.get_bus_index("SFX")
 	load_settings()
-
-func load_settings() -> void:
-	if !FileAccess.file_exists(SETTINGS_FILE_PATH):
-		save_settings()
-		return
 	
+## Aplica no jogo os valores do arquivo "config.ini". Caso não exista, usa os valores default
+func load_settings() -> void:
 	config.load(SETTINGS_FILE_PATH)
 	
-	master_volume_slider.value = config.get_value("audio", "master_volume")
-	music_volume_slider.value = config.get_value("audio", "music_volume")
-	sfx_volume_slider.value = config.get_value("audio", "sfx_volume")
+	master_volume_slider.value = config.get_value("audio", "master_volume", 0.7)
+	music_volume_slider.value = config.get_value("audio", "music_volume", 0.7)
+	sfx_volume_slider.value = config.get_value("audio", "sfx_volume", 0.7)
 	
-	master_mute_button.button_pressed = config.get_value("audio", "master_muted")
-	music_mute_button.button_pressed = config.get_value("audio", "music_muted")
-	sfx_mute_button.button_pressed = config.get_value("audio", "sfx_muted")
+	master_mute_button.button_pressed = config.get_value("audio", "master_muted", false)
+	music_mute_button.button_pressed = config.get_value("audio", "music_muted", false)
+	sfx_mute_button.button_pressed = config.get_value("audio", "sfx_muted", false)
 	
-	screen_mode_button.selected = config.get_value("video", "screen_mode")
-	_on_screen_options_selected(config.get_value("video", "screen_mode"))
+	screen_mode_button.selected = config.get_value("video", "screen_mode", 2)
+	_on_screen_options_selected(config.get_value("video", "screen_mode", 2))
 
 ## Pega os valores nos nós de Control e salva no arquivo config.ini
 func save_settings() -> void:
