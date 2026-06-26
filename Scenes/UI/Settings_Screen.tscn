@@ -46,7 +46,7 @@ _data = {
 &"RESET": SubResource("Animation_jay2q")
 }
 
-[node name="Settings_Screen" type="Control" unique_id=1642139216]
+[node name="Settings_Screen" type="Control" unique_id=1642139216 node_paths=PackedStringArray("master_volume_slider", "music_volume_slider", "sfx_volume_slider", "master_mute_button", "music_mute_button", "sfx_mute_button", "screen_mode_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,6 +54,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bftun")
+master_volume_slider = NodePath("Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Master_Volume_Slider")
+music_volume_slider = NodePath("Settings_BG/Settings_Container/Vertical_Layout/Music_Volume_Section/Music_Volume_Slider")
+sfx_volume_slider = NodePath("Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/SFX_Volume_Slider")
+master_mute_button = NodePath("Settings_BG/Settings_Container/Vertical_Layout/Master_Volume_Section/Mute_Section/Master_Mute_Option")
+music_mute_button = NodePath("Settings_BG/Settings_Container/Vertical_Layout/Music_Volume_Section/Mute_Section/Music_Mute_Option")
+sfx_mute_button = NodePath("Settings_BG/Settings_Container/Vertical_Layout/SFX_Volume_Section/Mute_Section/SFX_Mute_Option")
+screen_mode_button = NodePath("Settings_BG/Settings_Container/Vertical_Layout/Screen_Section/Screen_Options")
 
 [node name="Settings_BG" type="TextureRect" parent="." unique_id=1458550918]
 modulate = Color(1, 1, 1, 0)

@@ -15,8 +15,6 @@ var menu_theme := preload("res://Assets/Audio/Music/Menu Theme.ogg")
 var gameplay_theme := preload("res://Assets/Audio/Music/Escritório.ogg")
 
 func _ready() -> void:
-	if !OS.has_feature("editor"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	MusicManager.play_music(menu_theme)
 	options_animationPlayer = options_menu_ref.get_node("Transition_FX")
 	
