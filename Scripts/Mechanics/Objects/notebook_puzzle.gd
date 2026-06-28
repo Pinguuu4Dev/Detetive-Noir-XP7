@@ -42,8 +42,23 @@ func _areas_to_clean(text_num: int):
 ## Chamada depois de deixar as linhas 1 a 4 corretas
 func clean_line_5() -> void:
 	_areas_to_clean(5)
+
+func save_progression() -> void:
+	var notebook_state: Array[int]
+	notebook_state.clear() # talvez seja desnecessário
 	
+	# Guarda o número do texto de cada slot do caderno
+	for area: PuzzleText in areas_ref:
+		if area.text_data == null:
+			notebook_state.append(0)
+			continue
+		notebook_state.append(area.text_data.text_num)
+		
+	GameState.puzzles_states.set(PuzzleID.BECO_PUZZLE, notebook_state)
+	SaveManager.save()
+
 func _on_close_pressed() -> void:
+	save_progression()
 	visible = false
 	for i in b_scene.interactable_items.get_children():
 		if i != self:
