@@ -16,6 +16,8 @@ var current_item: Item
 var current_tips: int = 0
 
 func _ready() -> void:
+	SaveManager.load_save()
+	
 	TimelineManager.becoManager = self
 	notebook_ref = $Scene_Elements/Beco_BG/Interactable_Items/NotebookPuzzle
 	animation_player.play("Fade_In")

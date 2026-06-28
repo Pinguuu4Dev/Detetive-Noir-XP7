@@ -1,0 +1,4 @@
+{
+  "timelines_finished": {{TIMELINES}},
+  "puzzles_states": {{PUZZLE_ID_&_STATE}}
+}
