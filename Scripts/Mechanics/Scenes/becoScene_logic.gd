@@ -16,13 +16,15 @@ var current_item: Item
 var current_tips: int = 0
 
 func _ready() -> void:
-	SaveManager.load_save()
+	SaveManager.load_save() # provisório
 	
 	TimelineManager.becoManager = self
 	notebook_ref = $Scene_Elements/Beco_BG/Interactable_Items/NotebookPuzzle
 	animation_player.play("Fade_In")
 	await animation_player.animation_finished
 	Dialogic.start("beco_start")
+	
+	GameState.current_scene = SceneID.ALLEY_SCENE
 	
 func increase_tips(last_tip: bool) -> void:
 	if !current_item.any_tips_left:

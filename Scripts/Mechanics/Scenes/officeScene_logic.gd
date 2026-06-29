@@ -21,6 +21,7 @@ func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended) # Fazer com que o sinal de quando a 'timeline' termina seja conectada com a função deste script
 
 	animation_player.play("Fade_In")
+	GameState.current_scene = SceneID.OFFICE_SCENE
 
 ## Função quando o sinal de 'item_collected' dos itens ser ativado
 func _on_item_interacted(i: Item) -> void:

@@ -1,9 +1,7 @@
-## Se comunica com GameState para salvar e carregar o arquivo de save.
+## Salva e carrega as informaçõe do GameState de um arquivo.
 extends Node
 
-## Emitido quando o jogo salva com sucesso;
 signal game_saved()
-## Emitido quando o jogo carrega com sucesso
 signal game_loaded()
 
 const SAVE_DIR: String = "user://saves/"
@@ -16,18 +14,20 @@ func _ready() -> void:
 	# Cria o diretório caso não exista
 	DirAccess.make_dir_recursive_absolute(SAVE_DIR)
 
-## Cria o arquivo de save caso não exista um
+## Cria o arquivo de save baseado no save_template.
 func initialize_save_file() -> void:
 	save_template = FileAccess.get_file_as_string(SAVE_TEMPLATE_PATH)
 	var file := FileAccess.open(FILE_PATH, FileAccess.WRITE)
 	file.store_string(save_template)
 	file.close()
 
+## Salva as informações do GameState no arquivo de save. Emite o sinal game_saved ao salvar.
 func save() -> void:
 	var data: Dictionary = GameState.to_dict()
 	var json_string: String = save_template
 	
-	# fazer dessa forma mantém o Array numa linha só e o arquivo fica na ordem que você quiser
+	# Fazer dessa forma mantém arrays numa linha só e o arquivo fica na ordem que você quiser
+	json_string = json_string.replace("{{CURRENT_SCENE}}", JSON.stringify(data.get("current_scene")))
 	json_string = json_string.replace("{{TIMELINES}}", JSON.stringify(data.get("timelines_finished")))
 	json_string = json_string.replace("{{PUZZLE_ID_&_STATE}}", JSON.stringify(data.get("puzzles_states")))
 	
@@ -35,6 +35,9 @@ func save() -> void:
 	file.store_string(json_string)
 	file.close()
 	
+	game_saved.emit()
+
+## Atualiza as informações do GameState usando o arquivo de save. Emite o sinal game_loaded ao carregar.
 func load_save() -> void:
 	var file := FileAccess.open(FILE_PATH, FileAccess.READ)
 	
@@ -43,6 +46,8 @@ func load_save() -> void:
 		return
 	
 	var json_string: String = file.get_as_text()
-	var data: Dictionary = JSON.parse_string(json_string) # Se não for dicionário pode dar erro dps
+	var data: Dictionary = JSON.parse_string(json_string)
 	
 	GameState.from_dict(data)
+	
+	game_loaded.emit()

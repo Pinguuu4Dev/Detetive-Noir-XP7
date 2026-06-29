@@ -1,14 +1,17 @@
 ## Salva informações que devem ser salvas e carregadas dos diferentes nós num só lugar.
 extends Node
 
-var timelines_finished: Array
+var timelines_finished: Array = []
 ## Estados de todos os puzzles do jogo. Não guarda se eles foram completos, 
 ## no caso do caderno guarda apenas a posição de cada texto.
-var puzzles_states: Dictionary
+var puzzles_states: Dictionary = {}
+
+var current_scene: StringName
 
 ## Retorna todas as informações do GameState num dicionário.
 func to_dict() -> Dictionary:
 	return {
+		"current_scene": current_scene,
 		"timelines_finished": timelines_finished,
 		"puzzles_states": puzzles_states
 	}
@@ -17,5 +20,6 @@ func to_dict() -> Dictionary:
 func from_dict(data: Dictionary) -> void:
 	timelines_finished.clear()
 	
+	current_scene = data.get("current_scene")
 	timelines_finished = data.get("timelines_finished")
 	puzzles_states = data.get("puzzles_states")
